@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Übungsklausur 2 · Chile</title>
+<meta name="description" content="Übungsklausur Geographie LK Reliefsphäre: Subduktion vor Chile und Wollsackverwitterung – 60 BE, 90 Minuten, mit Erwartungshorizont.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/klausur.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e1a15'/%3E%3Cpath d='M2 24 L11 12 L17 19 L23 9 L30 18' fill='none' stroke='%23f07a3e' stroke-width='3'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('geo-reliefsphaere-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body class="exam" data-minutes="90">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink)"/></marker>
+    <marker id="arr-w" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#fff"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2d6a8e"/></marker>
+    <symbol id="eq" viewBox="-6 -6 12 12" overflow="visible"><path d="M0,-5 L1.5,-1.6 L5,-1.5 L2.3,0.9 L3,4.6 L0,2.6 L-3,4.6 L-2.3,0.9 L-5,-1.5 L-1.5,-1.6 Z" fill="#e0662a" stroke="#1e1a15" stroke-width=".7"/></symbol>
+    <pattern id="grus" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#e4d6c2"/><rect x="1" y="2" width="1.6" height="1.6" fill="#9c8a74"/><rect x="5" y="5" width="1.4" height="1.4" fill="#9c8a74"/></pattern>
+  </defs>
+</svg>
+
+<header class="topbar exam-top">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" aria-label="Zurück zum Lernzettel">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 19 L8 11 L12 15 L18 6 L25 14" fill="none" stroke="var(--accent)" stroke-width="2.4"/></svg>
+      <span class="brand-text">Reliefsphäre</span>
+    </a>
+    <nav class="nav" aria-label="Seiten">
+      <a href="index.html">Lernzettel</a>
+      <a href="uebungsklausur-1.html">Übungsklausur 1</a>
+      <a href="uebungsklausur-2.html" aria-current="page">Übungsklausur 2</a>
+    </nav>
+    <div class="topbar-tools">
+      <div class="timer" id="timer">
+        <span class="timer-clock" id="tClock">90:00</span>
+        <span class="timer-now" id="tNow"></span>
+        <button class="btn small" type="button" id="tStart">Start</button>
+        <button class="icon-btn" type="button" id="tReset" aria-label="Timer zurücksetzen" title="Zurücksetzen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12a8 8 0 1 0 2.3-5.6"/><path d="M4 4v4h4"/></svg></button>
+      </div>
+      <button class="btn small ghost" type="button" id="solBtn" aria-pressed="false">Erwartungshorizont</button>
+      <button class="icon-btn" type="button" id="printBtn" aria-label="Drucken" title="Drucken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8"/><path d="M6 14h12v7H6z"/></svg></button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4L7 17M17 7l1.4-1.4"/><path d="M12 8a4 4 0 0 0 0 8z" fill="currentColor"/><path d="M12 8a4 4 0 0 1 0 8"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<p class="exam-intro"><b>So übst du:</b> Ausdrucken oder auf Papier mitschreiben, Timer starten (90 Minuten), danach den Erwartungshorizont einblenden und dich selbst bewerten. Selbst erstellte Übungsklausur nach dem Muster der Klausur „Reliefsphäre“ von 2024 – keine offizielle Klausur.</p>
+
+<!-- ================= Blatt 1 ================= -->
+<section class="sheet">
+  <div class="ex-head">
+    <div class="ex-logo" aria-hidden="true"><svg viewBox="0 0 52 40"><path d="M4,36 L20,10 L24,10 L32,22 L36,18 L48,36 Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20,10 L22,4 L24,10" fill="none" stroke="#e0662a" stroke-width="2"/><path d="M18,3 l2,2 M26,2 l-1,3 M22,0 v3" stroke="#e0662a" stroke-width="1.5"/></svg></div>
+    <div class="tag course">Geo LK</div>
+    <div class="tag">Übung</div>
+    <div class="ttl">Geo-Übungsklausur Nr. 2</div>
+    <div class="tag">Reliefsphäre</div>
+  </div>
+  <div class="ex-info">
+    <div class="wide">Auf eine sorgfältige Darstellung und korrekte Rechtschreibung ist zu achten.</div>
+    <div class="wide wish">Viel Erfolg!</div>
+    <div class="field">Name: <span></span></div>
+    <div class="field">Datum: <span></span></div>
+    <div class="field">Punkte: <span></span> / (60 BE)</div>
+    <div class="field">Notenpunkte: <span></span></div>
+    <div class="field wide">Mündliche Selbsteinschätzung: <span></span></div>
+  </div>
+
+  <div class="task-bar"><b>Aufgabe 1</b><span class="be">(50 BE)</span><span class="time">Zeitmanagement: ca. 70 Minuten</span></div>
+  <p class="intro"><mark>Chile</mark> erstreckt sich über rund 4.300 km entlang der <mark>Westküste Südamerikas</mark>, ist im Durchschnitt aber nur etwa 180 km breit. Kaum ein Land der Erde wird so häufig von <mark>starken Erdbeben</mark> erschüttert: Das <mark>stärkste jemals gemessene Erdbeben</mark> ereignete sich 1960 bei Valdivia. Zugleich prägen rund 90 aktive <mark>Vulkane</mark> und die Hochgebirgskette der <mark>Anden</mark> das Landschaftsbild.</p>
+
+  <div class="st" data-min="20" data-label="Aufgabe 1 a)"><span class="st-l">a)</span><div class="st-b">
+    <p><span class="op">Beschreiben</span> Sie die plattentektonische Lage Chiles und <span class="op">erklären</span> Sie die Entstehung der Anden sowie des Atacamagrabens (M1, M3).</p>
+    <span class="st-be">(14 BE / ca. 20 Min.)</span></div></div>
+
+  <div class="st" data-min="16" data-label="Aufgabe 1 b)"><span class="st-l">b)</span><div class="st-b">
+    <p><span class="op">Erläutern</span> Sie die räumliche Verteilung der Erdbebenherde in M4 und <span class="op">erklären</span> Sie, warum vor Chile besonders starke Erdbeben möglich sind (M2, M4).</p>
+    <span class="st-be">(12 BE / ca. 16 Min.)</span></div></div>
+
+  <div class="st" data-min="17" data-label="Aufgabe 1 c)"><span class="st-l">c)</span><div class="st-b">
+    <p><span class="op">Stellen</span> Sie die Entstehung des Vulkanismus am Villarrica stichpunktartig in einem <span class="op">Fließschema dar</span> (M3). Beginnen Sie mit der Aussage „Ausgangspunkt: Konvergenz von Nazca-Platte und Südamerikanischer Platte“.</p>
+    <span class="st-be">(12 BE / ca. 17 Min.)</span></div></div>
+
+  <div class="st" data-min="8" data-label="Aufgabe 1 d)"><span class="st-l">d)</span><div class="st-b">
+    <p><span class="op">Arbeiten</span> Sie aus M5 die Entfernungen der drei Messstationen zum Epizentrum eines Erdbebens <span class="op">heraus</span> und <span class="op">begründen</span> Sie, warum zur Bestimmung des Epizentrums mindestens drei Stationen nötig sind.</p>
+    <span class="st-be">(6 BE / ca. 8 Min.)</span></div></div>
+
+  <div class="st" data-min="9" data-label="Aufgabe 1 e)"><span class="st-l">e)</span><div class="st-b">
+    <p>In einem Reiseführer heißt es: „Chiles Vulkane sind harmlos – sie lassen die Lava nur ruhig ausfließen, so wie auf Hawaii.“</p>
+    <p><span class="op">Beurteilen</span> Sie diese Aussage (M2).</p>
+    <span class="st-be">(6 BE / ca. 9 Min.)</span></div></div>
+  <div class="sheet-no">1</div>
+</section>
+
+<!-- ================= Blatt 2: M1, M2, M3 ================= -->
+<section class="sheet">
+  <div class="mats">
+    <div class="mat">
+      <h3>M1: Chile – Lage an der Plattengrenze</h3>
+      <svg viewBox="0 0 300 490" role="img" aria-label="Schematische Karte Chiles mit Tiefseegraben">
+        <rect x="10" y="10" width="288" height="472" class="f-water"/>
+        <polygon class="f-land" style="stroke:var(--ink-2)" stroke-width=".8" points="127.6,10 138.4,18.4 150.4,28 151.6,48.4 149.2,89.2 146.8,122.8 138.4,164.8 134.8,202 130,226 116.8,247.6 112,268 114.4,283.6 108.4,298 103.6,310 106,328 98.8,346 86.8,365.2 89.2,388 86.8,412 98.8,436 118,448 142,460 172,469.6 186.4,476.8 208,466 202,454 173.2,434.8 166,425.2 172,406 181.6,394 203.2,379.6 184,358 214,346 226,322 229.6,316 214,298 246.4,286 250,272.8 298,264 298,10"/>
+        <polygon class="f-land2" points="150.4,28 160,16 178,70 187.6,82 174.4,106 160,142 154,178 154,202 149.2,238 142,274 132.4,310 134.8,346 126.4,382 118,406 130,430 170.8,433.6 170.8,464.8 172,469.6 142,460 118,448 98.8,436 86.8,412 89.2,388 86.8,365.2 98.8,346 106,328 103.6,310 108.4,298 114.4,283.6 112,268 116.8,247.6 130,226 134.8,202 138.4,164.8 146.8,122.8 149.2,89.2 151.6,48.4"/>
+        <polyline fill="none" style="stroke:var(--ink-2)" stroke-width="1" stroke-dasharray="4 3" points="150.4,28 160,16 178,70 187.6,82 174.4,106 160,142 154,178 154,202 149.2,238 142,274 132.4,310 134.8,346 126.4,382 118,406 130,430 170.8,433.6 170.8,464.8"/>
+        <polyline fill="none" style="stroke:var(--ink)" stroke-width="2" points="118,10 132.4,40 136,88 131.2,130 125.2,166 119.2,202 106,238 96.4,274 90.4,310 84.4,346 82,364"/>
+        <g style="fill:var(--ink)">
+          <path d="M134.4,60 L141,64 L134.4,68 Z"/><path d="M134.2,106 L140.8,110 L134.2,114 Z"/><path d="M128.4,144 L135,148 L128.4,152 Z"/><path d="M122.4,180 L129,184 L122.4,188 Z"/><path d="M113,216 L119.6,220 L113,224 Z"/><path d="M101.2,252 L107.8,256 L101.2,260 Z"/><path d="M93.4,288 L100,292 L93.4,296 Z"/><path d="M87.4,324 L94,328 L87.4,332 Z"/>
+        </g>
+        <g style="fill:var(--ink)"><path d="M130.8,273 L135.6,281 L126,281 Z"/><path d="M171.5,125.3 L176.3,133.3 L166.7,133.3 Z"/></g>
+        <use href="#eq" x="106.7" y="258.4" width="12" height="12"/>
+        <use href="#eq" x="113.2" y="233.4" width="12" height="12"/>
+        <g style="fill:var(--ink)"><rect x="143" y="204.4" width="6" height="6"/><rect x="147.4" y="25" width="6" height="6"/></g>
+        <text x="152" y="215" font-size="9.5">Santiago</text>
+        <text x="156" y="36" font-size="9.5">Arica</text>
+        <text x="138" y="283" font-size="9.5" font-weight="600">Villarrica</text>
+        <text x="178" y="134" font-size="9.5" font-weight="600">Ojos del Salado</text>
+        <text x="96" y="262" font-size="9" text-anchor="end">Valdivia 1960</text>
+        <text x="96" y="272" font-size="9" text-anchor="end" font-weight="700">M 9,5</text>
+        <text x="102" y="236" font-size="9" text-anchor="end">Maule 2010</text>
+        <text x="102" y="246" font-size="9" text-anchor="end" font-weight="700">M 8,8</text>
+        <text x="125" y="370" font-size="10" font-weight="700" letter-spacing="3" transform="rotate(-80 125 370)">CHILE</text>
+        <text x="232" y="22" font-size="8.5" style="fill:var(--muted)">PERU</text>
+        <text x="212" y="54" font-size="8.5" style="fill:var(--muted)">BOLIVIEN</text>
+        <text x="188" y="250" font-size="8.5" style="fill:var(--muted)">ARGENTINIEN</text>
+        <text x="16" y="140" font-size="11" font-weight="700">Nazca-</text>
+        <text x="16" y="153" font-size="11" font-weight="700">Platte</text>
+        <line x1="20" y1="174" x2="80" y2="174" style="stroke:var(--ink)" stroke-width="2" marker-end="url(#arr)"/>
+        <text x="16" y="190" font-size="9">ca. 7 cm/Jahr</text>
+        <text x="16" y="330" font-size="10" font-style="italic" style="fill:var(--water-ink)">Pazifischer</text>
+        <text x="16" y="342" font-size="10" font-style="italic" style="fill:var(--water-ink)">Ozean</text>
+        <text x="16" y="424" font-size="10" font-weight="700">Antarktische</text>
+        <text x="16" y="436" font-size="10" font-weight="700">Platte</text>
+        <text x="196" y="150" font-size="11" font-weight="700">Süd-</text>
+        <text x="196" y="163" font-size="11" font-weight="700">amerikanische</text>
+        <text x="196" y="176" font-size="11" font-weight="700">Platte</text>
+        <rect x="200" y="380" width="94" height="98" class="f-surface" style="stroke:var(--ink-2)" stroke-width=".8"/>
+        <line x1="206" y1="392" x2="222" y2="392" style="stroke:var(--ink)" stroke-width="2"/><path d="M212,392 L218,395.5 L212,399 Z" style="fill:var(--ink)"/>
+        <text x="226" y="395" font-size="8">Tiefseegraben</text>
+        <path d="M214,404 L218,411 L210,411 Z" style="fill:var(--ink)"/><text x="226" y="411" font-size="8">Vulkan</text>
+        <use href="#eq" x="208" y="415" width="12" height="12"/><text x="226" y="424" font-size="8">Epizentrum</text>
+        <rect x="211" y="432" width="6" height="6" style="fill:var(--ink)"/><text x="226" y="438" font-size="8">Stadt</text>
+        <line x1="206" y1="449" x2="222" y2="449" style="stroke:var(--ink-2)" stroke-dasharray="4 3"/><text x="226" y="452" font-size="8">Staatsgrenze</text>
+        <line x1="206" y1="468" x2="260" y2="468" style="stroke:var(--ink)" stroke-width="3"/>
+        <text x="206" y="463" font-size="7.5">0</text><text x="260" y="463" font-size="7.5" text-anchor="end">500 km</text>
+      </svg>
+      <div class="src">Eigene, stark vereinfachte Darstellung</div>
+    </div>
+
+    <div class="mat">
+      <h3>M2: Ein Land in Bewegung</h3>
+      <div class="mat-text mat-box">
+        <p><b>Das Valdivia-Erdbeben 1960</b><br>Am 22. Mai 1960 erschütterte ein Erdbeben der Magnitude 9,5 den Süden Chiles – das stärkste Beben, das jemals gemessen wurde. Die Erde bebte rund zehn Minuten lang. Die Bruchfläche zwischen Nazca- und Südamerikanischer Platte war etwa 1.000 km lang. Ein Tsunami verwüstete die Küste und erreichte Stunden später sogar Hawaii und Japan. Teile der Küste sanken dauerhaft um bis zu zwei Meter ab. Zwei Tage nach dem Hauptbeben brach in den Anden der Vulkan Cordón Caulle aus.</p>
+        <p><b>Der Vulkan Villarrica</b><br>Der Villarrica (2.847 m) ist ein steiler, schneebedeckter Kegel und einer der aktivsten Vulkane Südamerikas. In seinem Krater brodelt zeitweise ein Lavasee. Im Laufe seiner Geschichte wechselten Lavaströme mit explosiven Ausbrüchen, bei denen Asche und Gesteinsbrocken ausgeworfen wurden. Schmilzt bei einem Ausbruch das Gletschereis am Gipfel, schießen Schlammströme die Täler hinab. Beim Ausbruch am 3. März 2015 stiegen Lavafontänen über einen Kilometer hoch; tausende Menschen in den umliegenden Orten wurden evakuiert.</p>
+      </div>
+      <div class="src">Eigene Zusammenstellung nach Fachinformationen (vereinfacht)</div>
+    </div>
+
+    <div class="mat wide">
+      <h3>M3: Schematisches Profil durch Chile und die Anden (ca. 33° S)</h3>
+      <svg viewBox="0 -42 640 322" role="img" aria-label="Profil der Subduktionszone vor Chile">
+        <rect x="0" y="60" width="640" height="220" fill="#d9a07a"/>
+        <path d="M0,60 L235,60 L205,120 Q192,96 170,90 L0,90 Z" class="f-water"/>
+        <path d="M0,90 L170,90 Q192,96 205,120 L626,280 L582,280 L196,138 Q180,112 160,110 L0,110 Z" fill="#4d5a63"/>
+        <path d="M205,120 L235,60 L250,48 L270,38 L290,46 L305,54 L340,54 L360,40 L380,22 L395,30 L410,14 L425,26 L440,18 L452,8 L464,18 L480,24 L495,12 L510,28 L530,36 L560,48 L640,52 L640,150 L560,158 Q470,190 390,160 L330,148 L270,144 Z" fill="#a8927a"/>
+        <line x1="0" y1="60" x2="235" y2="60" style="stroke:var(--water-ink)" stroke-dasharray="3 3" stroke-width=".8"/>
+        <path d="M452,212 C444,196 458,184 450,168 C444,152 456,140 452,126 L452,10" fill="none" stroke="#e0662a" stroke-width="4"/>
+        <ellipse cx="452" cy="122" rx="17" ry="7" fill="#e0662a"/>
+        <use href="#eq" x="224" y="123" width="12" height="12"/><use href="#eq" x="274" y="142" width="12" height="12"/><use href="#eq" x="324" y="161" width="12" height="12"/><use href="#eq" x="384" y="184" width="12" height="12"/><use href="#eq" x="514" y="234" width="12" height="12"/><use href="#eq" x="300" y="96" width="12" height="12"/>
+        <line x1="40" y1="76" x2="110" y2="76" style="stroke:var(--ink)" stroke-width="2" marker-end="url(#arr)"/>
+        <text x="116" y="80" font-size="10">ca. 7 cm/Jahr</text>
+        <line x1="372" y1="196" x2="430" y2="218" stroke="#fff" stroke-width="2" marker-end="url(#arr-w)"/>
+        <text x="270" y="170" font-size="10" style="fill:#fff" transform="rotate(21 270 170)">Plattenzug</text>
+        <text x="16" y="130" font-size="11" font-weight="700" style="fill:#1e1a15">Nazca-Platte</text>
+        <text x="16" y="143" font-size="10" style="fill:#1e1a15">(ozeanisch, ca. 3,0 g/cm³)</text>
+        <line x1="198" y1="160" x2="205" y2="124" stroke="#1e1a15" stroke-width=".8"/>
+        <text x="196" y="172" font-size="10" text-anchor="end" font-weight="600" style="fill:#1e1a15">Atacamagraben</text>
+        <text x="196" y="184" font-size="9.5" text-anchor="end" style="fill:#1e1a15">(über 8.000 m tief)</text>
+        <text x="480" y="98" font-size="11" font-weight="700" style="fill:#1e1a15">Südamerikanische Platte</text>
+        <text x="480" y="111" font-size="10" style="fill:#1e1a15">(kontinental, ca. 2,7 g/cm³)</text>
+        <line x1="470" y1="126" x2="500" y2="134" stroke="#1e1a15" stroke-width=".8"/>
+        <text x="503" y="138" font-size="10" style="fill:#1e1a15">Magmakammer</text>
+        <line x1="462" y1="196" x2="452" y2="206" stroke="#1e1a15" stroke-width=".8"/>
+        <text x="466" y="194" font-size="10" style="fill:#1e1a15">Magmabildung</text>
+        <text x="466" y="206" font-size="9.5" style="fill:#1e1a15">in ca. 100 km Tiefe</text>
+        <text x="40" y="250" font-size="11" font-weight="600" style="fill:#1e1a15">Asthenosphäre (Erdmantel)</text>
+        <g font-size="10" text-anchor="middle">
+          <text x="262" y="-20">Küstenkordillere</text><line x1="262" y1="-16" x2="270" y2="34" style="stroke:var(--ink-2)" stroke-width=".7"/>
+          <text x="322" y="-4">Längstal</text><line x1="322" y1="0" x2="322" y2="50" style="stroke:var(--ink-2)" stroke-width=".7"/>
+          <text x="452" y="-28" font-weight="600">Vulkan (z. B. Villarrica)</text><line x1="452" y1="-24" x2="452" y2="4" style="stroke:var(--ink-2)" stroke-width=".7"/>
+          <text x="560" y="-8">Hauptkordillere (Anden)</text><line x1="560" y1="-4" x2="510" y2="24" style="stroke:var(--ink-2)" stroke-width=".7"/>
+          <text x="90" y="50" font-style="italic" style="fill:var(--water-ink)">Pazifik</text>
+        </g>
+        <text x="4" y="-28" font-size="10" font-weight="600">W ←</text>
+        <text x="636" y="-28" font-size="10" font-weight="600" text-anchor="end">→ O</text>
+      </svg>
+      <div class="src">Eigene Darstellung, schematisch, stark überhöht. Sterne = Erdbebenherde</div>
+    </div>
+  </div>
+  <div class="sheet-no">2</div>
+</section>
+
+<!-- ================= Blatt 3: M4, M5 ================= -->
+<section class="sheet">
+  <div class="mats">
+    <div class="mat wide">
+      <h3>M4: Tiefe der Erdbebenherde (Hypozentren) unter Chile in Abhängigkeit von der Entfernung zur Tiefseerinne</h3>
+      <svg viewBox="0 0 640 300" role="img" aria-label="Streudiagramm: Erdbebenherde werden nach Osten tiefer">
+        <g style="stroke:var(--line-2)">
+          <line x1="168" y1="40" x2="168" y2="260"/><line x1="276" y1="40" x2="276" y2="260"/><line x1="384" y1="40" x2="384" y2="260"/><line x1="492" y1="40" x2="492" y2="260"/><line x1="600" y1="40" x2="600" y2="260"/>
+          <line x1="60" y1="71.4" x2="600" y2="71.4"/><line x1="60" y1="102.9" x2="600" y2="102.9"/><line x1="60" y1="134.3" x2="600" y2="134.3"/><line x1="60" y1="165.7" x2="600" y2="165.7"/><line x1="60" y1="197.1" x2="600" y2="197.1"/><line x1="60" y1="228.6" x2="600" y2="228.6"/><line x1="60" y1="260" x2="600" y2="260"/>
+        </g>
+        <path d="M60,260 L60,40 L600,40" fill="none" style="stroke:var(--ink)" stroke-width="1.5"/>
+        <g fill="#c2410c" fill-opacity=".85" style="stroke:var(--ink)" stroke-width=".6">
+          <circle cx="65.4" cy="43.1" r="3.6"/><circle cx="70.8" cy="44.7" r="3.6"/><circle cx="81.6" cy="47.9" r="3.6"/><circle cx="87" cy="49.4" r="3.6"/><circle cx="92.4" cy="46.3" r="3.6"/><circle cx="103.2" cy="51" r="3.6"/><circle cx="108.6" cy="47.9" r="3.6"/><circle cx="114" cy="54.1" r="3.6"/><circle cx="124.8" cy="52.6" r="3.6"/><circle cx="130.2" cy="55.7" r="3.6"/><circle cx="141" cy="58.9" r="3.6"/><circle cx="151.8" cy="57.3" r="3.6"/><circle cx="157.2" cy="62" r="3.6"/><circle cx="168" cy="68.3" r="3.6"/><circle cx="184.2" cy="71.4" r="3.6"/><circle cx="200.4" cy="74.6" r="3.6"/><circle cx="222" cy="80.9" r="3.6"/><circle cx="238.2" cy="87.1" r="3.6"/><circle cx="254.4" cy="90.3" r="3.6"/><circle cx="276" cy="99.7" r="3.6"/><circle cx="303" cy="106" r="3.6"/><circle cx="330" cy="115.4" r="3.6"/><circle cx="357" cy="121.7" r="3.6"/><circle cx="384" cy="134.3" r="3.6"/><circle cx="411" cy="143.7" r="3.6"/>
+          <circle cx="524.4" cy="216" r="3.6"/><circle cx="535.2" cy="228.6" r="3.6"/><circle cx="546" cy="225.4" r="3.6"/><circle cx="529.8" cy="234.9" r="3.6"/><circle cx="540.6" cy="219.1" r="3.6"/>
+          <circle cx="195" cy="44.7" r="3.6"/><circle cx="232.8" cy="43.1" r="3.6"/><circle cx="265.2" cy="46.3" r="3.6"/>
+        </g>
+        <g font-size="10" text-anchor="middle" style="fill:var(--muted)"><text x="60" y="30">0</text><text x="168" y="30">200</text><text x="276" y="30">400</text><text x="384" y="30">600</text><text x="492" y="30">800</text><text x="600" y="30">1.000</text></g>
+        <g font-size="10" text-anchor="end" style="fill:var(--muted)"><text x="54" y="44">0</text><text x="54" y="75">100</text><text x="54" y="107">200</text><text x="54" y="138">300</text><text x="54" y="170">400</text><text x="54" y="201">500</text><text x="54" y="233">600</text><text x="54" y="264">700</text></g>
+        <text x="330" y="14" text-anchor="middle" font-size="10.5">Entfernung von der Tiefseerinne nach Osten (km)</text>
+        <text x="16" y="284" font-size="10.5">Herdtiefe (km)</text>
+        <g font-size="9.5" style="fill:var(--ink-2)">
+          <text x="66" y="276">W</text><text x="596" y="276" text-anchor="end">O</text>
+          <line x1="114" y1="262" x2="114" y2="270" style="stroke:var(--ink-2)"/><text x="114" y="284" text-anchor="middle">Küste</text>
+          <line x1="195" y1="262" x2="195" y2="270" style="stroke:var(--ink-2)"/><text x="195" y="284" text-anchor="middle">Anden-Hauptkamm</text>
+        </g>
+      </svg>
+      <div class="src">Eigene Darstellung, schematisch nach Messdaten (vereinfacht). Jeder Punkt = ein Erdbebenherd</div>
+    </div>
+
+    <div class="mat wide">
+      <h3>M5: Aufzeichnungen eines Erdbebens an drei Messstationen</h3>
+      <table style="margin-bottom:14px">
+        <thead><tr><th>Messstation</th><th>Eintreffen der ersten P-Welle</th><th>Eintreffen der ersten S-Welle</th></tr></thead>
+        <tbody>
+          <tr><td>Station A</td><td>14:32:10 Uhr</td><td>14:32:35 Uhr</td></tr>
+          <tr><td>Station B</td><td>14:31:50 Uhr</td><td>14:32:05 Uhr</td></tr>
+          <tr><td>Station C</td><td>14:32:40 Uhr</td><td>14:33:20 Uhr</td></tr>
+        </tbody>
+      </table>
+      <svg viewBox="0 0 640 320" role="img" aria-label="Weg-Zeit-Diagramm für P- und S-Wellen mit Zeitdifferenz">
+        <g style="stroke:var(--line)">
+          <line x1="107.3" y1="40" x2="107.3" y2="270"/><line x1="194" y1="40" x2="194" y2="270"/><line x1="280.7" y1="40" x2="280.7" y2="270"/><line x1="367.3" y1="40" x2="367.3" y2="270"/><line x1="454" y1="40" x2="454" y2="270"/><line x1="540.7" y1="40" x2="540.7" y2="270"/>
+          <line x1="64" y1="254.7" x2="584" y2="254.7"/><line x1="64" y1="239.3" x2="584" y2="239.3"/><line x1="64" y1="224" x2="584" y2="224"/><line x1="64" y1="208.7" x2="584" y2="208.7"/><line x1="64" y1="178" x2="584" y2="178"/><line x1="64" y1="162.7" x2="584" y2="162.7"/><line x1="64" y1="147.3" x2="584" y2="147.3"/><line x1="64" y1="132" x2="584" y2="132"/><line x1="64" y1="101.3" x2="584" y2="101.3"/><line x1="64" y1="86" x2="584" y2="86"/><line x1="64" y1="70.7" x2="584" y2="70.7"/><line x1="64" y1="55.3" x2="584" y2="55.3"/>
+        </g>
+        <g style="stroke:var(--line-2)">
+          <line x1="150.7" y1="40" x2="150.7" y2="270"/><line x1="237.3" y1="40" x2="237.3" y2="270"/><line x1="324" y1="40" x2="324" y2="270"/><line x1="410.7" y1="40" x2="410.7" y2="270"/><line x1="497.3" y1="40" x2="497.3" y2="270"/><line x1="584" y1="40" x2="584" y2="270"/>
+          <line x1="64" y1="193.3" x2="584" y2="193.3"/><line x1="64" y1="116.7" x2="584" y2="116.7"/><line x1="64" y1="40" x2="584" y2="40"/>
+        </g>
+        <path d="M64,40 L64,270 L590,270" fill="none" style="stroke:var(--ink)" stroke-width="1.5"/>
+        <line x1="64" y1="270" x2="584" y2="116.7" stroke="#2d6a8e" stroke-width="2.6"/>
+        <line x1="64" y1="270" x2="584" y2="40" stroke="#c2410c" stroke-width="2.6"/>
+        <line x1="64" y1="270" x2="584" y2="193.3" style="stroke:var(--ink)" stroke-width="2" stroke-dasharray="7 4"/>
+        <text x="440" y="96" font-size="11" font-weight="600" style="fill:#c2410c">S-Welle</text>
+        <text x="470" y="160" font-size="11" font-weight="600" style="fill:#2d6a8e">P-Welle</text>
+        <text x="460" y="226" font-size="11" font-weight="600">Zeitdifferenz S − P</text>
+        <g font-size="10" text-anchor="middle" style="fill:var(--muted)"><text x="64" y="286">0</text><text x="150.7" y="286">100</text><text x="237.3" y="286">200</text><text x="324" y="286">300</text><text x="410.7" y="286">400</text><text x="497.3" y="286">500</text><text x="584" y="286">600</text></g>
+        <g font-size="10" text-anchor="end" style="fill:var(--muted)"><text x="56" y="274">0</text><text x="56" y="197">50</text><text x="56" y="121">100</text><text x="56" y="44">150</text></g>
+        <text x="590" y="304" text-anchor="end" font-size="10.5">Entfernung zum Epizentrum (km)</text>
+        <text x="14" y="28" font-size="10.5">Zeit nach dem Beben (s)</text>
+      </svg>
+      <div class="src">Eigene Darstellung. Rasterlinien alle 50 km und alle 10 s. Mittlere Geschwindigkeiten: P-Welle ca. 6 km/s, S-Welle ca. 4 km/s.</div>
+    </div>
+  </div>
+  <div class="sheet-no">3</div>
+</section>
+
+<!-- ================= Blatt 4: Aufgabe 2 + M6 + Operatoren ================= -->
+<section class="sheet">
+  <div class="task-bar" style="margin-top:0"><b>Aufgabe 2</b><span class="be">(10 BE)</span><span class="time">Zeitmanagement: ca. 20 Minuten</span></div>
+  <div class="st" data-min="20" data-label="Aufgabe 2"><span class="st-l"></span><div class="st-b">
+    <p>Im Odenwald, nur wenige Kilometer von Darmstadt entfernt, liegt bei Lautertal das „Felsenmeer“: Ein ganzer Hang ist mit gerundeten Gesteinsblöcken übersät, viele davon so groß wie ein Auto. <span class="op">Erklären</span> Sie die Entstehung eines solchen Felsenmeeres ausgehend von M6.</p>
+    <span class="st-be">(10 BE / ca. 20 Min.)</span></div></div>
+
+  <div class="mat" style="margin-top:22px">
+    <h3>M6: Vom Granit zum Felsenmeer</h3>
+    <svg viewBox="0 0 660 222" role="img" aria-label="Drei Stadien: Klüftung, Vergrusung, Freilegung">
+      <text x="110" y="15" text-anchor="middle" font-size="13" font-weight="700">Stadium 1</text>
+      <rect x="10" y="44" width="200" height="14" fill="#8a6a48"/>
+      <rect x="10" y="58" width="200" height="150" fill="#cdb8a0"/>
+      <g stroke="#5a4c40" stroke-width="2"><line x1="60" y1="58" x2="60" y2="208"/><line x1="110" y1="58" x2="110" y2="208"/><line x1="160" y1="58" x2="160" y2="208"/><line x1="10" y1="96" x2="210" y2="96"/><line x1="10" y1="134" x2="210" y2="134"/><line x1="10" y1="172" x2="210" y2="172"/></g>
+      <text x="330" y="15" text-anchor="middle" font-size="13" font-weight="700">Stadium 2</text>
+      <rect x="230" y="44" width="200" height="14" fill="#8a6a48"/>
+      <rect x="230" y="58" width="200" height="150" fill="url(#grus)"/>
+      <g fill="#cdb8a0" stroke="#8b7b6a">
+        <rect x="239" y="67" width="32" height="20" rx="10"/><rect x="289" y="67" width="32" height="20" rx="10"/><rect x="339" y="67" width="32" height="20" rx="10"/><rect x="389" y="67" width="32" height="20" rx="10"/>
+        <rect x="236" y="102" width="38" height="26" rx="11"/><rect x="286" y="102" width="38" height="26" rx="11"/><rect x="336" y="102" width="38" height="26" rx="11"/><rect x="386" y="102" width="38" height="26" rx="11"/>
+        <rect x="234" y="138" width="42" height="30" rx="8"/><rect x="284" y="138" width="42" height="30" rx="8"/><rect x="334" y="138" width="42" height="30" rx="8"/><rect x="384" y="138" width="42" height="30" rx="8"/>
+        <rect x="233" y="175" width="44" height="31" rx="5"/><rect x="283" y="175" width="44" height="31" rx="5"/><rect x="333" y="175" width="44" height="31" rx="5"/><rect x="383" y="175" width="44" height="31" rx="5"/>
+      </g>
+      <text x="550" y="15" text-anchor="middle" font-size="13" font-weight="700">Stadium 3</text>
+      <path d="M450,110 L650,190 L650,208 L450,208 Z" fill="#cdb8a0"/>
+      <g fill="#cdb8a0" stroke="#5a4c40" stroke-width="1.2">
+        <rect x="468" y="102" width="34" height="24" rx="10"/><rect x="503" y="117" width="30" height="22" rx="10"/><rect x="536" y="127" width="36" height="26" rx="11"/><rect x="576" y="146" width="30" height="22" rx="10"/><rect x="608" y="157" width="32" height="24" rx="10"/><rect x="488" y="86" width="26" height="20" rx="9"/><rect x="560" y="112" width="24" height="18" rx="8"/>
+      </g>
+      <path d="M462,70 Q540,80 628,138" fill="none" stroke="#2d6a8e" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arr-blue)"/>
+      <text x="470" y="62" font-size="9.5" style="fill:var(--water-ink)">abfließendes Wasser</text>
+      <g font-size="9.5" style="fill:var(--muted)"><text x="10" y="220">Boden</text><text x="60" y="220">Granit mit Klüften</text><text x="230" y="220">Grus (zerfallener Granit) mit Kernsteinen</text><text x="450" y="220">freigelegte Blöcke am Hang</text></g>
+    </svg>
+    <div class="mat-text mat-box" style="margin-top:12px">
+      <p><b>Granit</b> ist ein magmatisches, grobkristallines Tiefengestein (Plutonit), das durch langsame Abkühlung von aufsteigendem Magma im Erdinneren entsteht. Es besteht hauptsächlich aus Feldspat, Quarz und Glimmer. Beim Abkühlen bildet sich ein dreidimensionales, rechtwinkliges Netz aus Schrumpfungsrissen und -klüften. Das Gestein des Felsenmeers im Odenwald (Quarzdiorit) ist dem Granit sehr ähnlich.</p>
+      <p>Viele Felsenmeere in Mitteleuropa wurden in einer Zeit mit feucht-warmem Klima (Tertiär) unter einer Bodendecke vorbereitet und erst später freigelegt.</p>
+    </div>
+    <div class="src">Eigene Darstellung (schematisch) und Zusammenstellung</div>
+  </div>
+
+  <div class="oplist">
+    <b class="h">Operatoren-Liste</b>
+    <p><b>beschreiben</b> (AFB I): Sachverhalte schlüssig wiedergeben</p>
+    <p><b>herausarbeiten</b> (AFB II): Sachverhalte unter bestimmten Gesichtspunkten aus vorgegebenem Material entnehmen, wiedergeben und/oder ggf. berechnen</p>
+    <p><b>darstellen</b> (AFB II): Sachverhalte strukturiert und zusammenhängend verdeutlichen</p>
+    <p><b>erklären</b> (AFB II): Sachverhalte schlüssig aus Kenntnissen in einen Zusammenhang stellen</p>
+    <p><b>erläutern</b> (AFB II): Sachverhalte mit Beispielen oder Belegen veranschaulichen</p>
+    <p><b>begründen</b> (AFB II): Aussagen durch Argumente stützen, die durch Beispiele oder andere Belege untermauert werden</p>
+    <p><b>beurteilen</b> (AFB III): Aussagen, Behauptungen, Vorschläge oder Maßnahmen untersuchen, die dabei zugrunde gelegten Kriterien benennen und ein begründetes Sachurteil formulieren</p>
+  </div>
+  <div class="sheet-no">4</div>
+</section>
+
+<!-- ================= Erwartungshorizont ================= -->
+<section class="sheet solutions" id="loesung">
+  <div class="sol-head">
+    <div><div class="overline">Zum Selbstkorrigieren</div><h2>Erwartungshorizont</h2></div>
+    <span class="chip">Übungsklausur 2 · 60 BE</span>
+  </div>
+  <p style="font-size:14px;color:var(--ink-2)">Die Punkte sind Richtwerte. Du musst nicht wörtlich so formulieren – entscheidend ist, dass die Aspekte fachlich korrekt und mit Materialbezug vorkommen.</p>
+
+  <div class="sol">
+    <h3>1 a) Plattentektonische Lage, Anden &amp; Atacamagraben <span>14 BE · AFB I + II</span></h3>
+    <ul>
+      <li><strong>Lage:</strong> Chile liegt am Westrand der <strong>Südamerikanischen Platte</strong>; die ozeanische <strong>Nazca-Platte</strong> bewegt sich mit ca. 7 cm/Jahr nach Osten auf sie zu (M1) → <strong>konvergente, destruktive</strong> Plattengrenze (Ozean–Kontinent, „Andentyp“); im Süden grenzt die Antarktische Platte an (3)</li>
+      <li>Die Nazca-Platte ist als ozeanische Platte <strong>dichter</strong> (ca. 3,0 g/cm³) als die kontinentale (ca. 2,7 g/cm³) (M3) → sie wird unter die Südamerikanische Platte <strong>subduziert</strong> (2)</li>
+      <li><strong>Atacamagraben:</strong> An der Abtauchstelle wird der Meeresboden nach unten gezogen → langgestreckter <strong>Tiefseegraben</strong> (über 8.000 m tief) parallel zur Küste (3)</li>
+      <li><strong>Anden:</strong> Durch die Konvergenz wird die kontinentale Kruste am Plattenrand gestaucht, gefaltet und verdickt → <strong>Faltengebirge (Orogenese)</strong>; zusätzlich baut aufsteigendes Magma Vulkane auf (Hauptkordillere mit Vulkanen, M3) (4)</li>
+      <li>Antrieb v. a. durch <strong>Plattenzug</strong>; die verdickte, leichte Kruste ragt durch <strong>Isostasie</strong> hoch auf (Gebirgswurzel) (2)</li>
+    </ul>
+  </div>
+
+  <div class="sol">
+    <h3>1 b) Verteilung der Erdbebenherde &amp; starke Beben <span>12 BE · AFB II</span></h3>
+    <ul>
+      <li><strong>Verteilung (M4):</strong> nahe der Tiefseerinne flache Herde (unter ca. 70 km); mit zunehmender Entfernung nach Osten werden die Herde immer tiefer (ca. 100–300 km), weit im Osten Tiefbeben in ca. 550–650 km Tiefe; zusätzlich vereinzelte flache Beben in der kontinentalen Kruste (3)</li>
+      <li><strong>Erläuterung:</strong> Die schräg nach Osten abfallende Zone zeichnet die abtauchende Nazca-Platte nach (<strong>Wadati-Benioff-Zone</strong>); nur in der kalten, spröden Platte können in dieser Tiefe Beben entstehen → Flach-, Mittel- und Tiefbeben (3)</li>
+      <li><strong>Warum so stark:</strong> Die Platten <strong>verhaken</strong> sich an einer riesigen Kontaktfläche (Bruchfläche 1960 ca. 1.000 km lang, M2) → über Jahrzehnte bis Jahrhunderte Spannungsaufbau (2)</li>
+      <li>Hohe Konvergenzgeschwindigkeit (ca. 7 cm/Jahr) → schneller Spannungsaufbau; ruckartiges Lösen setzt enorme Energie frei (Valdivia 1960: M 9,5; Maule 2010: M 8,8) (2)</li>
+      <li>Vertikaler Versatz des Meeresbodens → <strong>Tsunami</strong> (bis Hawaii und Japan, M2); Absenkung der Küste (2)</li>
+    </ul>
+  </div>
+
+  <div class="sol">
+    <h3>1 c) Fließschema: Vulkanismus am Villarrica <span>12 BE · AFB II</span></h3>
+    <p class="hint">Darstellung (ca. 4 BE): Überschrift, lineare Anordnung, unbeschriftete Pfeile, Nominalstil. Inhalt (ca. 8 BE): logische, vollständige Kette mit Fachbegriffen.</p>
+    <p class="flow-title">Entstehung des Vulkanismus am Villarrica</p>
+    <div class="flow">
+      <div class="start">Ausgangspunkt: Konvergenz von Nazca-Platte und Südamerikanischer Platte</div>
+      <div>Subduktion der dichteren ozeanischen Nazca-Platte, Bildung des Atacamagrabens</div>
+      <div>Abtauchen der Platte in die Asthenosphäre (Plattenzug)</div>
+      <div>Anstieg von Druck und Temperatur, Reibung mit zunehmender Tiefe</div>
+      <div>Wasserabgabe der Platte → Absenkung des Schmelzpunktes (ca. 100 km Tiefe)</div>
+      <div>teilweises Aufschmelzen, Bildung von Magma</div>
+      <div>Aufstieg des Magmas (geringere Dichte), Aufnahme von Krustenmaterial</div>
+      <div>SiO₂- und gasreiches, zähflüssiges Magma in der Magmakammer, Druckaufbau</div>
+      <div class="end">Ausbruch: Schichtvulkan Villarrica (Wechsel explosiver und effusiver Phasen)</div>
+    </div>
+  </div>
+
+  <div class="sol">
+    <h3>1 d) Entfernungen &amp; drei Stationen <span>6 BE · AFB II</span></h3>
+    <ul>
+      <li>Zeitdifferenzen: A = 25 s, B = 15 s, C = 40 s (1)</li>
+      <li>Abgelesen über die Δt-Linie (bzw. d = Δt · 12 km/s): <strong>A ≈ 300 km</strong>, <strong>B ≈ 180 km</strong>, <strong>C ≈ 480 km</strong> (3)</li>
+      <li><strong>Begründung:</strong> Jede Station liefert nur eine Entfernung, also einen Kreis um die Station; zwei Kreise schneiden sich in zwei Punkten; erst der dritte Kreis ergibt einen eindeutigen gemeinsamen Schnittpunkt = Epizentrum (2)</li>
+    </ul>
+  </div>
+
+  <div class="sol">
+    <h3>1 e) Beurteilung der Reiseführer-Aussage <span>6 BE · AFB III</span></h3>
+    <ul>
+      <li><strong>Teilweise zutreffend:</strong> Der Villarrica hat zeitweise einen Lavasee und fördert auch Lavaströme bzw. Lavafontänen (effusive Phasen, M2) (1)</li>
+      <li><strong>Dagegen:</strong> Chiles Vulkane sind <strong>Schichtvulkane</strong> an einer Subduktionszone: SiO₂- und gasreiches, zähflüssiges Magma → <strong>explosive Ausbrüche</strong> mit Asche und Gesteinsbrocken (M2) (2)</li>
+      <li>Weitere Gefahren: Schlammströme durch geschmolzenes Gletschereis, Evakuierung tausender Menschen 2015 (M2) (1)</li>
+      <li>Hawaii: <strong>Schildvulkane</strong> über einem Hot Spot mit dünnflüssiger, SiO₂-armer Basaltlava – nicht vergleichbar (1)</li>
+      <li><strong>Urteil:</strong> Die Aussage ist nicht haltbar bzw. verharmlosend, weil … (begründetes Fazit) (1)</li>
+    </ul>
+  </div>
+
+  <div class="sol">
+    <h3>2) Entstehung eines Felsenmeeres <span>10 BE · AFB II</span></h3>
+    <ul>
+      <li><strong>Ausgangsgestein:</strong> Granit (bzw. Quarzdiorit) erstarrt langsam in der Tiefe; beim Abkühlen entsteht ein rechtwinkliges Netz aus <strong>Schrumpfungsklüften</strong> (M6, Stadium 1) (2)</li>
+      <li><strong>Vorverwitterung:</strong> Unter einer Bodendecke dringt Wasser entlang der Klüfte ein; bei feucht-warmem Klima (Tertiär) starke <strong>chemische Verwitterung</strong> (v. a. Hydrolyse der Feldspäte) → Granit zerfällt zu <strong>Grus</strong> (2)</li>
+      <li>Ecken (drei Angriffsflächen) und Kanten (zwei) verwittern schneller als Flächen → <strong>Abrundung</strong> der Blöcke zu festen Kernsteinen im Grus (Stadium 2) (3)</li>
+      <li><strong>Freilegung:</strong> Erosion durch abfließendes Wasser (in Kaltzeiten auch Bodenfließen) spült Boden und Grus aus; die schweren, runden Blöcke bleiben zurück, rutschen hangabwärts und sammeln sich → <strong>Felsenmeer</strong> (Stadium 3) (2)</li>
+      <li><strong>Einordnung:</strong> Zusammenspiel endogener (Magmatismus, Hebung) und exogener Kräfte (Verwitterung, Erosion); Bezeichnung „Wollsackverwitterung“ (1)</li>
+    </ul>
+  </div>
+
+  <div class="selfcheck">
+    <h3>Selbstbewertung</h3>
+    <p style="margin:0;font-size:13.5px;color:var(--ink-2)">Trag deine Punkte ein – die Notenpunkte werden nach einer üblichen Oberstufen-Tabelle berechnet (Richtwert, deine Lehrkraft kann einen anderen Schlüssel verwenden).</p>
+    <div class="sc-grid">
+      <label>1 a) / 14<input type="number" inputmode="decimal" min="0" max="14" step="0.5" placeholder="0"></label>
+      <label>1 b) / 12<input type="number" inputmode="decimal" min="0" max="12" step="0.5" placeholder="0"></label>
+      <label>1 c) / 12<input type="number" inputmode="decimal" min="0" max="12" step="0.5" placeholder="0"></label>
+      <label>1 d) / 6<input type="number" inputmode="decimal" min="0" max="6" step="0.5" placeholder="0"></label>
+      <label>1 e) / 6<input type="number" inputmode="decimal" min="0" max="6" step="0.5" placeholder="0"></label>
+      <label>2) / 10<input type="number" inputmode="decimal" min="0" max="10" step="0.5" placeholder="0"></label>
+    </div>
+    <div class="sc-result">
+      <div>Summe<b id="scSum">0 / 60</b></div>
+      <div>Prozent<b id="scPct">0 %</b></div>
+      <div class="np">Notenpunkte<b id="scNP">0 Punkte</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<script src="js/klausur.js"></script>
+</body>
+</html>

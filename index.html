@@ -1,0 +1,1491 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lernzettel Reliefsphäre</title>
+<meta name="description" content="Interaktiver Lernzettel Geographie LK: Schalenbau, Plattentektonik, Wilson-Zyklus, Vulkane, Erdbeben und Verwitterung – mit drei Erklärstufen, Abhak-Liste und Schnelltests.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e1a15'/%3E%3Cpath d='M2 24 L11 12 L17 19 L23 9 L30 18' fill='none' stroke='%23f07a3e' stroke-width='3'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('geo-reliefsphaere-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+
+<!-- Gemeinsame SVG-Definitionen (Pfeilspitzen, Muster) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="f-ink"/></marker>
+    <marker id="arr-mag" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e0662a"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2d6a8e"/></marker>
+    <pattern id="grus" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#e4d6c2"/><rect x="1" y="2" width="1.6" height="1.6" fill="#9c8a74"/><rect x="5" y="5" width="1.4" height="1.4" fill="#9c8a74"/></pattern>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top" aria-label="Lernzettel Reliefsphäre – nach oben">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 19 L8 11 L12 15 L18 6 L25 14" fill="none" stroke="var(--accent)" stroke-width="2.4"/></svg>
+      <span class="brand-text">Reliefsphäre</span>
+    </a>
+    <nav class="nav" aria-label="Seiten">
+      <a href="index.html" aria-current="page">Lernzettel</a>
+      <a href="uebungsklausur-1.html">Übungsklausur 1</a>
+      <a href="uebungsklausur-2.html">Übungsklausur 2</a>
+    </nav>
+    <div class="topbar-tools">
+      <div class="seg" id="levelSwitch" role="group" aria-label="Erklärstufe für alle Themen">
+        <button type="button" data-l="1" aria-pressed="false"><span class="bars" data-n="1" aria-hidden="true"><i></i><i></i><i></i></span>Einfach</button>
+        <button type="button" data-l="2" aria-pressed="true"><span class="bars" data-n="2" aria-hidden="true"><i></i><i></i><i></i></span>Normal</button>
+        <button type="button" data-l="3" aria-pressed="false"><span class="bars" data-n="3" aria-hidden="true"><i></i><i></i><i></i></span>Genauer</button>
+      </div>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4L7 17M17 7l1.4-1.4"/><path d="M12 8a4 4 0 0 0 0 8z" fill="currentColor"/><path d="M12 8a4 4 0 0 1 0 8"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="topbar-progress" aria-hidden="true"><span id="topProgress"></span></div>
+</header>
+
+<section class="hero" id="top">
+  <svg class="hero-topo" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="1.3">
+      <path d="M870,232 C866,205 905,190 935,192 C968,194 992,212 990,233 C988,256 958,270 928,268 C898,266 873,256 870,232Z"/>
+      <path d="M820,236 C812,190 868,160 932,162 C995,164 1045,195 1041,234 C1037,276 985,304 925,302 C866,300 826,278 820,236Z"/>
+      <path d="M765,240 C752,175 835,128 935,128 C1030,128 1100,170 1096,232 C1092,300 1020,340 928,338 C840,336 775,300 765,240Z"/>
+      <path d="M705,246 C690,160 800,92 940,94 C1075,96 1160,150 1154,230 C1148,320 1050,375 925,372 C810,369 715,320 705,246Z"/>
+      <path d="M640,250 C625,140 770,55 945,58 C1110,61 1225,130 1215,228 C1205,345 1080,412 922,408 C775,404 652,345 640,250Z"/>
+      <path d="M570,256 C555,120 740,15 950,20 C1150,25 1290,110 1280,226 C1270,370 1110,452 918,446 C735,440 584,370 570,256Z"/>
+      <path d="M495,262 C480,95 705,-25 955,-18 C1195,-11 1360,90 1348,224 C1336,395 1140,495 912,486 C690,477 510,395 495,262Z"/>
+      <path d="M250,420 C248,395 280,380 305,382 C335,385 352,402 348,422 C344,444 318,452 296,450 C270,448 252,440 250,420Z"/>
+      <path d="M190,424 C185,375 240,345 305,348 C370,351 410,385 404,426 C398,470 350,492 293,488 C238,484 195,462 190,424Z"/>
+      <path d="M120,430 C112,355 200,305 308,310 C410,315 478,365 470,430 C462,500 385,540 290,534 C200,528 128,492 120,430Z"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div>
+      <div class="overline">Geographie LK · Kursstufe 1 · Lernzettel</div>
+      <h1>Relief&shy;sphäre<span>Plattentektonik, Vulkane, Erdbeben &amp; Verwitterung</span></h1>
+      <p class="lead">Alles, was für die Klausur wichtig ist – jedes Thema in drei Stufen erklärt. Hake ab, was du verstanden hast, und leg Schicht für Schicht deinen Bohrkern frei.</p>
+      <div class="hero-meta">
+        <span class="chip" style="--cc:var(--c2)"><i></i>endogene Kräfte</span>
+        <span class="chip" style="--cc:var(--c6)"><i></i>exogene Kräfte</span>
+        <span class="chip" style="--cc:var(--c1)"><i></i>Operatoren &amp; Methoden</span>
+      </div>
+    </div>
+    <aside class="rank-card" aria-label="Dein Fortschritt">
+      <div class="core" id="core" aria-label="Bohrkern: jede verstandene Schicht färbt sich ein"></div>
+      <div class="rank-info">
+        <div class="overline">Dein Rang</div>
+        <div class="rank-name" id="rankName">Staubkorn</div>
+        <div class="rank-points"><span id="points">0</span> / <span id="pointsMax">0</span> Punkte</div>
+        <div class="rank-bar" aria-hidden="true"><span id="rankBar"></span></div>
+        <div class="rank-next" id="rankNext">&nbsp;</div>
+        <div class="stats">
+          <div><b><span id="doneCount">0</span>/<span id="totalCount">22</span></b>Themen verstanden</div>
+          <div><b><span id="quizCount">0</span>/<span id="quizTotal">0</span></b>Testfragen richtig</div>
+        </div>
+        <button class="btn" type="button" id="randomTopic">Zufälliges offenes Thema →</button>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="layout">
+  <aside class="sidebar" aria-label="Inhalt">
+    <nav class="toc-side" id="tocSide"></nav>
+    <div class="side-box">
+      <div class="overline">Testen</div>
+      <a href="uebungsklausur-1.html">Übungsklausur 1 · Ostafrika →</a>
+      <a href="uebungsklausur-2.html">Übungsklausur 2 · Chile →</a>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="block" id="inhalt">
+      <h2>Inhalt</h2>
+      <p class="block-lead">Eine genaue Themenliste gab es nicht – deshalb sind die Themen aus dem Hefter, dem Lernzettel und der Klausur „Reliefsphäre“ von 2024 zusammengestellt. Hake direkt hier oder beim Thema ab.</p>
+      <div class="howto">
+        <div><span class="n">01</span><b>Stufe wählen</b>Oben rechts für alle Themen – oder bei jedem Thema einzeln: Einfach, Normal, Genauer.</div>
+        <div><span class="n">02</span><b>Abhaken</b>Verstanden? Haken setzen: +10 Punkte und eine neue Schicht im Bohrkern.</div>
+        <div><span class="n">03</span><b>Schnelltest</b>Unter jedem Thema: richtige Antwort beim ersten Versuch = +5 Punkte.</div>
+      </div>
+      <div class="toc-grid" id="tocGrid"></div>
+    </section>
+
+    <!-- ================= KAPITEL I ================= -->
+    <section class="chapter" id="kap-1" style="--cc:var(--c1)" data-short="Handwerkszeug" data-msg="Du weißt jetzt, was die Aufgaben von dir wollen.">
+      <header class="chapter-head">
+        <div class="chapter-no">I</div>
+        <div><div class="overline">Kapitel I</div><h2>Handwerkszeug für die Klausur</h2><p class="chapter-desc">Bevor es um Gestein geht: Wie liest du eine Aufgabe richtig – und wie sieht ein Fließschema aus, das volle Punkte bringt?</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="operatoren" data-show="2">
+        <header class="topic-head"><h3>Operatoren &amp; Anforderungsbereiche</h3></header>
+        <div class="level" data-level="1">
+          <p><strong>Operatoren</strong> sind die Verben in einer Aufgabe. Sie sagen dir genau, <em>was</em> du tun sollst.</p>
+          <ul>
+            <li><strong>nennen</strong> → kurz aufzählen, ohne Erklärung.</li>
+            <li><strong>beschreiben</strong> → sagen, was da ist oder was passiert – noch kein „Warum“.</li>
+            <li><strong>erklären</strong> → das <em>Warum</em> zeigen: Ursache → Wirkung.</li>
+            <li><strong>erläutern</strong> → erklären <em>plus</em> Beispiel.</li>
+            <li><strong>erörtern / beurteilen</strong> → Pro und Contra abwägen, dann eine eigene, begründete Meinung.</li>
+          </ul>
+          <p>Es gibt drei Schwierigkeitsstufen, die <strong>Anforderungsbereiche (AFB)</strong>: AFB I = wiedergeben, AFB II = anwenden &amp; erklären, AFB III = selbst urteilen.</p>
+          <div class="box tipp"><span class="box-label">Merk dir</span>„<strong>anhand</strong> von M1“ = nur das Material benutzen.<br>„<strong>ausgehend</strong> von M1“ = Material <em>und</em> dein eigenes Wissen (Unterricht, Atlas …).</div>
+        </div>
+        <div class="level" data-level="2">
+          <p>Die Operatorenliste aus dem Bildungsplan (Auszug). In der Klausur steht sie meist am Ende – lernen musst du sie trotzdem, weil du wissen musst, wie <em>ausführlich</em> du antworten sollst.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Operator</th><th>AFB</th><th>Was du tun musst</th></tr></thead>
+            <tbody>
+              <tr><th>nennen</th><td class="c"><span class="afb">I</span></td><td>Sachverhalte in knapper Form anführen</td></tr>
+              <tr><th>beschreiben</th><td class="c"><span class="afb">I</span></td><td>Sachverhalte schlüssig wiedergeben</td></tr>
+              <tr><th>bezeichnen</th><td class="c"><span class="afb">I</span></td><td>Sachverhalte (z. B. aus Karten, Diagrammen) begrifflich präzise formulieren</td></tr>
+              <tr><th>herausarbeiten</th><td class="c"><span class="afb a2">II</span></td><td>Sachverhalte unter bestimmten Gesichtspunkten aus dem Material entnehmen, wiedergeben, ggf. berechnen</td></tr>
+              <tr><th>darstellen</th><td class="c"><span class="afb a2">II</span></td><td>Sachverhalte strukturiert und zusammenhängend verdeutlichen (oft als Fließschema)</td></tr>
+              <tr><th>erklären</th><td class="c"><span class="afb a2">II</span></td><td>Sachverhalte schlüssig aus Kenntnissen in einen Zusammenhang stellen (Theorie, Modell, Ursache–Wirkung)</td></tr>
+              <tr><th>erläutern</th><td class="c"><span class="afb a2">II</span></td><td>Sachverhalte mit Beispielen oder Belegen veranschaulichen</td></tr>
+              <tr><th>analysieren</th><td class="c"><span class="afb a2">II</span></td><td>Materialien oder Sachverhalte systematisch untersuchen und auswerten</td></tr>
+              <tr><th>vergleichen</th><td class="c"><span class="afb a2">II</span></td><td>Kriterien festlegen, Gemeinsamkeiten und Unterschiede gewichtend gegenüberstellen, Ergebnis formulieren</td></tr>
+              <tr><th>charakterisieren</th><td class="c"><span class="afb a2">II</span></td><td>Sachverhalte mit ihren typischen Merkmalen in Grundzügen bestimmen</td></tr>
+              <tr><th>erstellen</th><td class="c"><span class="afb a2">II</span></td><td>Sachverhalte in grafischer Form mit Fachbegriffen strukturiert aufzeigen</td></tr>
+              <tr><th>begründen</th><td class="c"><span class="afb a2">II</span></td><td>Aussagen durch Argumente stützen, die durch Beispiele oder Belege untermauert werden</td></tr>
+              <tr><th>erörtern</th><td class="c"><span class="afb a3">III</span></td><td>zu einer These durch Abwägen von Pro- und Contra-Argumenten ein begründetes Ergebnis formulieren</td></tr>
+              <tr><th>beurteilen</th><td class="c"><span class="afb a3">III</span></td><td>Aussagen/Maßnahmen untersuchen, Kriterien benennen, ein begründetes Sachurteil formulieren</td></tr>
+              <tr><th>bewerten</th><td class="c"><span class="afb a3">III</span></td><td>ein begründetes Werturteil formulieren und die Wertmaßstäbe offenlegen</td></tr>
+              <tr><th>überprüfen</th><td class="c"><span class="afb a3">III</span></td><td>Aussagen an Sachverhalten auf ihre Richtigkeit untersuchen, Ergebnis formulieren</td></tr>
+            </tbody>
+          </table></div>
+          <div class="box tipp"><span class="box-label">Aus dem Unterricht</span>„<strong>anhand</strong> von M1“ → nur das Material verwenden.<br>„<strong>ausgehend</strong> von M1“ → mit dem Material arbeiten <em>und</em> Hintergrundwissen (Atlas usw.) einbringen.</div>
+        </div>
+        <div class="level" data-level="3">
+          <h4>So holst du die Punkte</h4>
+          <ul>
+            <li><strong>Zeit = Punkte:</strong> 2024 gab es 60 BE in 90 Minuten – also ca. 1,5 Minuten pro BE. Eine 4-BE-Aufgabe verdient keine ganze Seite, eine 16-BE-Aufgabe schon.</li>
+            <li><strong>Doppelte Operatoren:</strong> „Erläutern Sie … und erklären Sie …“ (2024, Aufgabe a) sind zwei Teilaufgaben – beide brauchen einen eigenen Abschnitt.</li>
+            <li><strong>Materialbezug zeigen:</strong> Werte und Fundstellen nennen („M6: um 14 Uhr ca. 62 °C an der Gesteinsoberfläche …“).</li>
+            <li><strong>Fachsprache:</strong> „Subduktion der ozeanischen Platte“ statt „die Platte geht runter“.</li>
+            <li><strong>„Nicht näher beschreiben“</strong> (Randnotiz 2024): Wenn ein Material nur „unterstützend“ ist, nicht nacherzählen – nur damit belegen.</li>
+          </ul>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>Bei „beschreiben“ schon erklären – oder bei „erklären“ nur beschreiben. Beim Erklären immer die Ursache-Wirkungs-Kette ausschreiben: <em>weil … dadurch … folglich …</em></div>
+          <div class="box merke"><span class="box-label">Aufbau bei AFB III (erörtern, beurteilen)</span>1. These aufgreifen → 2. Pro-Argumente mit Beleg → 3. Contra-Argumente mit Beleg → 4. Abwägung und eigenes, begründetes Fazit. Ein Urteil ohne Begründung bringt fast keine Punkte.</div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Welcher Operator verlangt ausdrücklich Beispiele oder Belege?</p>
+            <ol><li>erklären</li><li>erläutern</li><li>nennen</li></ol>
+            <p class="why">Erläutern = erklären <em>und</em> mit Beispielen oder Belegen veranschaulichen.</p></div>
+          <div class="q" data-a="1"><p>Was bedeutet „ausgehend von M6“?</p>
+            <ol><li>Nur das Material benutzen, kein Zusatzwissen</li><li>Material benutzen und eigenes Fachwissen einbringen</li><li>Das Material abschreiben</li></ol>
+            <p class="why">„Ausgehend von“ = Startpunkt ist das Material, dazu kommt dein Hintergrundwissen. Bei „anhand von“ nur das Material.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="darstellungsformen" data-show="2">
+        <header class="topic-head"><h3>Darstellungsformen: Fließschema, Wirkungsgefüge &amp; Co.</h3></header>
+        <div class="level" data-level="1">
+          <p>Manchmal sollst du nicht schreiben, sondern <strong>zeichnen</strong>:</p>
+          <ul>
+            <li><strong>Fließschema</strong> = eine Kette. Ein Schritt führt zum nächsten, verbunden mit Pfeilen – meist von oben nach unten.</li>
+            <li><strong>Wirkungsgefüge</strong> = ein Netz. Mehrere Ursachen wirken zusammen, es darf Rückkopplungen geben.</li>
+            <li><strong>Skizze</strong> = vereinfachte Zeichnung (z. B. einer Plattengrenze) mit Beschriftung.</li>
+            <li><strong>Profil</strong> = Querschnitt durchs Gelände: Höhe gegen Strecke.</li>
+          </ul>
+          <p>Immer dabei: <strong>Überschrift</strong>, <strong>Stichworte</strong> statt ganzer Sätze, <strong>Fachbegriffe</strong> – und ordentlich zeichnen.</p>
+        </div>
+        <div class="level" data-level="2">
+          <p>Darstellungsaufgaben werden getrennt nach <strong>Darstellung</strong> und <strong>Inhalt</strong> bewertet. Die Kriterien aus dem Unterricht:</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Form</th><th>Darstellung</th><th>Inhalt</th></tr></thead>
+            <tbody>
+              <tr><th>Fließschema</th><td>sorgfältig, aussagekräftige Überschrift, übersichtliche <strong>lineare</strong> Struktur mit <strong>unbeschrifteten Pfeilen</strong>, klare Anordnung, Schlüsselbegriffe, knapp (<strong>Nominalstil</strong>)</td><td>zentrale Aspekte &amp; Einflussgrößen, Fachsprache, logische Abfolge (Kausalität), <strong>keine Rückkopplungen</strong></td></tr>
+              <tr><th>Wirkungsgefüge</th><td>wie Fließschema, aber nicht zwingend linear</td><td>wie Fließschema, <strong>plus wesentliche Rückkopplungen</strong></td></tr>
+              <tr><th>Skizze</th><td>sorgfältig, Überschrift, je nach Aufgabe Beschriftung und/oder Legende</td><td>richtig, Schlüsselbegriffe (Fachbegriffe, Prozesse), Strukturelemente zeigen (Schichtung, Bewegungsrichtung), sinnvoll vereinfacht</td></tr>
+              <tr><th>Profil</th><td>sorgfältig, Überschrift, Achsen korrekt beschriftet, Ortsmarken (A, B …), Himmelsrichtungen</td><td>Maßstäbe korrekt umgesetzt, Werte korrekt eingezeichnet</td></tr>
+              <tr><th>Analysespinne</th><td>sorgfältig, Überschrift, sinnvolle Achsenlänge, Legende</td><td>Achsen korrekt ausgerichtet, Werte korrekt übertragen</td></tr>
+            </tbody>
+          </table></div>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Wenn ein Startpunkt vorgegeben ist („Beginnen Sie mit …“), schreib ihn <em>wörtlich</em> in das erste Kästchen.</div>
+        </div>
+        <div class="level" data-level="3">
+          <p>Beispiel aus der Klausur 2024 (Aufgabe c, 16 BE): <em>Entstehung und Auswirkung einer Mantel-Plume als Fließschema.</em> So könnte eine Lösung aussehen:</p>
+          <p class="flow-title">Entstehung und Auswirkungen des Island-Plumes</p>
+          <div class="flow">
+            <div class="start">Ausgangspunkt: Schicht zwischen äußerem Erdkern und unterem Erdmantel</div>
+            <div>Erhitzung von Mantelmaterial (ca. 200 °C heißer als Umgebung)</div>
+            <div>Abnahme der Dichte</div>
+            <div>Aufstieg als schmaler, ortsfester Schlot (Plume)</div>
+            <div>Stau unter der Lithosphäre: pilzförmige Magmablase</div>
+            <div>Aufwölbung der Lithosphäre</div>
+            <div>Druckanstieg durch nachströmendes Magma</div>
+            <div>Aufreißen der Lithosphäre, Austritt von Lava</div>
+            <div>Erstarren der Lava am Meeresboden (zusätzlich zur Förderung des MAR)</div>
+            <div>Wachstum eines untermeerischen Vulkans über Mio. Jahre</div>
+            <div class="end">Durchbrechen der Meeresoberfläche: Inselbildung (Island) – Vulkanismus, Geysire, Thermalquellen</div>
+          </div>
+          <div class="box merke"><span class="box-label">Nominalstil</span>Statt „Das heiße Material steigt auf, weil es leichter ist“ → „Aufstieg des heißen Materials (geringere Dichte)“. Kürzer, klarer, gibt dieselben Punkte.</div>
+          <div class="box fehler"><span class="box-label">Typische Fehler</span>Beschriftete Pfeile („führt zu“), Rückkopplungen im Fließschema, Sätze statt Stichworte, fehlende Überschrift, Sprünge in der Kausalkette (z. B. von „Aufwölbung“ direkt zu „Insel“).</div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="2"><p>Was gehört <em>nicht</em> in ein Fließschema?</p>
+            <ol><li>eine aussagekräftige Überschrift</li><li>Fachbegriffe</li><li>Rückkopplungen</li></ol>
+            <p class="why">Rückkopplungen gehören ins Wirkungsgefüge. Ein Fließschema ist linear.</p></div>
+          <div class="q" data-a="0"><p>Wie formulierst du die Kästchen am besten?</p>
+            <ol><li>Nominalstil, z. B. „Aufstieg von Magma“</li><li>ganze Sätze mit Nebensätzen</li><li>als Fragen</li></ol>
+            <p class="why">Knapp im Nominalstil – so steht es auch in den Bewertungskriterien.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KAPITEL II ================= -->
+    <section class="chapter" id="kap-2" style="--cc:var(--c2)" data-short="Aufbau der Erde" data-msg="Bis zum Erdkern durchgebohrt.">
+      <header class="chapter-head">
+        <div class="chapter-no">II</div>
+        <div><div class="overline">Kapitel II</div><h2>Der Aufbau der Erde</h2><p class="chapter-desc">Was steckt unter unseren Füßen? Schalenbau, die Höhenverteilung der Erdkruste und warum Kontinente „schwimmen“.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="schalenbau" data-show="2">
+        <header class="topic-head"><h3>Schalenbau der Erde</h3></header>
+        <div class="level" data-level="1">
+          <p>Die Erde ist aufgebaut wie ein <strong>Pfirsich</strong>: außen eine dünne, harte Haut (die <strong>Kruste</strong>), darunter das dicke Fruchtfleisch (der <strong>Mantel</strong>), innen der Kern aus <strong>Eisen und Nickel</strong>.</p>
+          <ul>
+            <li>Die Kruste ist sehr dünn – unter den Ozeanen nur 5–10 km, unter Kontinenten ca. 35 km.</li>
+            <li>Der Mantel ist fest, aber in einer Zone (Asthenosphäre) so heiß, dass das Gestein ganz langsam fließen kann – wie Knete.</li>
+            <li>Der <strong>äußere Kern ist flüssig</strong>, der <strong>innere Kern ist fest</strong> – obwohl er ca. 6.000 °C heiß ist. Grund: Der Druck ist dort so riesig, dass das Eisen nicht schmelzen kann.</li>
+          </ul>
+          <p class="analogy">Woher wir das wissen? Niemand hat so tief gebohrt. Man „hört“ in die Erde hinein: Erdbebenwellen werden an Schichtgrenzen schneller, langsamer oder kommen gar nicht durch.</p>
+        </div>
+        <div class="level" data-level="2">
+          <h4>Chemische Gliederung (Zusammensetzung)</h4>
+          <ul>
+            <li><strong>Erdkruste</strong> (0 bis max. 70 km)
+              <ul>
+                <li>kontinental: ca. 35 km dick (unter Gebirgen bis 70 km), Dichte ca. 2,7 g/cm³, v. a. Granit/Gneis („SiAl“)</li>
+                <li>ozeanisch: 5–10 km dünn, Dichte ca. 3,0 g/cm³, v. a. Basalt/Gabbro („SiMa“)</li>
+                <li>Grenze zum Mantel: <strong>Moho</strong> (Mohorovičić-Diskontinuität)</li>
+              </ul></li>
+            <li><strong>Erdmantel</strong> (ca. 35 bis 2.900 km): schwere Silikatgesteine, reich an Magnesium und Eisen (Peridotit); oberer Mantel bis 660 km, darunter unterer Mantel</li>
+            <li><strong>Erdkern</strong> (ca. 2.900 bis 6.371 km): Eisen-Nickel-Legierung (80–85 % Fe, 5–10 % Ni)</li>
+          </ul>
+          <h4>Mechanische Gliederung (Verhalten)</h4>
+          <div class="tbl"><table>
+            <thead><tr><th>Schicht</th><th>Tiefe</th><th>Zustand</th><th>Besonderheit</th></tr></thead>
+            <tbody>
+              <tr><th>Lithosphäre</th><td>0–ca. 100 (200) km</td><td>starr, spröde, fest</td><td>Kruste + oberster Mantel; bildet die Platten; 0–ca. 500 °C</td></tr>
+              <tr><th>Asthenosphäre</th><td>ca. 100–410 (660) km</td><td>duktil, zähplastisch</td><td>Fließzone mit Konvektionsströmen (Antrieb der Platten); 1.000–1.500 °C</td></tr>
+              <tr><th>Mesosphäre</th><td>ca. 660–2.900 km</td><td>fest, hochviskos</td><td>unterer Mantel; hoher Druck erzwingt feste Struktur; 1.500–3.000 °C</td></tr>
+              <tr><th>Äußerer Kern</th><td>ca. 2.900–5.150 km</td><td>flüssig</td><td>Konvektion + Erdrotation erzeugen das Magnetfeld (Geodynamo); 3.000–5.000 °C</td></tr>
+              <tr><th>Innerer Kern</th><td>ca. 5.150–6.371 km</td><td>fest</td><td>extremer Druck (ca. 3,5 Mio. bar) hält Eisen trotz 5.500–6.000 °C fest</td></tr>
+            </tbody>
+          </table></div>
+          <div class="box merke"><span class="box-label">Lithosphäre ≠ Kruste</span>Die <strong>Kruste</strong> ist chemisch definiert (endet an der Moho). Die <strong>Lithosphäre</strong> ist mechanisch definiert: Kruste + oberster, starrer Mantel = „Mantelfestkörper“.</div>
+        </div>
+        <div class="level" data-level="3">
+          <h4>Seismologie: So „sieht“ man ins Erdinnere</h4>
+          <ul>
+            <li><strong>P-Wellen</strong> (Primärwellen, longitudinal) durchdringen Festkörper <em>und</em> Flüssigkeiten.</li>
+            <li><strong>S-Wellen</strong> (Sekundärwellen, transversal) breiten sich <em>nur in Festkörpern</em> aus.</li>
+            <li>Sprunghafte Geschwindigkeitsänderungen = <strong>Diskontinuitäten</strong> (Schichtgrenzen): Moho (Kruste/Mantel), Gutenberg-Diskontinuität (Mantel/Kern, ca. 2.900 km), Lehmann-Diskontinuität (äußerer/innerer Kern).</li>
+            <li>Hinter dem Kern kommen keine S-Wellen an (<strong>S-Wellen-Schattenzone</strong>) → Beweis für den flüssigen äußeren Kern.</li>
+          </ul>
+          <p><strong>Flüssiger vs. fester Kern:</strong> Der äußere Kern ist flüssig, weil die Temperatur dort über dem Schmelzpunkt liegt. Im inneren Kern steigt der <em>Druck</em> so stark, dass der Schmelzpunkt die Temperatur übersteigt – das Eisen erstarrt.</p>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>„Die Platten schwimmen auf flüssigem Magma.“ – Falsch! Die Asthenosphäre ist <em>fast vollständig fest</em>, verhält sich über Jahrmillionen aber plastisch (wie Gletschereis oder Knete). Magma entsteht nur lokal.</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 700 245" role="img" aria-label="Schalenbau der Erde als Halbschnitt">
+            <path d="M10,225 A200,200 0 0 1 410,225 Z" fill="#7d6a58"/>
+            <path d="M20,225 A190,190 0 0 1 400,225 Z" fill="#d9824a"/>
+            <path d="M36,225 A174,174 0 0 1 384,225 Z" fill="#b65a3a"/>
+            <path d="M100,225 A110,110 0 0 1 320,225 Z" fill="#e5a43b"/>
+            <path d="M170,225 A40,40 0 0 1 250,225 Z" fill="#f6d67e"/>
+            <line x1="0" y1="225" x2="420" y2="225" class="s-ink" stroke-width="1.5"/>
+            <g class="s-ink" stroke-width="1" fill="none">
+              <polyline points="301,53 330,35 432,35"/>
+              <polyline points="322,82 350,80 432,80"/>
+              <polyline points="319,134 350,127 432,127"/>
+              <polyline points="275,188 330,173 432,173"/>
+              <polyline points="229,218 330,215 432,215"/>
+            </g>
+            <g class="s-ink" fill="#fff" stroke-width="1"><circle cx="301" cy="53" r="2.5"/><circle cx="322" cy="82" r="2.5"/><circle cx="319" cy="134" r="2.5"/><circle cx="275" cy="188" r="2.5"/><circle cx="229" cy="218" r="2.5"/></g>
+            <text x="440" y="33" class="t-h">Lithosphäre</text><text x="440" y="49" class="t-s t-mute">0–ca. 100 km · starr, spröde</text>
+            <text x="440" y="78" class="t-h">Asthenosphäre</text><text x="440" y="94" class="t-s t-mute">ca. 100–410 (660) km · zähplastisch</text>
+            <text x="440" y="125" class="t-h">Mesosphäre (unterer Mantel)</text><text x="440" y="141" class="t-s t-mute">ca. 660–2.900 km · fest</text>
+            <text x="440" y="171" class="t-h">Äußerer Kern</text><text x="440" y="187" class="t-s t-mute">ca. 2.900–5.150 km · flüssig</text>
+            <text x="440" y="213" class="t-h">Innerer Kern</text><text x="440" y="229" class="t-s t-mute">ca. 5.150–6.371 km · fest</text>
+          </svg>
+          <figcaption>Schalenbau der Erde (Halbschnitt, nicht maßstabsgetreu – Lithosphäre und Asthenosphäre stark vergrößert)</figcaption>
+        </figure>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Welche Schicht ist flüssig?</p>
+            <ol><li>die Asthenosphäre</li><li>der äußere Kern</li><li>der innere Kern</li></ol>
+            <p class="why">Nur der äußere Kern ist flüssig – deshalb kommen dort keine S-Wellen durch. Die Asthenosphäre ist zähplastisch, aber nicht flüssig.</p></div>
+          <div class="q" data-a="1"><p>Was umfasst die Lithosphäre?</p>
+            <ol><li>nur die Erdkruste</li><li>die Kruste und den obersten, starren Teil des Mantels</li><li>den gesamten Mantel</li></ol>
+            <p class="why">Lithosphäre = Kruste + oberster Mantel (bis ca. 100 km). Sie ist in Platten zerbrochen.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="hypsografie" data-show="2">
+        <header class="topic-head"><h3>Höhenverteilung der Erdkruste (hypsografische Kurve)</h3></header>
+        <div class="level" data-level="1">
+          <p>Sortiert man alle Höhen der Erdoberfläche, fällt etwas auf: Es gibt zwei „Lieblingshöhen“.</p>
+          <ul>
+            <li>Sehr viel Fläche liegt <strong>knapp über dem Meeresspiegel</strong> (0–1 km) – das sind die Kontinente.</li>
+            <li>Noch mehr Fläche liegt <strong>ca. 4–5 km unter dem Meer</strong> – das ist der Tiefseeboden.</li>
+            <li>Dazwischen gibt es relativ wenig.</li>
+          </ul>
+          <p>Der Grund: Es gibt <strong>zwei Sorten Kruste</strong>. Die leichte, dicke kontinentale Kruste liegt hoch, die schwere, dünne ozeanische Kruste liegt tief.</p>
+          <p>Nur ca. <strong>29 %</strong> der Erdoberfläche sind Land, ca. <strong>71 %</strong> liegen unter dem Meeresspiegel.</p>
+        </div>
+        <div class="level" data-level="2">
+          <p>Das <strong>differentielle hypsografische Histogramm</strong> zeigt, wie viel Prozent der Erdoberfläche in welcher Höhenstufe liegen. Die <strong>kumulative hypsografische Kurve</strong> summiert diese Anteile auf.</p>
+          <ul>
+            <li>ca. <strong>29 %</strong> der Erdoberfläche liegen über dem Meeresspiegel (über NN), ca. 71 % darunter</li>
+            <li>mittlere Höhe an Land: <strong>ca. 0,8 km</strong> (Mittelgebirgsniveau); allein die Stufe 0–1 km umfasst ca. 21 %</li>
+            <li>mittlere Meerestiefe: <strong>ca. 3,7 km</strong></li>
+            <li>höchster Punkt: Mount Everest (8.849 m); tiefster Punkt: Marianengraben (ca. 11.000 m)</li>
+            <li>über die Hälfte der Erdoberfläche (ca. 54 %) liegt in 3–6 km Tiefe (Tiefseeboden)</li>
+            <li>Zwischen Land und Tiefsee: <strong>Kontinentalschelf</strong> (flach überflutet) und <strong>Kontinentalhang</strong> (steiler Abfall)</li>
+          </ul>
+          <div class="box merke"><span class="box-label">Kernaussage</span>Die Verteilung ist <strong>zweigipflig</strong> (bimodal), weil es zwei Krustentypen mit unterschiedlicher Dichte und Dicke gibt.</div>
+        </div>
+        <div class="level" data-level="3">
+          <p><strong>Warum zwei Maxima?</strong> Gäbe es nur eine Krustensorte, würden sich die Höhen um einen einzigen Mittelwert verteilen (eingipflig, wie eine Glockenkurve). Die zwei Gipfel entsprechen den zwei Krustentypen, die nach dem Prinzip der <a href="#isostasie">Isostasie</a> unterschiedlich hoch „schwimmen“: kontinental (ca. 2,7–2,8 g/cm³, dick) liegt hoch, ozeanisch (ca. 3,0 g/cm³, dünn) tief.</p>
+          <ul>
+            <li>Der <strong>Schelf</strong> gehört geologisch zum Kontinent – es ist überflutete kontinentale Kruste. Die eigentliche Grenze Kontinent/Ozean liegt am Kontinentalhang.</li>
+            <li>Hochgebirge und Tiefseegräben sind flächenmäßig winzig – sie liegen an <a href="#plattengrenzen">Plattengrenzen</a> (Kollision, Subduktion).</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Diagramm lesen</span>Kumulative Kurve: Wo sie die 0-km-Linie schneidet, kannst du den Landanteil ablesen (ca. 29 %). Histogramm: Balken einzeln ablesen und z. B. Stufen addieren.</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 560 290" role="img" aria-label="Histogramm der Höhenverteilung der Erdoberfläche">
+            <text x="100" y="16" text-anchor="end" class="t-xs t-mute">Höhe/Tiefe (km)</text>
+            <text x="110" y="16" class="t-xs t-mute">Anteil an der Erdoberfläche (%)</text>
+            <g fill="#c49a4a">
+              <rect x="110" y="30" width="7.5" height="15"/><rect x="110" y="50" width="16.5" height="15"/><rect x="110" y="70" width="33" height="15"/><rect x="110" y="90" width="67.5" height="15"/><rect x="110" y="110" width="313.5" height="15"/>
+            </g>
+            <g fill="#4f8db3">
+              <rect x="110" y="138" width="127.5" height="15"/><rect x="110" y="158" width="45" height="15"/><rect x="110" y="178" width="72" height="15"/><rect x="110" y="198" width="208.5" height="15"/><rect x="110" y="218" width="348" height="15"/><rect x="110" y="238" width="246" height="15"/><rect x="110" y="258" width="15" height="15"/>
+            </g>
+            <line x1="20" y1="132" x2="555" y2="132" class="s-water" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="555" y="127" text-anchor="end" class="t-xs t-water">Meeresspiegel</text>
+            <g class="t-xs" text-anchor="end">
+              <text x="100" y="42">+4 bis +5</text><text x="100" y="62">+3 bis +4</text><text x="100" y="82">+2 bis +3</text><text x="100" y="102">+1 bis +2</text><text x="100" y="122">0 bis +1</text>
+              <text x="100" y="150">0 bis −1</text><text x="100" y="170">−1 bis −2</text><text x="100" y="190">−2 bis −3</text><text x="100" y="210">−3 bis −4</text><text x="100" y="230">−4 bis −5</text><text x="100" y="250">−5 bis −6</text><text x="100" y="270">−6 bis −7</text>
+            </g>
+            <g class="t-xs t-mute">
+              <text x="123" y="42">0,5</text><text x="132" y="62">1,1</text><text x="149" y="82">2,2</text><text x="183" y="102">4,5</text><text x="429" y="122">20,9</text>
+              <text x="243" y="150">8,5</text><text x="161" y="170">3,0</text><text x="188" y="190">4,8</text><text x="324" y="210">13,9</text><text x="464" y="230">23,2</text><text x="362" y="250">16,4</text><text x="131" y="270">1,0</text>
+            </g>
+            <text x="555" y="80" text-anchor="end" class="t-s t-b">Σ ≈ 29 % über NN</text>
+            <text x="555" y="190" text-anchor="end" class="t-s t-b">Σ ≈ 71 % unter NN</text>
+          </svg>
+          <figcaption>Differentielles hypsografisches Histogramm: zwei Maxima bei 0 bis +1 km und −4 bis −5 km (Werte aus dem Unterrichtsmaterial, nach Wikipedia 2024)</figcaption>
+        </figure>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Wie viel Prozent der Erdoberfläche liegen etwa über dem Meeresspiegel?</p>
+            <ol><li>ca. 10 %</li><li>ca. 29 %</li><li>ca. 50 %</li></ol>
+            <p class="why">Ca. 29 % – addiere die Balken über dem Meeresspiegel (20,9 + 4,5 + 2,2 + 1,1 + 0,5).</p></div>
+          <div class="q" data-a="0"><p>Warum hat das Histogramm zwei Maxima?</p>
+            <ol><li>Es gibt zwei Krustentypen mit unterschiedlicher Dichte und Dicke</li><li>Erosion trägt alle Gebirge ab</li><li>Der Meeresspiegel schwankt</li></ol>
+            <p class="why">Kontinentale Kruste (leicht, dick) liegt hoch, ozeanische (schwer, dünn) tief.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="isostasie" data-show="2">
+        <header class="topic-head"><h3>Isostasie</h3></header>
+        <div class="level" data-level="1">
+          <p><strong>Isostasie</strong> heißt auf Griechisch „Gleichstand“.</p>
+          <p class="analogy">Stell dir einen Holzklotz im Wasser vor: Legst du ein Gewicht drauf, sinkt er tiefer ein. Nimmst du es weg, taucht er wieder auf.</p>
+          <p>Genauso „schwimmt“ die Lithosphäre auf der zähen Asthenosphäre. Beispiel: In der Eiszeit lag auf Skandinavien ein ca. <strong>2.000 m dicker Eispanzer</strong>. Er hat das Land nach unten gedrückt. Seit das Eis geschmolzen ist, <strong>hebt sich Skandinavien</strong> wieder – bis heute.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="def"><b>Isostasie</b> (griech. Gleichstand) = Gleichgewicht zwischen Auftriebs- und Gewichtskraft der Lithosphäre auf der Asthenosphäre.</div>
+          <ul>
+            <li>Wie ein Holzklotz im Wasser sinkt die Lithosphäre bei <strong>größerer Masse</strong> (z. B. Vereisung, Gebirge, Sedimente) tiefer in die Asthenosphäre ein.</li>
+            <li>Wird sie <strong>entlastet</strong> (Abschmelzen von Eis, Abtragung durch Erosion), hebt sie sich.</li>
+            <li>Dichten: kontinentale Kruste ca. 2,8 g/cm³ &lt; ozeanische Kruste ca. 3,0 g/cm³ &lt; Erdmantel ca. 3,4 g/cm³.</li>
+            <li>Folge: Die kontinentale Kruste schwimmt auf dem Mantel und ragt über die ozeanische hinaus. Unter Gebirgen reicht sie besonders tief (<strong>Gebirgswurzel</strong>, bis ca. 70 km).</li>
+          </ul>
+          <div class="box merke"><span class="box-label">Beispiel</span>Skandinavien lag in der Eiszeit unter einem ca. 2.000 m mächtigen Eispanzer. Seit dem Abschmelzen hebt es sich (postglaziale Hebung) – am stärksten am Bottnischen Meerbusen, um knapp 1 cm pro Jahr.</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum so langsam?</strong> Für den Ausgleich muss Mantelmaterial in der zähplastischen Asthenosphäre seitlich wegfließen bzw. zurückfließen. Das dauert Jahrtausende – deshalb hebt sich Skandinavien noch heute, obwohl das Eis seit über 10.000 Jahren weg ist.</li>
+            <li><strong>Gebirge „wachsen nach“:</strong> Erosion trägt oben Gestein ab → Entlastung → die Gebirgswurzel steigt auf. So gelangen Gesteine aus großer Tiefe an die Oberfläche.</li>
+            <li><strong>Verbindung zur hypsografischen Kurve:</strong> Die zwei Höhenniveaus (Kontinente/Tiefsee) sind eine Folge der Isostasie.</li>
+            <li><strong>Verbindung zu Wegener:</strong> Wegener argumentierte gegen die „Landbrückenhypothese“: Landbrücken aus leichter kontinentaler Kruste können nicht einfach im dichteren Ozeanboden versinken – das widerspricht der Isostasie.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>„Erklären Sie die Hebung Skandinaviens“ → Begriff Isostasie nennen, Holzklotz-Vergleich, Eislast → Einsinken, Abschmelzen → Entlastung → isostatische Ausgleichsbewegung (Hebung), Zeitverzögerung durch zähe Asthenosphäre.</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 660 225" role="img" aria-label="Isostasie: Holzklotz-Modell und Eislast auf Skandinavien">
+            <text x="150" y="16" text-anchor="middle" class="t-h">Modell: Holzklotz im Wasser</text>
+            <rect x="20" y="80" width="260" height="110" class="f-water"/>
+            <path d="M20,40 L20,190 L280,190 L280,40" fill="none" class="s-ink" stroke-width="1.5"/>
+            <line x1="20" y1="80" x2="280" y2="80" class="s-water" stroke-width="1.5"/>
+            <rect x="60" y="55" width="70" height="50" fill="#b98b5a" class="s-ink"/>
+            <rect x="170" y="70" width="70" height="50" fill="#b98b5a" class="s-ink"/>
+            <rect x="185" y="46" width="40" height="24" fill="#3d3a36"/>
+            <text x="205" y="62" text-anchor="middle" class="t-xs t-w">Last</text>
+            <text x="95" y="210" text-anchor="middle" class="t-s">ohne Last</text>
+            <text x="205" y="210" text-anchor="middle" class="t-s">mit Last: taucht tiefer ein</text>
+
+            <text x="490" y="16" text-anchor="middle" class="t-h">Eislast auf Skandinavien</text>
+            <rect x="340" y="125" width="300" height="65" fill="#d9a07a"/>
+            <path d="M340,100 L420,100 Q490,140 560,100 L640,100 L640,125 L560,125 Q490,165 420,125 L340,125 Z" fill="#7d6a58"/>
+            <path d="M420,100 Q490,140 560,100 Q490,52 420,100 Z" fill="#eaf3f8" stroke="#8fb3c9"/>
+            <line x1="490" y1="32" x2="490" y2="66" class="s-ink" stroke-width="1.5" marker-end="url(#arr)"/>
+            <text x="498" y="40" class="t-xs">Eislast</text>
+            <line x1="612" y1="94" x2="612" y2="58" class="s-ink" stroke-width="1.5" marker-end="url(#arr)"/>
+            <text x="640" y="50" text-anchor="end" class="t-xs">nach dem Abschmelzen: Hebung</text>
+            <path d="M470,160 Q440,168 405,170" fill="none" class="s-ink" marker-end="url(#arr)"/>
+            <path d="M510,160 Q540,168 575,170" fill="none" class="s-ink" marker-end="url(#arr)"/>
+            <text x="350" y="118" class="t-xs t-w">Lithosphäre</text>
+            <text x="350" y="182" class="t-xs">Asthenosphäre</text>
+            <text x="490" y="210" text-anchor="middle" class="t-xs t-mute">Mantelmaterial weicht seitlich aus und fließt später zurück</text>
+          </svg>
+          <figcaption>Prinzip der Isostasie (schematisch)</figcaption>
+        </figure>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Was passiert mit Skandinavien seit dem Ende der letzten Eiszeit?</p>
+            <ol><li>Es sinkt immer weiter ab</li><li>Es hebt sich</li><li>Nichts</li></ol>
+            <p class="why">Die Eislast ist weg → isostatische Ausgleichsbewegung → Hebung (bis knapp 1 cm/Jahr).</p></div>
+          <div class="q" data-a="2"><p>Warum ragen Kontinente höher auf als Ozeanböden?</p>
+            <ol><li>Weil Vulkane sie anheben</li><li>Weil kontinentale Kruste schwerer ist</li><li>Weil kontinentale Kruste leichter (geringere Dichte) und dicker ist</li></ol>
+            <p class="why">Geringere Dichte (ca. 2,7–2,8 g/cm³) + große Dicke → die kontinentale Kruste „schwimmt“ höher auf dem Mantel.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KAPITEL III ================= -->
+    <section class="chapter" id="kap-3" style="--cc:var(--c3)" data-short="Wegener → Plattentektonik" data-msg="Wegener wäre stolz.">
+      <header class="chapter-head">
+        <div class="chapter-no">III</div>
+        <div><div class="overline">Kapitel III</div><h2>Von Wegener zur Plattentektonik</h2><p class="chapter-desc">Wie eine verrückte Idee von 1912 zur wichtigsten Theorie der Geowissenschaften wurde.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="wegener" data-show="2">
+        <header class="topic-head"><h3>Wegeners Kontinentaldrifttheorie</h3></header>
+        <div class="level" data-level="1">
+          <p><strong>Alfred Wegener</strong> (Meteorologe und Polarforscher) hatte 1912 eine damals verrückte Idee: Alle Kontinente waren früher <strong>ein einziger Riesenkontinent</strong> – <strong>Pangäa</strong> (griech. „eine Erde“). Später ist Pangäa zerbrochen und die Teile sind auseinandergedriftet.</p>
+          <p>Seine Hinweise:</p>
+          <ul>
+            <li>Südamerika und Afrika passen zusammen wie <strong>Puzzleteile</strong>.</li>
+            <li>Auf beiden Kontinenten findet man die <strong>gleichen Fossilien</strong> – von Tieren, die nie über einen Ozean gekommen wären.</li>
+            <li>Gleiche <strong>Gesteine und Gebirge</strong> setzen sich auf dem anderen Kontinent fort.</li>
+            <li><strong>Gletscherspuren</strong> in heute heißen Gebieten (z. B. Afrika, Indien).</li>
+          </ul>
+          <p>Problem: Er konnte nicht erklären, <strong>welche Kraft</strong> die Kontinente bewegt. Deshalb glaubte man ihm lange nicht.</p>
+        </div>
+        <div class="level" data-level="2">
+          <p>1912 stellte Wegener die Theorie der <strong>Kontinentalverschiebung</strong> vor: Die heutigen Kontinente bildeten vor ca. 300 Mio. Jahren den Urkontinent <strong>Pangäa</strong>, der später zerbrach. Seine vier Gruppen von Indizien:</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Bereich</th><th>Indiz</th><th>Beispiel / Details</th></tr></thead>
+            <tbody>
+              <tr><th>G1 Geomorphologie</th><td><strong>Passform</strong> der Kontinente</td><td>Südamerika und Afrika passen zusammen – am besten an den <strong>Schelfkanten</strong>, nicht an den Küstenlinien (Küsten verändern sich durch Erosion, Sedimentation und Meeresspiegelschwankungen)</td></tr>
+              <tr><th>G2 Paläontologie</th><td>gleiche <strong>Fossilien</strong> auf heute getrennten Kontinenten</td><td><strong>Mesosaurus</strong> (kleines Süßwasserreptil – kein Hochseeschwimmer), <strong>Glossopteris</strong> (Samenfarn mit schweren Samen – keine Verbreitung über Wind/Meer), <strong>Lystrosaurus</strong> und <strong>Cynognathus</strong> (landlebende Reptilien)</td></tr>
+              <tr><th>G3 Geologie</th><td>gleiche <strong>Gesteinsarten und Gebirge</strong></td><td>Gesteine (über 2 Mrd. Jahre alt) und Gebirgszüge gleichen Alters und Aufbaus setzen sich auf dem anderen Kontinent fort</td></tr>
+              <tr><th>G4 Klimatologie</th><td><strong>Paläoklimazeugen</strong></td><td><strong>Tillite</strong> und <strong>Gletscherschrammen</strong> (ca. 300 Mio. Jahre) in Südamerika, Afrika, Indien, Australien – ergeben nur zusammengesetzt (Gondwana am Südpol) ein sinnvolles Muster; <strong>Kohlelager</strong> in heute kalten Gebieten zeigen früher warmes Klima</td></tr>
+            </tbody>
+          </table></div>
+          <h4>Kritik an Wegener</h4>
+          <ul>
+            <li>Als Antrieb nahm Wegener <strong>Zentrifugal- und Gezeitenkräfte</strong> an – diese reichen bei Weitem nicht aus.</li>
+            <li>Gegner erklärten die Fossilien mit der <strong>Landbrückenhypothese</strong> (versunkene Landbrücken zwischen den Kontinenten). Wegener konterte mit der Isostasie: Leichte Landbrücken können nicht im Ozeanboden versinken.</li>
+            <li>Klimazeugen könnten auch durch Klimaveränderungen, Polwanderung oder astronomische Ursachen entstanden sein – kein zwingender Beweis.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Indiz ≠ Beweis:</strong> Jeder Beleg allein ist angreifbar. Erst die <em>Kombination</em> aller vier Indizien macht die Theorie überzeugend.</li>
+            <li><strong>Gletscherschrammen-Argument genauer:</strong> Die Schrammen zeigen die Fließrichtung des Eises. Auf den heutigen Kontinenten zeigen sie teils vom Meer aufs Land – unmöglich für Gletscher. Fügt man die Kontinente zu Gondwana zusammen, laufen sie strahlenförmig von einem Zentrum am damaligen Südpol weg: eine einzige große Inlandeismasse.</li>
+            <li><strong>Rehabilitierung ab den 1960ern:</strong> Neue Beobachtungen am Ozeanboden – symmetrische magnetische Streifenmuster beidseits der Mittelozeanischen Rücken (Paläomagnetismus), das junge Alter des Ozeanbodens (höchstens ca. 180–200 Mio. Jahre), die Verteilung der Erdbeben an Plattengrenzen und das Modell des Seafloor-Spreadings (Hess, 1962).</li>
+            <li><strong>Plattentektonik als Weiterentwicklung:</strong> Nicht die Kontinente pflügen „wie Eisbrecher“ durch den Ozeanboden (Wegener), sondern ganze <strong>Lithosphärenplatten</strong> (Kontinente + Ozeanboden) bewegen sich – angetrieben durch Konvektion, Plattenzug und Rückendruck.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Bei „Erläutern Sie Belege“ immer: Indiz nennen → konkretes Beispiel → warum es für die Drift spricht („Mesosaurus konnte als Süßwasserreptil den Atlantik nicht überqueren → Kontinente müssen verbunden gewesen sein“).</div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Warum ist der Mesosaurus ein Indiz für Wegeners Theorie?</p>
+            <ol><li>Er lebte im Süßwasser und konnte keinen Ozean überqueren</li><li>Er konnte fliegen</li><li>Er lebte nur in Afrika</li></ol>
+            <p class="why">Fossilien eines kleinen Süßwasserreptils auf beiden Seiten des Atlantiks → die Kontinente müssen verbunden gewesen sein.</p></div>
+          <div class="q" data-a="1"><p>Was war die größte Schwäche von Wegeners Theorie?</p>
+            <ol><li>Es gab keine Fossilbelege</li><li>Kein überzeugender Antriebsmechanismus</li><li>Die Kontinente passten nicht zusammen</li></ol>
+            <p class="why">Zentrifugal- und Gezeitenkräfte reichen nicht aus. Den Antrieb erklärte erst die Plattentektonik.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="pangaea" data-show="2">
+        <header class="topic-head"><h3>Der Zerfall von Pangäa und seine Folgen</h3></header>
+        <div class="level" data-level="1">
+          <p>Pangäa ist nicht auf einmal zerbrochen, sondern Schritt für Schritt über viele Millionen Jahre:</p>
+          <ol>
+            <li>Vor ca. 250 Mio. Jahren: nur <strong>Pangäa</strong>, umgeben von einem riesigen Urozean.</li>
+            <li>Dann bricht Pangäa in einen Nordteil (<strong>Laurasia</strong>) und einen Südteil (<strong>Gondwana</strong>). Dazwischen liegt das Meer <strong>Tethys</strong>.</li>
+            <li>Daraus entstehen nach und nach die heutigen Kontinente.</li>
+          </ol>
+          <p>Wenn ein Kontinent wandert, landet er in einer anderen <strong>Klimazone</strong> – und damit ändern sich auch Pflanzen und Tiere. Außerdem öffnen und schließen sich <strong>Landbrücken</strong> und Meeresstraßen.</p>
+        </div>
+        <div class="level" data-level="2">
+          <ul class="timeline">
+            <li><span class="era">Perm · vor ca. 250 Mio. J.</span><b>Pangäa</b>Ein Ur-Großkontinent, umgeben vom Urozean (Panthalassa); im Osten greift die Tethys als Meeresbucht hinein.</li>
+            <li><span class="era">Jura · vor ca. 180 Mio. J.</span><b>Laurasia und Gondwana</b>Pangäa zerbricht in Laurasia (Norden) und Gondwana (Süden), dazwischen die Tethys. Der Atlantik beginnt sich zu öffnen.</li>
+            <li><span class="era">Tertiär · vor ca. 60 Mio. J.</span><b>Die Kontinente nehmen Form an</b>Südamerika und Afrika sind getrennt, Indien driftet nach Norden, Australien hängt noch an der Antarktis.</li>
+            <li><span class="era">Holozän · heute</span><b>Heutige Verteilung</b>Indien ist mit Asien kollidiert (Himalaya), Australien ist abgetrennt, Nord- und Südamerika sind verbunden.</li>
+          </ul>
+          <h4>Folgen (Wirkungskette)</h4>
+          <div class="flow">
+            <div class="start">Veränderung der geographischen Lage</div>
+            <div>Veränderung der Klimazone</div>
+            <div class="end">Veränderung von Flora und Fauna (Pflanzen- und Tierwelt)</div>
+          </div>
+          <p>Außerdem: Gebirgsbildung (<strong>Orogenese</strong>) bei Kollisionen, ggf. Ozeanbildung beim Auseinanderbrechen.</p>
+          <div class="box merke"><span class="box-label">Landbrücke Panama</span>Schließung der Landbrücke von Panama vor ca. 3–5 Mio. Jahren → Atlantik und Pazifik tauschen kaum noch Wasser aus → Ausbildung der heutigen Ozeanzirkulation inkl. <strong>Golfstrom</strong> (Teil der thermohalinen Zirkulation) sowie der Luftzirkulation als Energieaustausch.</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Öffnungen haben genauso große Folgen:</strong> Als sich Südamerika und Australien von der Antarktis lösten, entstand der Antarktische Zirkumpolarstrom. Er schirmt die Antarktis von warmem Wasser ab → Vereisung der Antarktis.</li>
+            <li><strong>Deutschland wanderte mit:</strong> Mitteleuropa lag im Karbon/Perm nahe dem Äquator. Daher stammen z. B. Steinkohlelager (tropische Sumpfwälder im Karbon) und Salzlager (heißes, trockenes Klima im Perm) – heute Klimazeugen in einer ganz anderen Klimazone.</li>
+            <li><strong>Isolation → eigene Tierwelt:</strong> Australien ist seit Langem isoliert – deshalb dominieren dort Beuteltiere.</li>
+          </ul>
+          <h4>Und in 30 Mio. Jahren? (Arbeitsauftrag aus dem Unterricht)</h4>
+          <ul>
+            <li>Der Atlantik wird weiter breiter (Spreizung am Mittelatlantischen Rücken).</li>
+            <li>Ostafrika löst sich entlang des Ostafrikanischen Grabens ab (Somalische Platte).</li>
+            <li>Afrika rückt näher an Europa – das Mittelmeer schrumpft weiter.</li>
+            <li>Australien driftet weiter nach Norden Richtung Südostasien.</li>
+            <li>Der Teil Kaliforniens westlich der San-Andreas-Verwerfung wandert mit der Pazifischen Platte nach Nordwesten.</li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>In welche zwei Teile zerbrach Pangäa zuerst?</p>
+            <ol><li>Laurasia und Gondwana</li><li>Tethys und Panthalassa</li><li>Eurasien und Afrika</li></ol>
+            <p class="why">Laurasia im Norden, Gondwana im Süden – dazwischen die Tethys (ein Meer, kein Kontinent).</p></div>
+          <div class="q" data-a="1"><p>Welche Folge hatte die Schließung der Landbrücke von Panama?</p>
+            <ol><li>Die Entstehung des Himalaya</li><li>Die heutige Ozeanzirkulation inkl. Golfstrom</li><li>Die Öffnung des Atlantiks</li></ol>
+            <p class="why">Kein Wasseraustausch mehr zwischen Atlantik und Pazifik → neue Meeresströmungen, darunter der Golfstrom.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="platten" data-show="2">
+        <header class="topic-head"><h3>Lithosphärenplatten: ozeanische vs. kontinentale Kruste</h3></header>
+        <div class="level" data-level="1">
+          <p>Die <strong>Lithosphäre</strong> („steinerne Hülle“) ist in <strong>Platten</strong> zerbrochen: 7 große und viele kleine. Sie gleiten auf der zähen Asthenosphäre – nur <strong>wenige Zentimeter pro Jahr</strong>, ungefähr so schnell, wie deine Fingernägel wachsen.</p>
+          <p>Es gibt zwei Sorten Kruste:</p>
+          <ul>
+            <li><strong>kontinental</strong>: dick, leicht, sehr alt (Granit)</li>
+            <li><strong>ozeanisch</strong>: dünn, schwer, jung (Basalt)</li>
+          </ul>
+          <p>Wenn beide zusammenstoßen, taucht immer die <strong>schwerere ozeanische</strong> Platte ab.</p>
+        </div>
+        <div class="level" data-level="2">
+          <p>Die Plattentektonik ist eine Weiterentwicklung von Wegeners Theorie: Nicht die Kontinente selbst bewegen sich, sondern die <strong>Lithosphärenplatten</strong>. Die Lithosphäre ist starr und besteht aus 7 großen und zahlreichen kleinen Platten.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Platten aus ozeanischer <em>und</em> kontinentaler Kruste</th><th>Platten nur aus ozeanischer Kruste</th></tr></thead>
+            <tbody><tr>
+              <td>Nordamerikanische, Südamerikanische, Afrikanische, Eurasische, Australische, Indische, Antarktische, Somalische Platte</td>
+              <td>Pazifische, Nazca-, Cocos-, Philippinische, Karibische, Scotia-, Juan-de-Fuca-Platte</td>
+            </tr></tbody>
+          </table></div>
+          <h4>Vergleich der Krustentypen</h4>
+          <div class="tbl"><table>
+            <thead><tr><th>Kriterium</th><th>kontinentale Kruste</th><th>ozeanische Kruste</th></tr></thead>
+            <tbody>
+              <tr><th>Lokalisation</th><td>Kontinente und Schelfe</td><td>Ozeanböden</td></tr>
+              <tr><th>Material</th><td>Granit, Gneis („SiAl“: Silizium, Aluminium)</td><td>Basalt, Gabbro („SiMa“: Silizium, Magnesium)</td></tr>
+              <tr><th>Mächtigkeit</th><td>ca. 30–40 km, unter Gebirgen bis 70 km</td><td>ca. 5–10 km</td></tr>
+              <tr><th>Alter</th><td>sehr alt, bis ca. 4 Mrd. Jahre</td><td>jung, höchstens ca. 180–200 Mio. Jahre</td></tr>
+              <tr><th>Dichte</th><td>ca. 2,7–2,8 g/cm³</td><td>ca. 3,0 g/cm³</td></tr>
+            </tbody>
+          </table></div>
+          <div class="box merke"><span class="box-label">Konsequenzen</span>Bei einer Kollision wird die <strong>dichtere ozeanische</strong> Platte subduziert. Ozeanische Kruste wird so ständig „recycelt“ und ist deshalb jung. Kontinentale Kruste ist zu leicht zum Abtauchen – sie bleibt erhalten und wird sehr alt. Und: Kontinente liegen höher (Isostasie).</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Geschwindigkeiten</strong> (Plattenkarte, in mm/Jahr): Mittelatlantik nur ca. 20 mm/Jahr (Island: je 1–2 cm pro Seite), Nazca-Platte ca. 70 mm/Jahr, am Ostpazifischen Rücken teils über 130 mm/Jahr. Platten mit großen Subduktionszonen sind am schnellsten (→ <a href="#antrieb">Plattenzug</a>).</li>
+            <li><strong>Arten von Plattengrenzen</strong> (Legende der Plattenkarte): konstruktiv (Spreizungszone/Dehnungszone), destruktiv (Subduktionszone, Kollisionszone), Transformstörung (Horizontalverschiebung, rechts- oder linkssinnig).</li>
+            <li><strong>Plattengrenze ≠ Küstenlinie:</strong> Am Atlantik liegt die Plattengrenze mitten im Ozean, die Küsten sind „passive Kontinentalränder“ (ohne Vulkane/Erdbeben). An der Westküste Südamerikas fällt die Plattengrenze dagegen mit dem Kontinentalrand zusammen („aktiver Kontinentalrand“).</li>
+          </ul>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>„Platte = Kontinent“. Die Afrikanische Platte reicht z. B. bis zur Mitte des Atlantiks und besteht dort aus ozeanischer Kruste.</div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Welche Kruste ist älter?</p>
+            <ol><li>die ozeanische</li><li>die kontinentale</li><li>beide sind gleich alt</li></ol>
+            <p class="why">Kontinentale Kruste: bis ca. 4 Mrd. Jahre. Ozeanische: höchstens ca. 200 Mio. Jahre.</p></div>
+          <div class="q" data-a="0"><p>Warum ist ozeanische Kruste nie älter als ca. 200 Mio. Jahre?</p>
+            <ol><li>Sie wird an Subduktionszonen ständig „recycelt“</li><li>Sie verwittert unter Wasser schneller</li><li>Meerwasser löst sie auf</li></ol>
+            <p class="why">Ozeanische Kruste entsteht am Mittelozeanischen Rücken und verschwindet an Subduktionszonen wieder im Mantel.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KAPITEL IV ================= -->
+    <section class="chapter" id="kap-4" style="--cc:var(--c4)" data-short="Plattentektonik in Aktion" data-msg="Die Platten bewegen sich – und du verstehst warum.">
+      <header class="chapter-head">
+        <div class="chapter-no">IV</div>
+        <div><div class="overline">Kapitel IV</div><h2>Plattentektonik in Aktion</h2><p class="chapter-desc">Was an Plattengrenzen passiert, was die Platten antreibt, wie Ozeane entstehen und vergehen – und warum Island ein Sonderfall ist.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="plattengrenzen" data-show="2">
+        <header class="topic-head"><h3>Plattengrenzen: divergent, konvergent, transform</h3></header>
+        <div class="level" data-level="1">
+          <p>Wo zwei Platten aufeinandertreffen, passiert immer etwas. Es gibt drei Möglichkeiten:</p>
+          <ol>
+            <li><strong>Auseinander (divergent):</strong> Es entsteht ein Spalt, Magma quillt nach und erstarrt – <strong>neuer Boden</strong> entsteht. Im Ozean bildet sich ein langes Unterwassergebirge (Mittelozeanischer Rücken), an Land ein Graben.</li>
+            <li><strong>Zusammen (konvergent):</strong> Die <strong>schwerere Platte taucht ab</strong> (Subduktion). Dort entstehen tiefe Gräben im Meer, Gebirge, Vulkane und starke Erdbeben. Stoßen zwei Kontinente zusammen, taucht keiner ab – sie <strong>falten sich zu riesigen Gebirgen</strong> auf (Himalaya).</li>
+            <li><strong>Aneinander vorbei (Transform):</strong> Die Platten verhaken sich und rucken dann plötzlich weiter → <strong>starke Erdbeben</strong>, aber keine Vulkane.</li>
+          </ol>
+        </div>
+        <div class="level" data-level="2">
+          <h4>Divergierende Plattengrenzen (konstruktiv)</h4>
+          <ul>
+            <li><strong>Ozeanisch:</strong> Zwei ozeanische Platten bewegen sich auseinander, flüssiges Magma tritt in der Lücke aus, kühlt ab und bildet einen <strong>Mittelozeanischen Rücken</strong> (MOR) = <strong>Seafloor-Spreading</strong>. Submariner Vulkanismus, meist schwache Erdbeben. „Konstruktiv“, weil neues Lithosphärenmaterial entsteht.</li>
+            <li><strong>Kontinental:</strong> Zwei kontinentale Platten divergieren → <strong>Grabenbruch (Rift)</strong>, z. T. oberirdischer Vulkanismus. Bsp.: Ostafrikanischer Graben, Oberrheingraben.</li>
+          </ul>
+          <h4>Konvergierende Plattengrenzen (destruktiv)</h4>
+          <div class="tbl"><table>
+            <thead><tr><th>Typ</th><th>Vorgang</th><th>Erscheinungen</th><th>Beispiel</th></tr></thead>
+            <tbody>
+              <tr><th>Ozean–Kontinent</th><td>spezifisch schwerere ozeanische Platte wird unter die leichtere kontinentale <strong>subduziert</strong>; sie wird durch Reibung und zunehmende Druck- und Temperaturerhöhung in der Tiefe aufgeschmolzen</td><td>Tiefseegraben, Faltengebirge (Orogenese), Vulkanismus, starke Erdbeben</td><td>Anden (Nazca- unter Südamerikanische Platte), „Andentyp“</td></tr>
+              <tr><th>Ozean–Ozean</th><td>die <strong>ältere</strong>, abgekühlte und damit dichtere ozeanische Platte wird subduziert</td><td>Tiefseegraben, vulkanischer <strong>Inselbogen</strong>, Erdbeben</td><td>Japan, Philippinen, Aleuten („Inselbogentyp“)</td></tr>
+              <tr><th>Kontinent–Kontinent</th><td>gleiche Dichte → <strong>keine Subduktion</strong>; Aufschiebung und Auffaltung (Kollisionszone)</td><td>mächtige Faltengebirge, starke Krustenverdickung, Erdbeben, kaum Vulkanismus</td><td>Himalaya (Indische + Eurasische Platte), Alpen („Alpinotyp“)</td></tr>
+            </tbody>
+          </table></div>
+          <h4>Transformstörung / Horizontalverschiebung (konservativ)</h4>
+          <ul>
+            <li>Zwei Platten gleiten horizontal aneinander vorbei – nicht fließend, sondern <strong>ruckartig</strong> wegen Reibungswiderständen → ruckartiger Spannungsabbau → <strong>starke Erdbeben</strong>.</li>
+            <li>„Konservativ“: Lithosphäre wird weder zerstört noch neu gebildet → <strong>kein Vulkanismus</strong>.</li>
+            <li>Transformstörungen versetzen auch Mittelozeanische Rücken seitlich. Bsp.: <strong>San-Andreas-Verwerfung</strong> (Pazifische + Nordamerikanische Platte), Alpine Fault in Neuseeland.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum entsteht an Subduktionszonen Magma?</strong> Im Unterricht: Erhitzung durch Reibung sowie Druck- und Temperaturzunahme mit der Tiefe. Fachlich zusätzlich wichtig: Die abtauchende Platte gibt in ca. 100 km Tiefe <strong>Wasser</strong> ab. Das senkt den Schmelzpunkt des darüberliegenden Mantelgesteins → teilweises Aufschmelzen. Das Magma steigt auf, nimmt Krustenmaterial auf → <strong>SiO₂-reich, gasreich, zähflüssig</strong> → explosive Schichtvulkane.</li>
+            <li><strong>Warum entsteht am MOR Magma?</strong> Durch <strong>Druckentlastung</strong>: Die Platten weichen auseinander, heißes Mantelgestein steigt nach, der Druck sinkt → es schmilzt teilweise. Das Magma ist basaltisch, SiO₂-arm und dünnflüssig.</li>
+            <li><strong>Wadati-Benioff-Zone:</strong> An Subduktionszonen liegen die Erdbebenherde entlang der abtauchenden Platte – landeinwärts immer tiefer (bis ca. 700 km). Tiefbeben gibt es <em>nur</em> dort.</li>
+            <li><strong>Erdbebenstärke nach Grenztyp:</strong> Subduktion = die stärksten Beben (bis Magnitude 9,5, Chile 1960), Transform = stark und flach, MOR = schwach und flach.</li>
+            <li>Die <strong>Kollisionszone</strong> (Kontinent–Kontinent) zählt laut Plattenkarte zu den <strong>destruktiven</strong> Plattengrenzen, obwohl dort kaum Material im Mantel verschwindet.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Begriffe sicher trennen</span>Tiefseegraben = Tiefseerinne · Subduktion = Abtauchen einer Platte · Orogenese = Gebirgsbildung · konstruktiv / destruktiv / konservativ = Material entsteht / wird zerstört / bleibt erhalten.</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 660 232" role="img" aria-label="Skizzen der drei Plattengrenztypen">
+            <text x="100" y="16" text-anchor="middle" class="t-h">Divergent</text>
+            <text x="100" y="32" text-anchor="middle" class="t-xs t-mute">konstruktiv</text>
+            <rect x="0" y="80" width="200" height="120" fill="#d9a07a" opacity=".6"/>
+            <rect x="0" y="58" width="200" height="30" class="f-water"/>
+            <path d="M0,92 L84,86 L97,80 L97,98 L0,120 Z" fill="#6f5f52"/>
+            <path d="M200,92 L116,86 L103,80 L103,98 L200,120 Z" fill="#6f5f52"/>
+            <path d="M100,198 C92,175 108,150 100,128 C94,112 104,96 100,80" fill="none" stroke="#e0662a" stroke-width="6"/>
+            <line x1="78" y1="70" x2="30" y2="70" class="s-ink" stroke-width="1.6" marker-end="url(#arr)"/>
+            <line x1="122" y1="70" x2="170" y2="70" class="s-ink" stroke-width="1.6" marker-end="url(#arr)"/>
+            <text x="100" y="222" text-anchor="middle" class="t-xs">z. B. Mittelatlantischer Rücken</text>
+
+            <text x="330" y="16" text-anchor="middle" class="t-h">Konvergent</text>
+            <text x="330" y="32" text-anchor="middle" class="t-xs t-mute">destruktiv (Subduktion)</text>
+            <rect x="230" y="80" width="200" height="120" fill="#d9a07a" opacity=".6"/>
+            <rect x="230" y="58" width="122" height="30" class="f-water"/>
+            <path d="M230,88 L320,88 Q336,90 345,100 L420,190 L404,198 L332,112 Q322,104 312,104 L230,104 Z" fill="#4d5a63"/>
+            <path d="M345,100 L352,60 L372,58 L384,46 L392,40 L400,46 L412,58 L430,60 L430,118 L380,126 L360,120 Z" fill="#a8927a"/>
+            <path d="M398,160 C388,140 402,120 394,100 C388,80 397,62 392,42" fill="none" stroke="#e0662a" stroke-width="4"/>
+            <line x1="252" y1="73" x2="300" y2="73" class="s-ink" stroke-width="1.6" marker-end="url(#arr)"/>
+            <line x1="426" y1="84" x2="404" y2="84" class="s-ink" stroke-width="1.6" marker-end="url(#arr)"/>
+            <line x1="300" y1="140" x2="342" y2="104" class="s-ink" stroke-width=".8"/>
+            <text x="298" y="152" text-anchor="end" class="t-xs">Tiefseegraben</text>
+            <text x="330" y="222" text-anchor="middle" class="t-xs">z. B. Anden, Japan</text>
+
+            <text x="560" y="16" text-anchor="middle" class="t-h">Transform</text>
+            <text x="560" y="32" text-anchor="middle" class="t-xs t-mute">konservativ (Draufsicht)</text>
+            <rect x="470" y="50" width="90" height="150" fill="#8b7b6a"/>
+            <rect x="560" y="50" width="90" height="150" fill="#a8927a"/>
+            <path d="M560,50 L557,80 L563,110 L558,140 L562,170 L560,200" fill="none" class="s-ink" stroke-width="2"/>
+            <line x1="515" y1="175" x2="515" y2="78" class="s-ink" stroke-width="2" marker-end="url(#arr)"/>
+            <line x1="605" y1="75" x2="605" y2="172" class="s-ink" stroke-width="2" marker-end="url(#arr)"/>
+            <path d="M560,113 L563,121 L571,121 L565,126 L567,134 L560,129 L553,134 L555,126 L549,121 L557,121 Z" fill="#e0662a" class="s-ink" stroke-width=".6"/>
+            <text x="560" y="222" text-anchor="middle" class="t-xs">z. B. San-Andreas-Verwerfung</text>
+          </svg>
+          <figcaption>Die drei Typen von Plattengrenzen (schematisch). Orange: aufsteigendes Magma bzw. Erdbebenherd (Stern)</figcaption>
+        </figure>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>An welcher Plattengrenze gibt es typischerweise <em>keinen</em> Vulkanismus?</p>
+            <ol><li>an einer Transformstörung</li><li>an einer Ozean-Kontinent-Subduktion</li><li>am Mittelozeanischen Rücken</li></ol>
+            <p class="why">An Transformstörungen wird keine Lithosphäre zerstört oder neu gebildet – es entsteht kein Magma.</p></div>
+          <div class="q" data-a="1"><p>Welche Platte taucht bei einer Ozean-Ozean-Kollision ab?</p>
+            <ol><li>die jüngere, wärmere</li><li>die ältere, kältere und dichtere</li><li>keine von beiden</li></ol>
+            <p class="why">Ozeanische Lithosphäre kühlt mit dem Alter ab und wird dichter – die ältere Platte sinkt.</p></div>
+          <div class="q" data-a="2"><p>Der Himalaya entstand durch …</p>
+            <ol><li>eine Ozean-Ozean-Subduktion</li><li>eine Transformstörung</li><li>eine Kontinent-Kontinent-Kollision</li></ol>
+            <p class="why">Indische und Eurasische Platte: gleiche Dichte, keine Subduktion → Auffaltung und Krustenverdickung.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="antrieb" data-show="2">
+        <header class="topic-head"><h3>Warum bewegen sich die Platten? Antriebskräfte</h3></header>
+        <div class="level" data-level="1">
+          <p>Drei Kräfte treiben die Platten an:</p>
+          <ol>
+            <li><strong>Konvektion:</strong> Im Mantel steigt heißes Gestein langsam auf, kühleres sinkt ab – wie in einem <em>Topf mit kochender Suppe</em>. Diese Umwälzung schiebt die Platten mit.</li>
+            <li><strong>Plattenzug:</strong> Wo eine schwere Platte abtaucht, zieht sie den Rest der Platte hinterher – wie eine <em>Tischdecke, die vom Tisch rutscht</em>.</li>
+            <li><strong>Rückendruck:</strong> Am Mittelozeanischen Rücken liegt die Platte erhöht. Durch ihr Gewicht rutscht sie seitlich „bergab“ – weg vom Rücken.</li>
+          </ol>
+        </div>
+        <div class="level" data-level="2">
+          <div class="def"><b>(1) Thermische Konvektionsströme</b> entstehen durch Druck- und Temperaturunterschiede zwischen Erdkern und Erdoberfläche in der Asthenosphäre. Die mit dem Aufstieg von heißem Mantelmaterial verbundenen Umwälzungen können die Lithosphärenplatten bewegen.</div>
+          <div class="def"><b>(2) Plattenzug</b> (slab pull): Die spezifisch schwerere ozeanische Lithosphärenplatte wird an destruktiven Plattengrenzen subduziert und zieht dabei den hinter ihr befindlichen Teil aufgrund der Schwerkraft mit sich.</div>
+          <div class="def"><b>(3) Rückendruck</b> (ridge push): Die Platten „rutschen“ infolge ihrer Masse von den Aufwölbungen der Mittelozeanischen Rücken weg – aufgrund von Hangabtriebskräften.</div>
+          <div class="tbl"><table>
+            <thead><tr><th></th><th>Plattenzug</th><th>Rückendruck</th><th>kein Antrieb (Transform)</th></tr></thead>
+            <tbody>
+              <tr><th>Beispiel</th><td>Anden (Nazca/Südamerika), Himalaya, Japan/Philippinen/Aleuten</td><td>Eurasische ↔ Nordamerikanische Platte (Island), Ostafrikanischer Graben, Oberrheingraben</td><td>San-Andreas-Verwerfung, Neuseeland, Scotia-/Südamerikanische Platte</td></tr>
+              <tr><th>Erdbebengefahr</th><td><strong>hoch</strong> – Spannungsaufbau durch Plattenbewegung, Kollision</td><td><strong>gering</strong> – Dehnungskräfte; Beben durch Vulkanismus</td><td><strong>hoch</strong> – Reibungswiderstände, ruckartiges Lösen</td></tr>
+              <tr><th>Vulkanismus</th><td><strong>hoch</strong> bei Ozean–Ozean und Ozean–Kontinent; bei Kontinent–Kontinent kaum</td><td><strong>hoch</strong> – aufsteigendes Magma (submarin und oberirdisch)</td><td><strong>keiner</strong> – kein Austritt von Magma</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Gewichtung:</strong> Heute gilt der <strong>Plattenzug als stärkste Kraft</strong>. Beleg: Platten mit langen Subduktionsrändern (Pazifische, Nazca-Platte) bewegen sich am schnellsten (ca. 7–10 cm/Jahr), Platten ohne nennenswerte Subduktionsränder (Eurasische, Afrikanische) nur langsam.</li>
+            <li><strong>Platten als Teil der Konvektion:</strong> Die kalte, abtauchende Platte <em>ist</em> der absinkende Ast der Mantelkonvektion – Konvektion und Plattenzug lassen sich nicht sauber trennen.</li>
+            <li><strong>Rückendruck genauer:</strong> Junge ozeanische Lithosphäre am Rücken ist heiß und liegt hoch. Mit dem Abkühlen wird sie dichter und sinkt tiefer ein (Isostasie) – so entsteht ein Gefälle, auf dem die Platte abgleitet.</li>
+            <li><strong>Druckentlastung durch Dehnung</strong> unter dem Rücken lässt Mantelgestein schmelzen → Magmanachschub.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Wegener scheiterte genau an dieser Frage. Wenn nach dem Unterschied Wegener ↔ Plattentektonik gefragt ist: Antrieb (Zentrifugal-/Gezeitenkräfte vs. Konvektion, Plattenzug, Rückendruck) und bewegte Einheit (Kontinente vs. Lithosphärenplatten).</div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Was beschreibt der Plattenzug?</p>
+            <ol><li>Eine abtauchende Platte zieht durch ihr Gewicht den Rest der Platte nach</li><li>Platten rutschen vom Mittelozeanischen Rücken herunter</li><li>Magma drückt die Platten nach oben</li></ol>
+            <p class="why">Slab pull: Die schwere, subduzierte Platte zieht den restlichen Teil durch die Schwerkraft nach.</p></div>
+          <div class="q" data-a="1"><p>Wo wirkt der Rückendruck?</p>
+            <ol><li>an Subduktionszonen</li><li>an Mittelozeanischen Rücken</li><li>an Transformstörungen</li></ol>
+            <p class="why">Die Platten gleiten von der erhöhten Aufwölbung des Rückens ab (Hangabtrieb).</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="wilson" data-show="2">
+        <header class="topic-head"><h3>Der Wilson-Zyklus</h3></header>
+        <div class="level" data-level="1">
+          <p>Ozeane gehen auf und wieder zu – immer wieder, über Hunderte Millionen Jahre:</p>
+          <ol start="0">
+            <li>Ein Kontinent liegt <strong>ruhig</strong> da, darunter staut sich Wärme.</li>
+            <li>Er wölbt sich auf und <strong>reißt auf</strong> → ein Graben entsteht.</li>
+            <li>Der Graben sinkt ab, das <strong>Meer läuft hinein</strong> → junger Ozean.</li>
+            <li>Der Ozean wird immer <strong>breiter</strong>.</li>
+            <li>Irgendwann taucht der Ozeanboden am Rand ab → der Ozean wird <strong>kleiner</strong>.</li>
+            <li>Nur noch ein <strong>Restmeer</strong> bleibt übrig.</li>
+            <li>Die Kontinente <strong>krachen zusammen</strong> → hohes Gebirge. Danach beginnt alles von vorn.</li>
+          </ol>
+          <p class="analogy">Jedes Stadium ist nach einem Ort benannt, an dem man es heute sehen kann – das hilft beim Merken!</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="def"><b>Wilson-Zyklus:</b> beschreibt die Entstehung der Kontinente durch Auseinanderbrechen von Superkontinenten und die sich anschließende Öffnung/Schließung von Ozeanbecken (nach J. Tuzo Wilson, 1908–1993).</div>
+          <div class="wilson">
+            <div class="wstage"><span class="n">0</span><b>Ruhephase</b>Kontinentale Platte im Ruhezustand; Anfangs- und Endstadium; Erosion und Sedimentation; zunehmender Wärmestau.<span class="ex">Bsp.: Eurasische Platte</span></div>
+            <div class="wstage" data-t="div"><span class="n">1 · divergent</span><b>Graben-/Rift-Stadium</b>Magma steigt unter der kontinentalen Platte auf → Aufwölbung; Druck und Spannung nehmen zu, bis die Aufwölbung reißt → Grabenbruch.<span class="ex">Bsp.: Ostafrikanischer Graben</span></div>
+            <div class="wstage" data-t="div"><span class="n">2 · divergent</span><b>Rotes-Meer-Stadium</b>Mehr Magma → Erweiterung, Dehnung, Absenkung des Grabens; Lava bildet schwere basaltische Kruste → Überflutung. „Junger Ozean“.<span class="ex">Bsp.: Rotes Meer</span></div>
+            <div class="wstage" data-t="div"><span class="n">3 · divergent</span><b>Atlantik-Stadium</b>Seafloor-Spreading bildet neuen Ozeanboden → MOR + Vulkanismus; an den Ozeanrändern keine Gebirgsbildung. „Reifer, noch wachsender Ozean“.<span class="ex">Bsp.: Atlantik</span></div>
+            <div class="wstage" data-t="kon"><span class="n">4 · konvergent</span><b>Pazifik-Stadium</b>Driftrichtung kehrt sich um, am Ozeanrand setzt Subduktion ein → Vulkane, Tiefseerinnen; der Ozean wird eingeengt. „Schrumpfungsstadium“.<span class="ex">Bsp.: Pazifik</span></div>
+            <div class="wstage" data-t="kon"><span class="n">5 · konvergent</span><b>Mittelmeer-Stadium</b>Weitere Annäherung → der Ozean schrumpft zum flachen Meeresbecken; Auffaltung und Gebirgsbildung an den Rändern. „Restmeer-Stadium“.<span class="ex">Bsp.: Mittelmeer</span></div>
+            <div class="wstage" data-t="kon"><span class="n">6 · konvergent</span><b>Himalaya-Stadium</b>Die ozeanische Platte ist vollständig subduziert → Kontinente kollidieren, falten sich, bilden mächtige Gebirge. „Kollisionsstadium“.<span class="ex">Bsp.: Himalaya</span></div>
+          </div>
+          <div class="legend"><span><i style="background:#c2410c"></i>Divergenz (Öffnung)</span><span><i style="background:#2d6a8e"></i>Konvergenz (Schließung)</span><span>→ danach wieder Ruhephase (Abtragung des Gebirges)</span></div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Dauer:</strong> Ein vollständiger Zyklus dauert einige hundert Millionen Jahre. Mehrere Wilson-Zyklen bilden den Superkontinent-Zyklus (z. B. Rodinia → Pangäa → zukünftiger Superkontinent).</li>
+            <li><strong>Antrieb je Phase:</strong> Stadien 1–3 vor allem Wärmestau, Aufwölbung, Rückendruck; ab Stadium 4 dominiert der Plattenzug.</li>
+            <li><strong>Gesteinsbildung:</strong> In Stadium 2/3 entsteht neue ozeanische (basaltische) Kruste, an den passiven Rändern lagern sich Sedimente ab. In Stadium 5/6 werden diese Sedimente gefaltet und zu Gebirgen gestapelt.</li>
+            <li><strong>Heute nebeneinander:</strong> Alle Stadien sind gleichzeitig auf der Erde zu beobachten – das ist der Clou bei der Benennung.</li>
+          </ul>
+          <div class="box merke"><span class="box-label">Klausur 2024 · Aufgabe e</span><strong>Warum wächst die Erde nicht, obwohl am MOR ständig neue Kruste entsteht?</strong> Weil im gleichen Maß an destruktiven Plattengrenzen ozeanische Lithosphäre subduziert und im Mantel wieder aufgeschmolzen wird. Neubildung und Abbau gleichen sich aus – ein Kreislauf.</div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>In welchem Stadium befindet sich das Rote Meer?</p>
+            <ol><li>Graben-/Rift-Stadium</li><li>junger Ozean (Rotes-Meer-Stadium)</li><li>Restmeer-Stadium</li></ol>
+            <p class="why">Der Graben ist abgesunken und überflutet, es bildet sich basaltische Kruste – ein junger Ozean.</p></div>
+          <div class="q" data-a="0"><p>Was passiert im Pazifik-Stadium?</p>
+            <ol><li>Subduktion setzt ein, der Ozean schrumpft</li><li>Ein Graben reißt auf</li><li>Kontinente kollidieren</li></ol>
+            <p class="why">Die Driftrichtung kehrt sich um, am Rand taucht Ozeanboden ab: Schrumpfungsstadium.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="hotspots" data-show="2">
+        <header class="topic-head"><h3>Hot Spots und Mantelplumes</h3></header>
+        <div class="level" data-level="1">
+          <p>Ein <strong>Hot Spot</strong> ist wie eine <em>feste Lötlampe tief im Mantel</em>. Von dort steigt heißes Gestein als schmale Säule auf – der <strong>Mantelplume</strong> (englisch „plume“ = Feder).</p>
+          <p class="analogy">Die Platte wandert darüber hinweg wie ein Blatt Papier, das man langsam über eine Kerze zieht: Es entsteht eine Kette von Brandflecken.</p>
+          <p>So entsteht eine <strong>Kette von Vulkaninseln</strong>: Der jüngste, aktive Vulkan liegt genau über dem Hot Spot, die älteren sind erloschen und weiter weg. Bestes Beispiel: <strong>Hawaii</strong> – mitten auf einer Platte, weit weg von jeder Plattengrenze.</p>
+        </div>
+        <div class="level" data-level="2">
+          <ul>
+            <li><strong>Herkunft:</strong> vermutlich aus der Schicht zwischen äußerem Erdkern und unterem Erdmantel (ca. 2.900 km Tiefe).</li>
+            <li><strong>Aufstieg:</strong> Das Material ist ca. <strong>200 °C heißer</strong> als das umgebende Mantelgestein → geringere Dichte → es steigt auf.</li>
+            <li>Stößt der <strong>ortsfeste</strong> Aufstrom auf die Lithosphäre, bildet sich eine große, <strong>pilzförmige Magmablase</strong> → <strong>Aufwölbung</strong> der Lithosphäre → nachströmendes Magma baut Druck auf → die Lithosphäre <strong>reißt auf</strong> → Lava fließt aus und erstarrt → über Millionen Jahre wächst ein Vulkan bis über die Meeresoberfläche.</li>
+            <li>Hot Spots sind <strong>unabhängig von Plattengrenzen</strong> (Hawaii), können aber mit ihnen zusammenfallen (<strong>Island</strong>: Plume + Mittelatlantischer Rücken).</li>
+            <li>Hot-Spot-Vulkane sind meist <strong>Schildvulkane</strong> mit dünnflüssiger Basaltlava.</li>
+            <li>Das <strong>Alter der Vulkane</strong> nimmt mit der Entfernung vom Hot Spot zu → die Kette zeigt die Bewegungsrichtung der Platte.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <h4>Die Plume-Theorie ist umstritten (Klausur 2024, M5)</h4>
+          <p>Bis vor ca. 15 Jahren war die Theorie allgemein anerkannt. 2002 veröffentlichte die britische Geologin <strong>Gillian Foulger</strong> den Artikel „Plumes, or plate tectonic processes?“ und wies am Beispiel Islands auf Widersprüche hin:</p>
+          <ul>
+            <li>Es fehlen <strong>außergewöhnlich hohe Temperaturen</strong>.</li>
+            <li>Es fehlt eine <strong>Anordnung als Vulkankette</strong> wie bei Hawaii.</li>
+            <li>Es fehlen <strong>seismische Anomalien im unteren Mantel</strong> (der Plume müsste dort als „Schlot“ sichtbar sein).</li>
+          </ul>
+          <p><strong>Ihre Alternative:</strong> eine Kombination plattentektonischer Prozesse. Unter Island kreuzt die alte <strong>kaledonische Sutur</strong> (eine ca. 430 Mio. Jahre alte, ehemalige Plattengrenze) den Mittelatlantischen Rücken – dort gibt es leichter schmelzbares Material. Dafür spricht z. B. die vergleichbare geologische Situation bei den <strong>Azoren</strong>.</p>
+          <div class="box tipp"><span class="box-label">So beantwortest du so eine Aufgabe</span>„Arbeiten Sie zwei Gründe heraus“ (4 BE) → genau zwei Gründe aus dem Text, kurz in eigenen Worten. „Geben Sie an, was sie vermutet und wie sie es begründet“ → Alternative + Beleg (Azoren). Keine eigene Meinung nötig.</div>
+          <p>Warum braucht Island überhaupt einen Sonderfaktor? Die Magmaproduktion des MAR allein reicht nicht, um eine ca. 103.000 km² große Insel entstehen zu lassen – dafür ist eine <strong>zwei- bis dreifach höhere Magmafördermenge</strong> nötig.</p>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Was zeigt eine Hot-Spot-Vulkankette wie Hawaii?</p>
+            <ol><li>die Bewegungsrichtung der Platte über dem ortsfesten Hot Spot</li><li>eine Subduktionszone</li><li>eine Transformstörung</li></ol>
+            <p class="why">Der Hot Spot bleibt, die Platte wandert – die Vulkane werden in Bewegungsrichtung immer älter.</p></div>
+          <div class="q" data-a="2"><p>Welches Argument nennt Foulger <em>gegen</em> einen Plume unter Island?</p>
+            <ol><li>Island hat zu viele Gletscher</li><li>Island liegt am Polarkreis</li><li>Es fehlen außergewöhnlich hohe Temperaturen</li></ol>
+            <p class="why">Außerdem fehlen eine Vulkankette wie bei Hawaii und seismische Anomalien im unteren Mantel.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="island" data-show="2">
+        <header class="topic-head"><h3>Fallbeispiel Island</h3></header>
+        <div class="level" data-level="1">
+          <p>Island ist ein Sonderfall: Es liegt <strong>genau auf dem Mittelatlantischen Rücken</strong>. Dort driften die <strong>Nordamerikanische</strong> (Westen) und die <strong>Eurasische Platte</strong> (Osten) auseinander – jede um ca. 1–2 cm pro Jahr. Zusätzlich liegt darunter vermutlich ein <strong>Mantelplume</strong>.</p>
+          <ul>
+            <li>Deshalb gibt es extrem viele <strong>Vulkane, Geysire und heiße Quellen</strong>.</li>
+            <li>Es gibt täglich Erdbeben, aber fast nur <strong>schwache</strong>.</li>
+            <li>In der <strong>Mitte</strong> der Insel sind die Gesteine am jüngsten, nach außen werden sie immer älter – weil in der Mitte ständig neues Gestein entsteht.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="2">
+          <ul>
+            <li><strong>Lage:</strong> Nordatlantik, knapp südlich des nördlichen Polarkreises (66,5° N), ca. 103.000 km².</li>
+            <li><strong>Plattentektonik:</strong> divergente, konstruktive Plattengrenze; der Rücken verläuft als <strong>Zentralgraben</strong> quer durch die Insel (SW → NO). Antrieb: Rückendruck.</li>
+            <li><strong>Räumliche Verteilung der Vulkane:</strong> konzentriert entlang des Zentralgrabens und der Vulkanspalten (Spaltenvulkanismus), von Südwest nach Nordost.</li>
+            <li><strong>Altersverteilung der Basalte:</strong> jünger als 0,7 Mio. Jahre im Zentrum → 3–0,7 Mio. Jahre beidseits → älter als 3 Mio. Jahre an West- und Ostküste. Das Muster ist <strong>spiegelbildlich (symmetrisch)</strong>, weil in der Mitte neues Material entsteht und nach beiden Seiten weggeschoben wird – Seafloor-Spreading an Land sichtbar.</li>
+            <li><strong>Moderate Erdbeben:</strong> Dehnung statt Zusammenstoß; die Lithosphäre ist dünn und heiß, Spannungen lösen sich häufig in kleinen Beben; kein Verhaken großer Platten wie an Subduktionszonen; dazu vulkanische Beben durch Magmabewegungen.</li>
+            <li><strong>Sonderfall:</strong> Der MAR allein könnte Island nicht erklären – dafür braucht es die 2–3-fache Magmamenge → Plume.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <h4>So hättest du die Klausur 2024 gelöst (Kurzfassung)</h4>
+          <div class="tbl"><table>
+            <thead><tr><th>Aufgabe</th><th>Kernpunkte</th></tr></thead>
+            <tbody>
+              <tr><th>a) 10 BE</th><td><strong>Allgemein starke Beben:</strong> an konvergenten Grenzen (Subduktion: Verhaken der Platten über große Flächen, Spannungsaufbau über Jahrzehnte) und Transformstörungen (Reibungswiderstand) → ruckartiges Lösen der Spannung. <strong>Island:</strong> divergent → Dehnung, dünne heiße Lithosphäre, Spannungen bauen sich kaum auf und lösen sich in vielen kleinen Beben; Beben durch Magmabewegung.</td></tr>
+              <tr><th>b) 16 BE</th><td>Vulkane entlang Zentralgraben/Vulkanspalten SW–NO (M1) = Verlauf des MAR; Basaltalter symmetrisch: jung in der Mitte, alt an den Küsten → Platten driften je 1–2 cm/Jahr auseinander, neues Material entsteht im Zentrum (Seafloor-Spreading, M2 nur unterstützend nutzen).</td></tr>
+              <tr><th>c) 16 BE</th><td>Fließschema Mantelplume – siehe Beispiel bei <a href="#darstellungsformen">Darstellungsformen</a> (Genauer).</td></tr>
+              <tr><th>d) 4 BE</th><td>Gründe: keine außergewöhnlich hohen Temperaturen; keine Vulkankette wie Hawaii; keine seismischen Anomalien im unteren Mantel. Vermutung: Kreuzung der kaledonischen Sutur mit dem MAR; Beleg: ähnliche Situation bei den Azoren.</td></tr>
+              <tr><th>e) 4 BE</th><td>Subduktion an destruktiven Plattengrenzen gleicht die Neubildung am MAR aus → Kreislauf, die Erdoberfläche bleibt gleich groß.</td></tr>
+            </tbody>
+          </table></div>
+          <p><strong>Begleiterscheinungen:</strong> Geysire, Thermalquellen, Nutzung der Geothermie (ein Großteil der Häuser wird geothermisch beheizt), Gletscher auf Vulkanen → Schmelzwasserfluten bei Ausbrüchen (Vatnajökull); bei Þingvellir kann man die „Brücke zwischen den Kontinenten“ besuchen.</p>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Wo liegen auf Island die jüngsten Gesteine?</p>
+            <ol><li>an der West- und Ostküste</li><li>im Zentralgraben in der Mitte</li><li>ganz im Norden</li></ol>
+            <p class="why">Im Zentralgraben entsteht neues Gestein, das nach beiden Seiten weggeschoben wird.</p></div>
+          <div class="q" data-a="0"><p>Warum sind Islands Erdbeben meist schwach?</p>
+            <ol><li>Dehnung statt Verhakung, dünne heiße Lithosphäre – Spannungen lösen sich früh</li><li>Weil Island so klein ist</li><li>Weil Gletscher die Beben dämpfen</li></ol>
+            <p class="why">An divergenten Grenzen baut sich kaum Spannung auf – ganz anders als an Subduktionszonen.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KAPITEL V ================= -->
+    <section class="chapter" id="kap-5" style="--cc:var(--c5)" data-short="Vulkane &amp; Erdbeben" data-msg="Ausbruch an Wissen – Vulkane und Beben sitzen.">
+      <header class="chapter-head">
+        <div class="chapter-no">V</div>
+        <div><div class="overline">Kapitel V</div><h2>Vulkane &amp; Erdbeben</h2><p class="chapter-desc">Wo sie vorkommen, welche Vulkantypen es gibt, wie Erdbeben entstehen und wie man ihr Epizentrum findet.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="feuerring" data-show="2">
+        <header class="topic-head"><h3>Verbreitung von Vulkanen &amp; Erdbeben – der Pazifische Feuerring</h3></header>
+        <div class="level" data-level="1">
+          <p>Vulkane und Erdbeben sind nicht zufällig verteilt. Fast alle liegen <strong>an Plattengrenzen</strong> – wie Perlen auf einer Kette.</p>
+          <p>Am bekanntesten ist der <strong>Pazifische Feuerring</strong>: ein riesiger Gürtel rund um den Pazifik (Anden, Westküste Nordamerikas, Alaska, Japan, Philippinen, Indonesien, Neuseeland). Dort gibt es besonders viele Vulkane und die stärksten Erdbeben, weil der Pazifikboden an fast allen Rändern abtaucht.</p>
+          <p>Ausnahme: <strong>Hot Spots</strong> wie Hawaii liegen mitten auf einer Platte.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="def"><b>Pazifischer Feuerring:</b> ca. 40.000 km langer, hufeisenförmiger Gürtel von Vulkanen und Erdbebenherden rund um den Pazifik entlang von Subduktionszonen (destruktive Plattengrenzen). Hier liegen rund drei Viertel der aktiven Vulkane der Erde, und hier ereignen sich die meisten Erdbeben.</div>
+          <h4>Erdbeben nach Herdtiefe</h4>
+          <ul>
+            <li><strong>Flachbeben</strong> (Herd bis ca. 70 km): an allen Plattengrenzen – MOR, Transform, Subduktion, Kollision</li>
+            <li><strong>Mittelbeben</strong> (ca. 70–300 km) und <strong>Tiefbeben</strong> (ca. 300–700 km): <strong>nur an Subduktionszonen</strong>, entlang der abtauchenden Platte</li>
+          </ul>
+          <h4>Weitere Zonen</h4>
+          <ul>
+            <li><strong>Mittelatlantischer Rücken:</strong> Vulkanismus und Flachbeben (z. B. Island)</li>
+            <li><strong>Alpidischer Gürtel</strong> (Mittelmeer → Himalaya): viele Erdbeben, Vulkane nur im Mittelmeerraum (Ätna, Vesuv); im Himalaya (Kontinent–Kontinent) kaum Vulkanismus</li>
+            <li><strong>Ostafrikanischer Graben:</strong> Vulkane und Beben an einer kontinentalen Divergenz</li>
+            <li><strong>Hot Spots:</strong> Vulkanismus fernab von Plattengrenzen (Hawaii)</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <h4>Kartenaufgabe aus dem Unterricht – so vergleichst du</h4>
+          <ol>
+            <li><strong>Gemeinsamkeit:</strong> Vulkane und Erdbeben häufen sich linienhaft entlang der Plattengrenzen.</li>
+            <li><strong>Unterscheiden nach Grenztyp:</strong> Subduktionszonen → Vulkane + Flach-, Mittel- und Tiefbeben; MOR → Vulkane + Flachbeben; Transform → nur (Flach-)Beben; Kollision → Beben, kaum Vulkane.</li>
+            <li><strong>Ausnahmen erklären:</strong> Hot Spots (Hawaii) – Vulkane ohne Plattengrenze.</li>
+            <li><strong>Auffälligkeit:</strong> Tiefbeben ziehen sich landeinwärts – sie zeichnen die abtauchende Platte nach (Wadati-Benioff-Zone).</li>
+          </ol>
+          <div class="box tipp"><span class="box-label">Merksatz</span>Kein Magma ohne Subduktion, Spreizung oder Hot Spot – deshalb gibt es an Transformstörungen und bei Kontinent-Kontinent-Kollisionen kaum Vulkane, aber sehr wohl Erdbeben.</div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Wo kommen Tiefbeben (bis ca. 700 km) vor?</p>
+            <ol><li>an Subduktionszonen</li><li>am Mittelozeanischen Rücken</li><li>an Hot Spots</li></ol>
+            <p class="why">Nur dort reicht spröde Lithosphäre (die abtauchende Platte) so tief in den Mantel.</p></div>
+          <div class="q" data-a="2"><p>Warum gibt es im Himalaya viele Erdbeben, aber kaum Vulkane?</p>
+            <ol><li>Weil es dort zu kalt ist</li><li>Weil dort ein Hot Spot liegt</li><li>Kontinent-Kontinent-Kollision ohne Subduktion → kaum Magmabildung</li></ol>
+            <p class="why">Keine abtauchende Platte → kein aufschmelzendes Material → kaum Magma. Die Kollision erzeugt aber enorme Spannungen.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="vulkantypen" data-show="2">
+        <header class="topic-head"><h3>Schildvulkan vs. Schichtvulkan</h3></header>
+        <div class="level" data-level="1">
+          <p>Es gibt zwei Haupttypen:</p>
+          <ul>
+            <li><strong>Schildvulkan:</strong> flach und riesig – wie ein auf dem Boden liegender Schild. Die Lava ist heiß und <strong>dünnflüssig</strong> (wie warmer Honig), fließt weit und ruhig aus. Kaum Explosionen. Bsp.: Hawaii, Island.</li>
+            <li><strong>Schichtvulkan:</strong> steiler Kegel aus <strong>abwechselnden Schichten</strong> aus Lava und Asche. Die Lava ist <strong>zäh</strong> und voller Gas – wie eine geschüttelte Sprudelflasche. Deshalb kann er <strong>explodieren</strong>. Bsp.: Vesuv, Fuji.</li>
+          </ul>
+          <p>Schichtvulkane sind gefährlicher – und sie stehen dort, wo viele Menschen leben.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="tbl"><table>
+            <thead><tr><th>Kriterium</th><th>Schildvulkan</th><th>Schichtvulkan (Stratovulkan)</th></tr></thead>
+            <tbody>
+              <tr><th>Vorkommen</th><td>vorwiegend in ozeanischen Gebieten: Hot Spots, Mittelozeanische Rücken (divergent)</td><td>in fast allen Vulkangebieten der Erde, v. a. an <strong>Subduktionszonen</strong></td></tr>
+              <tr><th>Aussehen</th><td>flach gewölbt, sehr flache Hänge, nimmt riesige Flächen ein</td><td>kegelförmig, steile Flanken</td></tr>
+              <tr><th>Aufbau</th><td>Zentralvulkan mit zentralem Schlot zur Magmakammer; viele dünne Lavadecken übereinander</td><td>Zentralvulkan aus abwechselnden Schichten von Lava und Lockerprodukten (Asche, Lapilli); Hauptkrater, ggf. Nebenkrater und Spalten</td></tr>
+              <tr><th>Krater</th><td>flacher Kessel mit steilen Wänden, z. T. kochender Lavasee</td><td>steil, trichterförmig</td></tr>
+              <tr><th>Magma/Lava</th><td>basaltisch, sehr heiß (ca. 1.150 °C), relativ gasarm, SiO₂-arm (basisch) → <strong>sehr dünnflüssig</strong></td><td>SiO₂-reich, kühler (ca. 800–1.000 °C) → <strong>zähflüssig</strong>; explosive Phase gasreich, effusive Phase gasarm</td></tr>
+              <tr><th>Ausbruch</th><td>keine explosiven Ausbrüche, <strong>effusiv</strong> (ausfließend)</td><td>Wechsel <strong>explosiv – effusiv</strong></td></tr>
+              <tr><th>Förderprodukte</th><td>Lava (Basalt)</td><td>effusiv: Lavaströme · explosiv: Asche, Lapilli, Bomben, Steine, Gase</td></tr>
+              <tr><th>Beispiele</th><td>Mauna Loa (Hawaii), Vulkane auf Island</td><td>Vesuv (Italien), Fudschijama (Japan), Kilimandscharo (Tansania)</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="level" data-level="3">
+          <h4>„Ausbrüche von Schichtvulkanen sind gefährlicher.“ – Erkläre!</h4>
+          <ol>
+            <li><strong>SiO₂ macht zäh:</strong> Silikat-Moleküle bilden Ketten → hohe Viskosität. Gase (v. a. Wasserdampf, CO₂) können nicht entweichen.</li>
+            <li><strong>Druckaufbau:</strong> Zähes Magma verstopft den Schlot, der Gasdruck steigt – bis der „Pfropfen“ explosionsartig weggesprengt wird (wie beim Öffnen einer geschüttelten Sprudelflasche).</li>
+            <li><strong>Folgen:</strong> Aschewolken, Bomben, <strong>pyroklastische Ströme</strong> (Glutlawinen, mehrere hundert °C, über 100 km/h – Pompeji 79 n. Chr.), Lahare (Schlammströme, wenn Schnee/Gletscher schmelzen).</li>
+            <li><strong>Lage:</strong> Subduktionszonen sind oft dicht besiedelt (Japan, Indonesien, Italien, Anden).</li>
+          </ol>
+          <p><strong>Woher kommt der Unterschied?</strong> An Subduktionszonen nimmt aufsteigendes Magma SiO₂-reiches Krustengestein und Wasser aus der abtauchenden Platte auf → zäh und gasreich. An MOR und Hot Spots steigt basaltisches Mantelmaterial fast direkt auf → dünnflüssig, Gase entweichen leicht.</p>
+          <div class="box merke"><span class="box-label">Fachbegriffe</span>effusiv = ausfließend · explosiv = herausgeschleudert · Lapilli = Steinchen von 2–64 mm · Bomben = größere, im Flug geformte Lavafetzen · Pyroklastika = alle ausgeworfenen Lockerprodukte.</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 660 258" role="img" aria-label="Querschnitt Schildvulkan und Schichtvulkan im Vergleich">
+            <line x1="0" y1="150" x2="660" y2="150" class="s-line" stroke-width="1.5"/>
+            <ellipse cx="170" cy="182" rx="50" ry="10" fill="#e0662a"/>
+            <line x1="170" y1="172" x2="170" y2="96" stroke="#e0662a" stroke-width="4"/>
+            <path d="M20,150 C80,146 120,104 160,94 L180,94 C220,104 260,146 320,150 Z" fill="#6f5f52"/>
+            <path d="M178,96 C215,112 250,140 300,148" fill="none" stroke="#e0662a" stroke-width="3"/>
+            <path d="M162,96 C128,110 92,140 44,148" fill="none" stroke="#e0662a" stroke-width="3"/>
+            <text x="228" y="186" class="t-xs t-mute">Magmakammer</text>
+            <ellipse cx="500" cy="182" rx="40" ry="9" fill="#e0662a"/>
+            <line x1="500" y1="173" x2="500" y2="50" stroke="#e0662a" stroke-width="4"/>
+            <path d="M380,150 L488,46 L512,46 L620,150 Z" fill="#8b7b6a"/>
+            <path d="M402,150 L491,60 M598,150 L509,60 M446,150 L497,88 M554,150 L503,88" fill="none" stroke="#cbb79e" stroke-width="3"/>
+            <path d="M424,150 L494,74 M576,150 L506,74" fill="none" stroke="#5a4c40" stroke-width="3"/>
+            <path d="M466,36 L478,14 L496,22 L504,4 L522,18 L542,10 L538,32 L516,42 L492,42 Z" fill="#9a9187"/>
+            <rect x="446" y="28" width="5" height="5" fill="#5a4c40"/><rect x="556" y="24" width="4" height="4" fill="#5a4c40"/><rect x="566" y="42" width="5" height="5" fill="#5a4c40"/>
+            <text x="170" y="214" text-anchor="middle" class="t-h">Schildvulkan</text>
+            <text x="170" y="232" text-anchor="middle" class="t-s">flach &amp; breit · dünnflüssige Basaltlava</text>
+            <text x="170" y="249" text-anchor="middle" class="t-s t-mute">effusiv · z. B. Mauna Loa, Island</text>
+            <text x="500" y="214" text-anchor="middle" class="t-h">Schichtvulkan</text>
+            <text x="500" y="232" text-anchor="middle" class="t-s">steiler Kegel · Lava &amp; Asche im Wechsel</text>
+            <text x="500" y="249" text-anchor="middle" class="t-s t-mute">explosiv + effusiv · z. B. Vesuv, Fuji</text>
+          </svg>
+          <figcaption>Schildvulkan und Schichtvulkan im Querschnitt (schematisch, nicht maßstabsgetreu)</figcaption>
+        </figure>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Welcher Vulkantyp hat dünnflüssige, SiO₂-arme Lava?</p>
+            <ol><li>Schildvulkan</li><li>Schichtvulkan</li><li>beide</li></ol>
+            <p class="why">Basaltische, heiße, SiO₂-arme Lava ist dünnflüssig – typisch für Schildvulkane.</p></div>
+          <div class="q" data-a="1"><p>Warum explodieren Schichtvulkane?</p>
+            <ol><li>Weil sie größer sind</li><li>Zähes, gasreiches Magma verstopft den Schlot → Gasdruck baut sich auf</li><li>Weil Meerwasser in den Krater läuft</li></ol>
+            <p class="why">SiO₂-reiches Magma ist zäh, Gase können nicht entweichen – der Druck entlädt sich explosiv.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="erdbeben" data-show="2">
+        <header class="topic-head"><h3>Erdbeben: Entstehung, Herd und Stärke</h3></header>
+        <div class="level" data-level="1">
+          <p>Die meisten Erdbeben (ca. <strong>90 %</strong>) entstehen an Plattengrenzen: Die Platten verhaken sich, Spannung baut sich auf – wie bei einem <em>Lineal, das man immer weiter biegt</em>. Irgendwann schnappt es: Die Spannung löst sich <strong>ruckartig</strong>, die Erde schwingt, Wellen breiten sich aus.</p>
+          <ul>
+            <li><strong>Hypozentrum</strong> (Erdbebenherd): der Ort im Untergrund, an dem das Beben entsteht.</li>
+            <li><strong>Epizentrum:</strong> der Punkt an der Oberfläche <strong>direkt darüber</strong> – dort ist es meist am schlimmsten.</li>
+          </ul>
+          <p>Die <strong>Magnitude</strong> (Richter-Skala) sagt, wie viel Energie frei wurde. Die <strong>Intensität</strong> (Mercalli-Skala) sagt, wie stark die Zerstörung war.</p>
+        </div>
+        <div class="level" data-level="2">
+          <p class="flow-title">Wirkungsgefüge: Entstehung von Erdbeben</p>
+          <div class="flow-row">
+            <div><b>Tektonische Ursachen (ca. 90 %)</b><small>Kompression in Konvergenzzonen · Divergenzzonen (Grabenbildung, Vulkanismus) · Verhaken von Platten an Transformstörungen</small></div>
+            <div><b>Einsturz von Hohlräumen</b><small>z. B. Höhlen, Bergwerke</small></div>
+            <div><b>Künstliche Explosion</b><small>z. B. Sprengungen</small></div>
+          </div>
+          <div class="flow after-row">
+            <div>Ruckartiges Lösen von Spannung</div>
+            <div>Schwingung von Erdoberfläche und Erdinnerem</div>
+            <div>Ausbreitung seismischer Wellen (P-, S-, Oberflächenwellen) im Erdkörper</div>
+            <div class="end">Erdbeben</div>
+          </div>
+          <div class="def"><b>Hypozentrum:</b> Ort im Untergrund, an dem das Erdbeben entsteht (Erdbebenherd). Von dort breiten sich die seismischen Wellen in alle Richtungen aus.</div>
+          <div class="def"><b>Epizentrum:</b> über dem Hypozentrum liegendes Gebiet an der Erdoberfläche. Hier treffen die Wellen am schnellsten ein und richten die größte Zerstörung an.</div>
+          <h4>Das Ausmaß der Zerstörung hängt ab von …</h4>
+          <ul>
+            <li>der <strong>Magnitude</strong> (Stärke des Bebens)</li>
+            <li>der <strong>Tiefe</strong> des Hypozentrums und der <strong>Entfernung</strong> zum Epizentrum</li>
+            <li>der <strong>Topographie</strong> (z. B. Hanglagen → Rutschungen)</li>
+            <li>dem <strong>Untergrund</strong> (Lockersedimente verstärken die Erschütterung, Fels dämpft)</li>
+            <li>der <strong>Dauer</strong> des Bebens</li>
+          </ul>
+          <div class="tbl"><table>
+            <thead><tr><th>Skala</th><th>misst</th><th>Bedeutung</th></tr></thead>
+            <tbody>
+              <tr><th>Richter-Skala</th><td><strong>Magnitude</strong> = freigesetzte Energie (gemessen, objektiv)</td><td>ein Wert pro Beben, unabhängig vom Ort</td></tr>
+              <tr><th>Mercalli-Skala</th><td><strong>Intensität</strong> = sichtbare Zerstörung (subjektive Wahrnehmung, Stufen I–XII)</td><td>wichtig z. B. für Gebäudeversicherungen; nimmt mit der Entfernung ab</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Die Magnitude ist logarithmisch:</strong> +1 Magnitude = <strong>10-facher</strong> Ausschlag (Amplitude) im Seismogramm und ca. <strong>30-fache</strong> Energie. Ein Beben der Stärke 7 setzt also rund 1.000-mal mehr Energie frei als eines der Stärke 5.</li>
+            <li>Die Skala ist nach oben offen. Heute nutzt man meist die <strong>Momenten-Magnitude</strong> (Mw). Stärkstes je gemessenes Beben: <strong>Valdivia (Chile) 1960, Mw 9,5</strong>.</li>
+            <li><strong>Elastische Rückstellung:</strong> Das Gestein verformt sich über Jahre elastisch, bis die Reibung an der Störungsfläche überwunden wird – dann springt es ruckartig in eine entspannte Lage zurück.</li>
+            <li><strong>Flache Beben</strong> (&lt; 70 km) sind meist zerstörerischer als tiefe, weil die Energie weniger abgeschwächt an der Oberfläche ankommt.</li>
+            <li><strong>Folgeerscheinungen:</strong> Tsunamis (bei Seebeben mit vertikalem Versatz des Meeresbodens), Bodenverflüssigung, Hangrutschungen, Brände, Nachbeben.</li>
+          </ul>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>Magnitude und Intensität verwechseln. Ein Beben hat <em>eine</em> Magnitude, aber an verschiedenen Orten <em>unterschiedliche</em> Intensitäten.</div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Was ist das Epizentrum?</p>
+            <ol><li>der Erdbebenherd im Untergrund</li><li>der Punkt an der Oberfläche direkt über dem Herd</li><li>die nächste Messstation</li></ol>
+            <p class="why">Epi- = „darüber“. Der Herd im Untergrund heißt Hypozentrum.</p></div>
+          <div class="q" data-a="1"><p>Um wie viel wächst der Ausschlag (Amplitude), wenn die Magnitude um 1 steigt?</p>
+            <ol><li>er verdoppelt sich</li><li>er verzehnfacht sich</li><li>er verhundertfacht sich</li></ol>
+            <p class="why">Logarithmische Skala: +1 = 10-fache Amplitude (und ca. 30-fache Energie).</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="seismik" data-show="2">
+        <header class="topic-head"><h3>Seismische Wellen, Seismograph &amp; Epizentrum bestimmen</h3></header>
+        <div class="level" data-level="1">
+          <p>Bei einem Erdbeben laufen verschiedene Wellen los:</p>
+          <ol>
+            <li>Zuerst kommen die schnellen <strong>P-Wellen</strong> (Primärwellen) – „drücken und ziehen“.</li>
+            <li>Dann die langsameren <strong>S-Wellen</strong> (Sekundärwellen) – „schütteln“.</li>
+            <li>Zuletzt die <strong>Oberflächenwellen</strong> – sie richten den größten Schaden an.</li>
+          </ol>
+          <p>Ein <strong>Seismograph</strong> zeichnet die Wellen auf (Seismogramm).</p>
+          <p class="analogy">Wie beim Gewitter: Blitz sehen, Sekunden bis zum Donner zählen – je länger, desto weiter weg. Genauso verrät der Zeitabstand zwischen P- und S-Welle, wie weit das Beben entfernt war.</p>
+          <p>Mit <strong>drei Messstationen</strong> findet man das Epizentrum: Um jede Station zeichnet man einen Kreis mit der Entfernung – wo sich alle drei Kreise schneiden, liegt das Epizentrum.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="tbl"><table>
+            <thead><tr><th>Welle</th><th>Art</th><th>Geschwindigkeit</th><th>Besonderheit</th></tr></thead>
+            <tbody>
+              <tr><th>P-Welle</th><td>Longitudinalwelle</td><td>am schnellsten, Ø ca. 6 km/s</td><td>durchdringt Festkörper und Flüssigkeiten, kommt zuerst an</td></tr>
+              <tr><th>S-Welle</th><td>Transversalwelle</td><td>Ø ca. 4 km/s</td><td>nur in Festkörpern</td></tr>
+              <tr><th>Oberflächenwellen</th><td>entstehen, wenn P- und S-Wellen die Oberfläche erreichen</td><td>am langsamsten</td><td>größte Amplitude → größte Zerstörung</td></tr>
+            </tbody>
+          </table></div>
+          <p><strong>Seismograph:</strong> Das Gestell ist fest mit dem Boden verbunden und schwingt mit. Eine an einer Feder aufgehängte <strong>Ruhemasse</strong> bleibt durch ihre Trägheit fast in Ruhe. Die Schreibnadel zeichnet die Relativbewegung auf → <strong>Seismogramm</strong>.</p>
+          <h4>Entfernung zum Epizentrum</h4>
+          <ol>
+            <li>Im Seismogramm die <strong>Zeitdifferenz Δt</strong> zwischen dem Eintreffen der ersten P- und der ersten S-Welle ablesen.</li>
+            <li>Im <strong>Weg-Zeit-Diagramm</strong> die Stelle suchen, an der P- und S-Kurve genau Δt auseinanderliegen → Entfernung ablesen.</li>
+          </ol>
+          <div class="box merke"><span class="box-label">Rechnen statt ablesen</span>Mit v<sub>P</sub> = 6 km/s und v<sub>S</sub> = 4 km/s gilt: Δt = d/4 − d/6 = d/12 → <strong>d = Δt · 12 km/s</strong>. Beispiel: Δt = 20 s → d = 240 km.</div>
+          <h4>Lokalisierung des Epizentrums</h4>
+          <p>Man braucht <strong>mindestens drei Messstationen</strong>: Um jede Station einen Kreis mit dem Radius „Entfernung zum Epizentrum“ zeichnen (Zirkel, Atlasmaßstab). Der gemeinsame <strong>Schnittpunkt</strong> ist das Epizentrum. Mit nur zwei Stationen gibt es zwei mögliche Schnittpunkte.</p>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Magnitude grafisch bestimmen (Nomogramm):</strong> Entfernung zum Epizentrum und maximale Amplitude im Seismogramm mit einer Linie verbinden – auf der mittleren Skala die Magnitude ablesen.</li>
+            <li><strong>Übungsaufgabe aus dem Material:</strong> Ein Messgerät steht 150 km vom Epizentrum entfernt. Bei einem neuen Beben ist die Bodenbewegung nur 1/100 so stark wie bei einem Beben der Magnitude 4,9. Lösung: 1/100 der Amplitude = zwei Zehnerpotenzen weniger → Magnitude <strong>2,9</strong>.</li>
+            <li><strong>Warum 6 und 4 km/s?</strong> Das sind Durchschnittswerte für die Kruste. In der Tiefe werden die Wellen schneller – deshalb sind die Laufzeitkurven für große Entfernungen gekrümmt.</li>
+            <li><strong>Schattenzone:</strong> Hinter dem flüssigen äußeren Kern kommen auf der Gegenseite der Erde keine S-Wellen an – Beweis für den flüssigen äußeren Kern (siehe <a href="#schalenbau">Schalenbau</a>).</li>
+          </ul>
+        </div>
+        <figure class="fig">
+          <div class="fig-row">
+            <svg viewBox="0 0 640 312" role="img" aria-label="Weg-Zeit-Diagramm für P- und S-Wellen">
+              <g class="s-line" stroke-width="1">
+                <line x1="150.7" y1="40" x2="150.7" y2="270"/><line x1="237.3" y1="40" x2="237.3" y2="270"/><line x1="324" y1="40" x2="324" y2="270"/><line x1="410.7" y1="40" x2="410.7" y2="270"/><line x1="497.3" y1="40" x2="497.3" y2="270"/><line x1="584" y1="40" x2="584" y2="270"/>
+                <line x1="64" y1="231.7" x2="584" y2="231.7"/><line x1="64" y1="193.3" x2="584" y2="193.3"/><line x1="64" y1="155" x2="584" y2="155"/><line x1="64" y1="116.7" x2="584" y2="116.7"/><line x1="64" y1="78.3" x2="584" y2="78.3"/><line x1="64" y1="40" x2="584" y2="40"/>
+              </g>
+              <path d="M64,40 L64,270 L590,270" fill="none" class="s-ink" stroke-width="1.5"/>
+              <line x1="64" y1="270" x2="584" y2="116.7" stroke="#2d6a8e" stroke-width="3"/>
+              <line x1="64" y1="270" x2="584" y2="40" stroke="#c2410c" stroke-width="3"/>
+              <line x1="324" y1="270" x2="324" y2="193.3" class="s-ink" stroke-dasharray="4 3"/>
+              <line x1="324" y1="191" x2="324" y2="158" class="s-ink" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+              <text x="332" y="179" class="t-s t-b">Δt = 25 s</text>
+              <text x="324" y="300" text-anchor="middle" class="t-s t-b t-acc">300 km</text>
+              <text x="434" y="96" class="t-s t-b" fill="#c2410c" style="fill:#c2410c">S-Welle · ca. 4 km/s</text>
+              <text x="470" y="172" class="t-s t-b" style="fill:#2d6a8e">P-Welle · ca. 6 km/s</text>
+              <g class="t-xs t-mute" text-anchor="middle">
+                <text x="64" y="285">0</text><text x="150.7" y="285">100</text><text x="237.3" y="285">200</text><text x="410.7" y="285">400</text><text x="497.3" y="285">500</text><text x="584" y="285">600</text>
+              </g>
+              <g class="t-xs t-mute" text-anchor="end">
+                <text x="56" y="274">0</text><text x="56" y="235">25</text><text x="56" y="197">50</text><text x="56" y="159">75</text><text x="56" y="121">100</text><text x="56" y="82">125</text><text x="56" y="44">150</text>
+              </g>
+              <text x="590" y="300" text-anchor="end" class="t-xs t-mute">Entfernung (km)</text>
+              <text x="14" y="30" class="t-xs t-mute">Laufzeit (s)</text>
+            </svg>
+            <svg viewBox="-10 -15 320 290" role="img" aria-label="Epizentrum durch drei Kreise bestimmen">
+              <circle cx="80" cy="70" r="75" fill="none" class="s-ink" stroke-width="1.5"/>
+              <circle cx="215" cy="80" r="82.8" fill="none" class="s-ink" stroke-width="1.5"/>
+              <circle cx="150" cy="185" r="70.7" fill="none" class="s-ink" stroke-width="1.5"/>
+              <rect x="75" y="65" width="10" height="10" class="f-ink"/><text x="70" y="60" text-anchor="end" class="t-s t-b">A</text>
+              <rect x="210" y="75" width="10" height="10" class="f-ink"/><text x="226" y="70" class="t-s t-b">B</text>
+              <rect x="145" y="180" width="10" height="10" class="f-ink"/><text x="162" y="200" class="t-s t-b">C</text>
+              <path d="M140,105 L143,112 L151,112 L145,117 L147,125 L140,120 L133,125 L135,117 L129,112 L137,112 Z" fill="#e0662a" class="s-ink" stroke-width=".8"/>
+              <text x="140" y="146" text-anchor="middle" class="t-xs t-b">Epizentrum</text>
+            </svg>
+          </div>
+          <figcaption>Links: Weg-Zeit-Diagramm (v<sub>P</sub> ≈ 6 km/s, v<sub>S</sub> ≈ 4 km/s) – bei 25 s Abstand ist das Beben 300 km entfernt. Rechts: Der Schnittpunkt der drei Entfernungskreise ist das Epizentrum.</figcaption>
+        </figure>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Welche Wellen kommen zuerst an?</p>
+            <ol><li>P-Wellen</li><li>S-Wellen</li><li>Oberflächenwellen</li></ol>
+            <p class="why">P = Primärwellen: Longitudinalwellen mit der höchsten Geschwindigkeit (ca. 6 km/s).</p></div>
+          <div class="q" data-a="1"><p>P- und S-Welle kommen mit 30 s Abstand an (v<sub>P</sub> = 6 km/s, v<sub>S</sub> = 4 km/s). Wie weit ist das Epizentrum entfernt?</p>
+            <ol><li>180 km</li><li>360 km</li><li>540 km</li></ol>
+            <p class="why">d = Δt · 12 km/s = 30 · 12 = 360 km. Probe: 360/4 − 360/6 = 90 − 60 = 30 s.</p></div>
+          <div class="q" data-a="0"><p>Warum braucht man mindestens drei Messstationen?</p>
+            <ol><li>Zwei Kreise schneiden sich in zwei Punkten – erst der dritte macht es eindeutig</li><li>Falls eine Station ausfällt</li><li>Um die Magnitude zu berechnen</li></ol>
+            <p class="why">Jede Station liefert nur eine Entfernung (Kreis). Erst drei Kreise haben einen gemeinsamen Schnittpunkt.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KAPITEL VI ================= -->
+    <section class="chapter" id="kap-6" style="--cc:var(--c6)" data-short="Verwitterung" data-msg="Selbst Granit hält dir nicht mehr stand.">
+      <header class="chapter-head">
+        <div class="chapter-no">VI</div>
+        <div><div class="overline">Kapitel VI</div><h2>Exogene Kräfte: Verwitterung</h2><p class="chapter-desc">Was die endogenen Kräfte aufbauen, tragen Sonne, Wasser, Eis, Salz und Lebewesen wieder ab – und das Klima entscheidet, wie.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="verwitterung" data-show="2">
+        <header class="topic-head"><h3>Verwitterung – Grundlagen</h3></header>
+        <div class="level" data-level="1">
+          <p><strong>Endogene Kräfte</strong> (von innen: Plattentektonik, Vulkanismus) bauen Gebirge auf. <strong>Exogene Kräfte</strong> (von außen: Sonne, Wasser, Eis, Wind, Lebewesen) bauen sie wieder ab.</p>
+          <p>Der erste Schritt ist die <strong>Verwitterung</strong>: Gestein wird <strong>an Ort und Stelle</strong> zerkleinert oder chemisch zersetzt. Danach geht es weiter:</p>
+          <p><strong>Verwitterung</strong> (zerkleinern) → <strong>Erosion</strong> (abtragen) → <strong>Transport</strong> (durch Wasser, Wind, Eis) → <strong>Sedimentation</strong> (ablagern)</p>
+          <p>Es gibt drei Arten: <strong>physikalisch</strong> (mechanisch zerbrechen), <strong>chemisch</strong> (auflösen/umwandeln) und <strong>biologisch</strong> (durch Lebewesen).</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="def"><b>Verwitterung</b> bezeichnet die natürliche Zersetzung von Gestein infolge dessen exponierter Lage an oder nahe der Erdoberfläche.</div>
+          <p>Dabei wirken mehrere Prozesse zusammen, die eine <strong>physikalische Zerstörung</strong> und/oder <strong>chemische Veränderung</strong> des Gesteins – abiotisch oder biotisch verursacht – herbeiführen. Bei der physikalischen Verwitterung bleiben die gesteinsbildenden Minerale erhalten, bei der chemischen werden sie aufgelöst oder umgewandelt.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Physikalische Verwitterung</th><th>Chemische Verwitterung</th><th>Biologische Verwitterung</th></tr></thead>
+            <tbody><tr>
+              <td>Insolationsverwitterung (= Temperaturverwitterung) · Frostsprengung · Salzsprengung · Druckentlastung · Hydratation</td>
+              <td>Lösungsverwitterung · Kohlensäureverwitterung (= Karbonatverwitterung) · Hydrolyse · Oxidationsverwitterung</td>
+              <td>Wurzelsprengung · Säuren von Insekten, Moosen, Flechten · Pilzbefall</td>
+            </tr>
+            <tr>
+              <td><em>Vorkommen:</em> Wüsten, (tropische) Hochgebirge, subpolare Zone</td>
+              <td><em>Vorkommen:</em> Regionen mit humidem Klima und hohen Jahresdurchschnittstemperaturen</td>
+              <td><em>Vorkommen:</em> überall, wo es Pflanzen, Bäume und Insekten gibt</td>
+            </tr></tbody>
+          </table></div>
+          <div class="box merke"><span class="box-label">Fachbegriffe Erosion</span><strong>äolisch</strong> = durch Wind · <strong>fluvial</strong> = durch fließendes Wasser · <strong>glazial</strong> = durch Gletscher. Abtragung = Erosion, Ablagerung = Sedimentation.</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Teamwork:</strong> Physikalische Verwitterung vergrößert die Oberfläche (viele kleine Stücke), dadurch greift die chemische Verwitterung besser an. In der Natur wirken fast immer mehrere Prozesse gleichzeitig.</li>
+            <li><strong>Voraussetzung für Landschaftsformung und Bodenbildung:</strong> Ohne Verwitterung könnte nichts abgetragen werden, und es gäbe keinen Boden.</li>
+            <li><strong>Endogen und exogen greifen ineinander:</strong> Abtragung entlastet ein Gebirge → isostatische Hebung → neues Gestein wird freigelegt und verwittert.</li>
+          </ul>
+          <h4>Wechselwirkung Klima ↔ Lithosphäre (CO₂-Kreislauf)</h4>
+          <p>Bei der Verwitterung von Silikaten wird CO₂ aus der Atmosphäre gebunden (als Hydrogencarbonat, HCO₃⁻). Das ergibt einen <strong>Regelkreis</strong>, der das Klima über Jahrmillionen stabilisiert:</p>
+          <ol>
+            <li>Viel CO₂ in der Atmosphäre → Erwärmung → schnellere chemische Verwitterung</li>
+            <li>Schnellere Verwitterung entzieht der Atmosphäre CO₂ → Abkühlung</li>
+            <li>Kühleres Klima → langsamere Verwitterung → CO₂ steigt wieder an (z. B. durch Vulkanismus)</li>
+          </ol>
+          <p>Das ist eine negative Rückkopplung – ein typisches Element für ein <a href="#darstellungsformen">Wirkungsgefüge</a>.</p>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Was ist der Unterschied zwischen Verwitterung und Erosion?</p>
+            <ol><li>Verwitterung zerkleinert/zersetzt an Ort und Stelle, Erosion trägt das Material ab</li><li>Das ist dasselbe</li><li>Erosion gibt es nur im Meer</li></ol>
+            <p class="why">Erst verwittert das Gestein, dann wird es durch Wasser, Wind oder Eis abgetragen (Erosion).</p></div>
+          <div class="q" data-a="2"><p>Bei welcher Verwitterungsart bleiben die Minerale erhalten?</p>
+            <ol><li>bei der chemischen</li><li>bei keiner</li><li>bei der physikalischen</li></ol>
+            <p class="why">Physikalisch = mechanische Zertrümmerung. Die Minerale werden nur zerkleinert, nicht verändert.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="physikalisch" data-show="2">
+        <header class="topic-head"><h3>Physikalische Verwitterung</h3></header>
+        <div class="level" data-level="1">
+          <p>Gestein wird <strong>mechanisch kaputt gemacht</strong>, ohne dass es sich chemisch verändert:</p>
+          <ul>
+            <li><strong>Insolationsverwitterung:</strong> Die Sonne heizt das Gestein tagsüber auf, nachts kühlt es stark ab. Es dehnt sich aus und zieht sich zusammen – immer wieder –, bis es zerbröselt. Typisch für <strong>Wüsten</strong>.</li>
+            <li><strong>Frostsprengung:</strong> Wasser dringt in Ritzen ein, gefriert und <strong>dehnt sich aus</strong> (um ca. 9 %). Das Eis sprengt den Stein wie ein Keil. Typisch fürs <strong>Hochgebirge</strong>.</li>
+            <li><strong>Salzsprengung:</strong> Salzwasser verdunstet in Ritzen, Salzkristalle wachsen und sprengen das Gestein. Typisch für trockene Gebiete und Küsten.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="2">
+          <div class="tbl"><table>
+            <thead><tr><th>Prozess</th><th>Was passiert</th><th>Vorkommen</th></tr></thead>
+            <tbody>
+              <tr><th>Insolations&shy;verwitterung<br><small>(= Temperatur&shy;verwitterung)</small></th><td>Lockerung des Mineralgefüges durch unterschiedliche Ausdehnung der Minerale bei Erwärmung (Sonne) bzw. Volumenabnahme beim Abkühlen. Besonders intensiv bei häufigen und großen Temperaturveränderungen.</td><td>Wüsten, tropische Hochgebirge</td></tr>
+              <tr><th>Frostsprengung</th><td>Die Volumenzunahme von Wasser beim Gefrieren erzeugt in Ritzen und Spalten einen Druck, der Gestein sprengt oder Teile absprengt. Besonders intensiv bei häufigem Temperaturwechsel um den Gefrierpunkt. Ein anfangs oberflächlicher <strong>Eispfropf</strong> verhindert das Ausdehnen des später innen gefrierenden Wassers nach außen → starker Druck auf die Seitenwände.</td><td>Hochgebirge, subpolare Zone; humide Gebiete mit häufigem Frostwechsel</td></tr>
+              <tr><th>Salzsprengung</th><td>Aus Lösungen auskristallisierende Minerale (Salze) verursachen durch Volumenzunahme beim Kristallisieren einen Druck, der Gestein absprengt. Die Salze können in Lösungen enthalten sein oder durch <strong>Kapillarwirkung</strong> aus dem Gesteinsinneren aufsteigen.</td><td>trockene und wechselfeuchte Gebiete</td></tr>
+              <tr><th>Druckentlastung</th><td>Bei Hebung oder Freilegung (Abtragung der Auflast) dehnt sich das Gestein aus → Ablösen von Schalen (Abschuppung), kleinen Bruchstücken, Abbröckeln (Vergrusung).</td><td>überall, wo Gestein freigelegt wird</td></tr>
+              <tr><th>Hydratation</th><td>An- oder Einlagerung von Wassermolekülen ins Kristallgitter lässt es aufquellen und erzeugt dadurch Druck (wird teils auch zur chemischen Verwitterung gezählt).</td><td>feuchte Gebiete</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="level" data-level="3">
+          <h4>Musterlösung Klausur 2024, Aufgabe 2: Insolationsverwitterung in der Sonora-Wüste (M6)</h4>
+          <ol>
+            <li><strong>Material auswerten:</strong> Die Gesteinsoberfläche erwärmt sich von ca. 28 °C (7 Uhr) auf ca. 62 °C (14 Uhr) – eine Tagesschwankung von über 30 K. Die Luft schwankt nur zwischen ca. 33 und 45 °C. Nach Sonnenuntergang kühlt das Gestein schneller ab als die Luft und liegt nachts darunter.</li>
+            <li><strong>Ursachen:</strong> wolkenloser Himmel und trockene Luft (arid) → starke Einstrahlung am Tag, starke Ausstrahlung in der Nacht; keine Vegetation, die das Gestein beschattet.</li>
+            <li><strong>Prozess:</strong> Gestein leitet Wärme schlecht → die Außenschicht dehnt sich stärker aus als der Kern → Spannungen zwischen Oberfläche und Innerem. Verschiedene Minerale (hell/dunkel) dehnen sich unterschiedlich stark aus → Lockerung des Mineralgefüges.</li>
+            <li><strong>Folge:</strong> Durch die tägliche Wiederholung ermüdet das Gestein: Absprengen von Schalen (Abschuppung), Kernsprünge, Zerfall zu Grus und Schutt.</li>
+          </ol>
+          <div class="box tipp"><span class="box-label">Profi-Info</span>Ganz trockenes Gestein verwittert durch Temperaturwechsel allein überraschend langsam. Schon geringe Feuchtigkeit (Tau, seltene Niederschläge) verstärkt den Effekt deutlich – in der Wüste wirken Insolation und Salzsprengung deshalb oft zusammen.</div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Wann wirkt Frostsprengung am stärksten?</p>
+            <ol><li>bei Dauerfrost</li><li>bei häufigem Temperaturwechsel um den Gefrierpunkt</li><li>bei großer Hitze</li></ol>
+            <p class="why">Jedes Auftauen lässt Wasser tiefer eindringen, jedes Gefrieren sprengt weiter. Bei Dauerfrost passiert kaum etwas.</p></div>
+          <div class="q" data-a="0"><p>Wodurch wird das Gestein bei der Insolationsverwitterung gelockert?</p>
+            <ol><li>durch die unterschiedliche Ausdehnung der Minerale bei Erwärmung und Abkühlung</li><li>durch Säuren</li><li>durch Pflanzenwurzeln</li></ol>
+            <p class="why">Unterschiedliche Minerale und Außen-/Innenschicht dehnen sich verschieden aus → Spannungen → Gefügelockerung.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="chemisch" data-show="2">
+        <header class="topic-head"><h3>Chemische &amp; biologische Verwitterung</h3></header>
+        <div class="level" data-level="1">
+          <p>Bei der <strong>chemischen Verwitterung</strong> wird Gestein „aufgelöst“ oder in andere Stoffe umgewandelt – durch Wasser, Säuren und Sauerstoff. Am besten klappt das, wo es <strong>warm und feucht</strong> ist (Tropen).</p>
+          <ul>
+            <li>Kalkstein wird von kohlensäurehaltigem Wasser gelöst – so entstehen <strong>Höhlen</strong>.</li>
+            <li>Eisen im Gestein <strong>rostet</strong> – deshalb sind tropische Böden oft rot.</li>
+          </ul>
+          <p>Bei der <strong>biologischen Verwitterung</strong> helfen Lebewesen mit: <strong>Wurzeln</strong> sprengen Steine, Moose und Flechten scheiden <strong>Säuren</strong> aus.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="tbl"><table>
+            <thead><tr><th>Prozess</th><th>Was passiert</th></tr></thead>
+            <tbody>
+              <tr><th>Lösungsverwitterung</th><td>Wasser löst Minerale (z. B. Steinsalz, Gips) und transportiert sie ab.</td></tr>
+              <tr><th>Kohlensäure&shy;verwitterung<br><small>(= Karbonatverwitterung)</small></th><td>Kohlensäure (CO₂ + Wasser) verwandelt schwer löslichen Kalkstein in leicht lösliches Calciumhydrogencarbonat → Karst, Höhlen. <strong>Besonderheit:</strong> CO₂ löst sich in kaltem Wasser besser als in warmem; in den Tropen wirkt sie trotzdem stark wegen der hohen biologischen CO₂-Produktion im Boden.</td></tr>
+              <tr><th>Hydrolyse</th><td>Säure (H⁺-Ionen) zerstört Silikate im Gestein (z. B. Feldspat) → neue <strong>Tonminerale</strong> entstehen.</td></tr>
+              <tr><th>Oxidations&shy;verwitterung</th><td>Sauerstoff reagiert mit Metallen (v. a. Eisen) im Gestein und lockert das Kristallgitter – „natürliches Rosten“.</td></tr>
+            </tbody>
+          </table></div>
+          <p><strong>Vorkommen chemische Verwitterung:</strong> Regionen mit humidem Klima und hohen Jahresdurchschnittstemperaturen – Wärme beschleunigt chemische Reaktionen, Wasser ist das Reaktionsmittel.</p>
+          <div class="def"><b>Biologische Verwitterung:</b> Mischung aus Mechanik (Pflanzenwurzeln sprengen Gestein durch ihr Dickenwachstum) und Chemie (Säuren von Lebewesen verstärken die Zersetzung: Insekten, Moose, Flechten, Pilzbefall). Vorkommen: überall, wo es Pflanzen, Bäume und Insekten gibt.</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Kohlensäureverwitterung als Gleichung:</strong> CaCO₃ + H₂O + CO₂ ⇌ Ca(HCO₃)₂. Die Reaktion ist <strong>umkehrbar</strong>: Entweicht CO₂ (z. B. in einer Höhle), fällt wieder Kalk aus → Tropfsteine.</li>
+            <li><strong>Hydrolyse genauer:</strong> H⁺-Ionen aus der Bodenlösung verdrängen leicht lösliche Alkali- und Erdalkali-Ionen (z. B. K⁺, Na⁺, Ca²⁺) aus dem Kristallgitter. Aus den Resten entstehen Tonminerale. <strong>Nicht umkehrbar.</strong> Quarz verwittert kaum → deshalb besteht Sand größtenteils aus Quarz.</li>
+            <li><strong>Oxidation und Farbe:</strong> Eisenoxide wie Hämatit (Fe₂O₃) färben Böden rot – typisch für tropische Laterit-Böden (lat. later = Ziegel).</li>
+            <li><strong>Mensch als Faktor:</strong> Saurer Regen (Luftverschmutzung) beschleunigt die chemische Verwitterung von Steinfiguren und Gebäuden erheblich.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Chemische Verwitterung immer mit <strong>Wasser + Wärme</strong> begründen: Wasser ist das Reaktionsmittel, Wärme beschleunigt die Reaktion. Beides gibt es ganzjährig in den immerfeuchten Tropen.</div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Wo ist die chemische Verwitterung am stärksten?</p>
+            <ol><li>in heißen, feuchten Gebieten (Tropen)</li><li>in Wüsten</li><li>in Polargebieten</li></ol>
+            <p class="why">Wasser als Reaktionsmittel + hohe Temperaturen = schnelle chemische Reaktionen.</p></div>
+          <div class="q" data-a="2"><p>Was entsteht bei der Hydrolyse von Silikaten?</p>
+            <ol><li>Salzkristalle</li><li>Eis</li><li>Tonminerale</li></ol>
+            <p class="why">Säure zerstört z. B. Feldspat – aus den Resten bilden sich neue Tonminerale.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="klima" data-show="2">
+        <header class="topic-head"><h3>Verwitterung in Abhängigkeit vom Klima</h3></header>
+        <div class="level" data-level="1">
+          <p>Welche Verwitterung „gewinnt“, hängt vom <strong>Klima</strong> ab:</p>
+          <ul>
+            <li><strong>Wüste</strong> (trocken, große Temperaturunterschiede): physikalische Verwitterung – vor allem Insolation und Salzsprengung. Der Wind weht Sand weg und lagert ihn als Dünen ab.</li>
+            <li><strong>Kalt und feucht</strong> (Hochgebirge, Spitzbergen): <strong>Frostsprengung</strong>. Am Fuß der Felswände sammeln sich Schutthalden.</li>
+            <li><strong>Tropen</strong> (heiß und nass): <strong>chemische Verwitterung</strong>. Böden sind dort bis zu 10 m tief verwittert und rot.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="2">
+          <h4>1. Aride Gebiete, z. B. Wüsten</h4>
+          <p>Merkmale: arid → <strong>Wassermangel</strong>; meist große Temperaturunterschiede zwischen Tag und Nacht (ΔT bis ca. 50 K); kaum Vegetation → <strong>physikalische Verwitterung überwiegt</strong>.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Wüstenart</th><th>Entstehung / prägende Kräfte</th><th>Anteil Sahara</th></tr></thead>
+            <tbody>
+              <tr><th>Fels- und Steinwüste<br><small>(Hammada)</small></th><td>Insolationsverwitterung → Temperaturunterschiede → Gestein zerspringt; äolische Erosion: Sand und Kies werden ausgeweht</td><td class="c">ca. 70 %</td></tr>
+              <tr><th>Kieswüste<br><small>(Serir)</small></th><td>fluviale Erosion durch Sturzfluten → gerundete Kiese; äolische Erosion: Sande werden ausgeweht</td><td class="c">ca. 10 %</td></tr>
+              <tr><th>Sandwüste<br><small>(Erg)</small></th><td>ausgewehter Sand lagert sich als Sanddünen in Mulden oder an Vegetation ab – wegen nachlassender Schleppkraft des Windes (Sedimentation)</td><td class="c">ca. 20 %</td></tr>
+            </tbody>
+          </table></div>
+          <p>Abfolge vom Gebirge zur Sandwüste: Verwitterung → Erosion (Abtragung) → Transport (Wind/Wasser) → Sedimentation (Ablagerung).</p>
+          <h4>2. Kühle, humide Gebiete, z. B. die arktische Insel Spitzbergen</h4>
+          <p><strong>Frostsprengung</strong> (und Insolationsverwitterung) überwiegen. Physikalisch verwittertes Gestein wird erodiert und sammelt sich in <strong>Schuttkegeln</strong> am Steilufer.</p>
+          <h4>3. Stark humide, heiße Gebiete, z. B. die Tropen</h4>
+          <p>Ganzjährig warm und stark humid → <strong>chemische Verwitterung</strong> überwiegt, insbesondere Oxidation und Hydrolyse. Ergebnis: tiefgründig (bis ca. 10 m) verwitterte, rote <strong>Laterit-Böden</strong>, angereichert mit Aluminium- und Eisenoxiden. Sie sind nährstoffarm – die Pflanzen des Regenwaldes beziehen ihre Nährstoffe hauptsächlich aus Pflanzenresten.</p>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum so tief verwittert?</strong> In den Tropen gab es keine Kaltzeiten. Die Verwitterung läuft dort seit Millionen Jahren ungestört. Bei uns haben die Gletscher der Eiszeit alles „zurückgesetzt“ – unsere Böden sind höchstens ca. 10.000 Jahre alt.</li>
+            <li><strong>Rot durch Rost:</strong> Sauerstoff lagert sich an Eisen, Schwefel und Mangan an und lockert das Kristallgitter; Eisenoxid (Hämatit, Fe₂O₃) färbt den Boden rot.</li>
+            <li><strong>Windwirkung in der Wüste:</strong> Deflation = Auswehung feiner Teilchen; Korrasion = Windschliff durch mitgeführten Sand (Pilzfelsen, Felsnadeln).</li>
+            <li><strong>Mitteleuropa:</strong> mäßige chemische Verwitterung + Frostverwitterung im Winter.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Strategie</span>Immer die Kette bilden: <strong>Klimadaten</strong> (Temperatur, Niederschlag, Tagesgang) → <strong>dominante Verwitterungsart</strong> → <strong>entstehende Formen</strong> (Schutt, Dünen, Laterit). So kannst du auch unbekannte Räume erklären.</div>
+        </div>
+        <div class="climate" role="img" aria-label="Schema: dominierende Verwitterung nach Temperatur und Niederschlag">
+          <div class="h"></div><div class="h">trocken</div><div class="h">mäßig feucht</div><div class="h">sehr feucht</div>
+          <div class="h rh">warm</div>
+          <div class="cell ins"><b>Insolation &amp; Salzsprengung</b><small>Wüsten (Sahara)</small></div>
+          <div class="cell chem1"><b>mäßige chemische + Salzverwitterung</b><small>wechselfeuchte Tropen</small></div>
+          <div class="cell chem3"><b>extreme chemische Verwitterung</b><small>immerfeuchte Tropen, Laterit</small></div>
+          <div class="h rh">gemäßigt</div>
+          <div class="cell ins" style="opacity:.7"><b>schwache Insolation &amp; Salz</b><small>Steppen, Halbwüsten</small></div>
+          <div class="cell mix"><b>mäßige chemische + Frostverwitterung</b><small>Mitteleuropa</small></div>
+          <div class="cell chem2"><b>starke chemische Verwitterung</b><small>feuchte Subtropen</small></div>
+          <div class="h rh">kalt</div>
+          <div class="cell frost"><b>schwache Frostverwitterung</b><small>kaum Wasser</small></div>
+          <div class="cell frost2"><b>starke Frostverwitterung</b><small>Hochgebirge, Spitzbergen</small></div>
+          <div class="cell frost2" style="opacity:.8"><b>Frost + mäßige chemische</b><small>feuchte Subpolarzone</small></div>
+          <div class="axis"><span>← Jahresniederschlag →</span><span>vereinfachtes Schema</span></div>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Welche Wüstenart nimmt den größten Teil der Sahara ein?</p>
+            <ol><li>Sandwüste (Erg)</li><li>Fels- und Steinwüste (Hammada)</li><li>Kieswüste (Serir)</li></ol>
+            <p class="why">Hammada ca. 70 %, Erg ca. 20 %, Serir ca. 10 %. Die „typische“ Sandwüste ist also gar nicht der Normalfall.</p></div>
+          <div class="q" data-a="0"><p>Warum sind Laterit-Böden rot?</p>
+            <ol><li>durch Eisenoxide (Oxidationsverwitterung)</li><li>durch roten Wüstensand</li><li>durch Vulkanasche</li></ol>
+            <p class="why">„Natürliches Rosten“: Eisenoxid (Hämatit, Fe₂O₃) färbt den Boden ziegelrot.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="wollsack" data-show="2">
+        <header class="topic-head"><h3>Wollsackverwitterung &amp; Felsenmeere</h3></header>
+        <div class="level" data-level="1">
+          <p>Im <strong>Odenwald</strong>, im Schwarzwald und im Harz gibt es <strong>Felsenmeere</strong>: Hänge voller rundlicher Gesteinsblöcke, die aussehen wie aufgestapelte <strong>Wollsäcke</strong>.</p>
+          <p>So entstehen sie:</p>
+          <ol>
+            <li>Granit hat von Natur aus Risse, die wie ein <strong>Würfelgitter</strong> angeordnet sind.</li>
+            <li>Wasser dringt in die Risse ein und verwittert die Blöcke – an den <strong>Ecken und Kanten am schnellsten</strong>, weil das Wasser dort von mehreren Seiten angreift. Die Blöcke werden rund.</li>
+            <li>Später <strong>wäscht Wasser den feinen Gesteinsgrus weg</strong> – übrig bleiben die runden Blöcke.</li>
+          </ol>
+        </div>
+        <div class="level" data-level="2">
+          <div class="def"><b>Granit</b> = magmatisches, grobkristallines Tiefengestein (Plutonit), das durch langsame Abkühlung von aufsteigendem Magma im Erdinneren entsteht. Es besteht hauptsächlich aus Feldspat, Quarz und Glimmer. Beim Abkühlen bildet sich ein dreidimensionales, rechtwinkliges Netz aus Schrumpfungsrissen und -klüften.</div>
+          <p class="flow-title">Wie entstehen Felsenmeere aus Granit?</p>
+          <div class="flow">
+            <div class="start">Klüfte und Schrumpfungsrisse im Granitgestein</div>
+            <div>Eindringen von Wasser: Verwitterungsprozesse entlang der Klüfte</div>
+            <div>Abrundung der Blöcke durch chemische Verwitterung von Ecken und Kanten</div>
+            <div>Freilegung der „Wollsäcke“ durch Auswaschung des Feinmaterials (Grus)</div>
+            <div class="end">Felsenmeer – z. B. Odenwald, Schwarzwald, Harz</div>
+          </div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum Ecken und Kanten?</strong> Eine Ecke wird von drei Seiten angegriffen, eine Kante von zwei, eine Fläche nur von einer. Deshalb verwittern Ecken am schnellsten → die Blöcke werden kugelig („Kernsteine“).</li>
+            <li><strong>Phase 1 – unterirdische Vorverwitterung:</strong> unter einer Bodendecke, bei feucht-warmem Klima (z. B. im Tertiär). Vor allem Hydrolyse der Feldspäte → der Granit zerfällt entlang der Klüfte zu <strong>Grus</strong> (grobkörniger Gesteinszerfall); im Inneren bleiben feste Kerne.</li>
+            <li><strong>Phase 2 – Freilegung:</strong> Erosion trägt Boden und Grus ab (Wasser; in den Kaltzeiten zusätzlich Bodenfließen auf gefrorenem Untergrund). Die Kernsteine bleiben liegen, rutschen hangabwärts und sammeln sich zu Blockmeeren.</li>
+            <li><strong>Odenwald:</strong> Das Felsenmeer bei Lautertal besteht genau genommen aus Quarzdiorit, einem granitähnlichen Tiefengestein – der Prozess ist derselbe.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Verknüpfung</span>Hier wirken <strong>endogene</strong> (Magma erstarrt in der Tiefe, Klüfte beim Abkühlen; Hebung und Freilegung) und <strong>exogene</strong> Kräfte (chemische Verwitterung, Erosion) zusammen – ideal für eine Erklär-Aufgabe.</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 660 220" role="img" aria-label="Drei Stadien der Wollsackverwitterung">
+            <text x="110" y="15" text-anchor="middle" class="t-h">1 · Klüftung</text>
+            <text x="110" y="31" text-anchor="middle" class="t-xs t-mute">rechtwinklige Klüfte im Granit</text>
+            <rect x="10" y="44" width="200" height="14" fill="#8a6a48"/>
+            <rect x="10" y="58" width="200" height="150" fill="#cdb8a0"/>
+            <g stroke="#5a4c40" stroke-width="2"><line x1="60" y1="58" x2="60" y2="208"/><line x1="110" y1="58" x2="110" y2="208"/><line x1="160" y1="58" x2="160" y2="208"/><line x1="10" y1="96" x2="210" y2="96"/><line x1="10" y1="134" x2="210" y2="134"/><line x1="10" y1="172" x2="210" y2="172"/></g>
+
+            <text x="330" y="15" text-anchor="middle" class="t-h">2 · Vergrusung</text>
+            <text x="330" y="31" text-anchor="middle" class="t-xs t-mute">Ecken &amp; Kanten verwittern zuerst</text>
+            <rect x="230" y="44" width="200" height="14" fill="#8a6a48"/>
+            <rect x="230" y="58" width="200" height="150" fill="url(#grus)"/>
+            <g fill="#cdb8a0" stroke="#8b7b6a">
+              <rect x="239" y="67" width="32" height="20" rx="10"/><rect x="289" y="67" width="32" height="20" rx="10"/><rect x="339" y="67" width="32" height="20" rx="10"/><rect x="389" y="67" width="32" height="20" rx="10"/>
+              <rect x="236" y="102" width="38" height="26" rx="11"/><rect x="286" y="102" width="38" height="26" rx="11"/><rect x="336" y="102" width="38" height="26" rx="11"/><rect x="386" y="102" width="38" height="26" rx="11"/>
+              <rect x="234" y="138" width="42" height="30" rx="8"/><rect x="284" y="138" width="42" height="30" rx="8"/><rect x="334" y="138" width="42" height="30" rx="8"/><rect x="384" y="138" width="42" height="30" rx="8"/>
+              <rect x="233" y="175" width="44" height="31" rx="5"/><rect x="283" y="175" width="44" height="31" rx="5"/><rect x="333" y="175" width="44" height="31" rx="5"/><rect x="383" y="175" width="44" height="31" rx="5"/>
+            </g>
+
+            <text x="550" y="15" text-anchor="middle" class="t-h">3 · Freilegung</text>
+            <text x="550" y="31" text-anchor="middle" class="t-xs t-mute">Grus ausgewaschen → Felsenmeer</text>
+            <path d="M450,110 L650,190 L650,208 L450,208 Z" fill="#cdb8a0"/>
+            <g fill="#cdb8a0" stroke="#5a4c40" stroke-width="1.2">
+              <rect x="468" y="102" width="34" height="24" rx="10"/><rect x="503" y="117" width="30" height="22" rx="10"/><rect x="536" y="127" width="36" height="26" rx="11"/><rect x="576" y="146" width="30" height="22" rx="10"/><rect x="608" y="157" width="32" height="24" rx="10"/><rect x="488" y="86" width="26" height="20" rx="9"/><rect x="560" y="112" width="24" height="18" rx="8"/>
+            </g>
+            <path d="M462,70 Q540,80 628,138" fill="none" stroke="#2d6a8e" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arr-blue)"/>
+            <text x="470" y="64" class="t-xs t-water">Auswaschung durch Wasser</text>
+          </svg>
+          <figcaption>Wollsackverwitterung in drei Stadien (schematisch). Braun = Boden, gepunktet = Grus (zerfallener Granit)</figcaption>
+        </figure>
+        <div class="quiz">
+          <div class="q" data-a="2"><p>Warum werden die Granitblöcke rund?</p>
+            <ol><li>Der Wind schleift sie rund</li><li>Sie waren schon immer rund</li><li>Ecken und Kanten bieten mehr Angriffsfläche und verwittern schneller</li></ol>
+            <p class="why">Ecke = 3 Angriffsflächen, Kante = 2, Fläche = 1 → Abrundung zu „Wollsäcken“.</p></div>
+          <div class="q" data-a="0"><p>Was wird bei der Freilegung der Wollsäcke ausgewaschen?</p>
+            <ol><li>das Feinmaterial (Grus)</li><li>die Klüfte</li><li>das Magma</li></ol>
+            <p class="why">Der zerfallene, feinkörnige Granit (Grus) wird abgetragen – die festen Kernsteine bleiben liegen.</p></div>
+        </div>
+      </article>
+    </section>
+
+
+    <section class="block" id="exams">
+      <h2>Bereit für den Ernstfall?</h2>
+      <p class="block-lead">Zwei Übungsklausuren im Stil der Klausur von 2024: 60 BE, 90 Minuten, mit Materialien, Operatorenliste, Timer und Erwartungshorizont zum Selbstkorrigieren.</p>
+      <div class="exam-cards">
+        <a class="exam-card" href="uebungsklausur-1.html">
+          <span class="overline">Übungsklausur 1</span>
+          <b>Ostafrika – ein Kontinent bricht auseinander</b>
+          <span>Grabenbruch, Wilson-Zyklus, Vulkantypen, Erdbebenstärke · Aufgabe 2: Frostsprengung an der Zugspitze</span>
+          <em>60 BE · 90 Min. · 6 Materialien</em>
+        </a>
+        <a class="exam-card" href="uebungsklausur-2.html">
+          <span class="overline">Übungsklausur 2</span>
+          <b>Chile – Leben am Rand der Platte</b>
+          <span>Subduktion, Anden, Erdbebenherde, Epizentrum bestimmen, Vulkanismus · Aufgabe 2: Felsenmeer im Odenwald</span>
+          <em>60 BE · 90 Min. · 6 Materialien</em>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>Lernzettel „Reliefsphäre“ · Geo LK. Zusammengestellt aus Unterrichtsmaterialien, einem Lernzettel aus dem Kurs und der Klausur von 2024. Ohne Gewähr – bei Widersprüchen gilt der Hefter. Dein Fortschritt wird nur in diesem Browser gespeichert.</p>
+    <button class="linkish" type="button" id="resetAll">Fortschritt zurücksetzen</button>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="finale" id="finale" hidden>
+  <div class="finale-card" role="dialog" aria-modal="true" aria-labelledby="finaleTitle">
+    <div class="overline">Alle Themen abgehakt</div>
+    <h2 id="finaleTitle">Pangäa ist komplett!</h2>
+    <p>Du hast jede Schicht deines Bohrkerns freigelegt. Jetzt der echte Test: Schreib eine Übungsklausur unter Zeitdruck.</p>
+    <p><a class="btn" href="uebungsklausur-1.html">Zur Übungsklausur 1 →</a> <button class="btn ghost" type="button" data-close>Schließen</button></p>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
