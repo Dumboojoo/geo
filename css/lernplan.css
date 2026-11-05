@@ -1,0 +1,119 @@
+/* =========================================================
+   Lernplan – ergänzt style.css
+   ========================================================= */
+.plan-wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+/* Kopf */
+.plan-hero{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:40px;align-items:start;padding:52px 0 34px;border-bottom:1px solid var(--line)}
+.plan-hero h1{font-size:clamp(40px,5vw,64px);font-weight:850;font-stretch:122%;text-transform:uppercase;letter-spacing:-.025em;line-height:.9;margin:14px 0 18px}
+.plan-hero h1 span{display:block;font-size:.34em;font-stretch:100%;letter-spacing:.01em;font-weight:700;color:var(--accent);margin-top:12px;text-transform:none}
+.plan-hero .lead{max-width:56ch;font-size:19px;color:var(--ink-2);margin:0}
+
+.plan-card{background:var(--surface);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--accent);padding:20px 20px 18px;display:grid;gap:12px}
+.goal{display:flex;gap:14px;align-items:flex-start;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.goal p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.5}
+.goal-np{display:grid;justify-items:center;line-height:1;flex:none}
+.goal-np b{font-family:var(--font-head);font-size:52px;font-weight:900;font-stretch:120%;color:var(--accent)}
+.goal-np span{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.field-row{display:grid;gap:6px;font-size:13px;font-weight:600;color:var(--ink-2)}
+.field-row input[type="time"]{font:500 18px/1.2 var(--font-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line-2);border-radius:var(--r);padding:7px 10px;width:100%}
+.field-row .seg{display:flex}
+.field-row .seg button{flex:1;justify-content:center;padding:8px 6px}
+.finish{margin:0;font-size:14px;color:var(--ink-2);min-height:1.5em}
+.finish b{color:var(--ink)}
+.finish.late{color:var(--bad)}
+.finish.late b{color:var(--bad)}
+.plan-progress .rank-bar{margin:4px 0 6px}
+.plan-count{font-family:var(--font-mono);font-size:12.5px;color:var(--muted)}
+.plan-count b{color:var(--ink)}
+.plan-card .btn{justify-content:center}
+
+/* Strategie */
+.strategy .box{margin-top:0}
+.prio div{border-top:4px solid var(--accent)}
+.rules{grid-template-columns:repeat(5,1fr)}
+.tag-extra,.tasks li.extra::before{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;border:1px dashed var(--line-2);color:var(--muted);padding:1px 5px;border-radius:var(--r);white-space:nowrap}
+
+/* Tagesablauf */
+.daylist{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:14px}
+.daylist > li{margin:0}
+.pblock{display:grid;grid-template-columns:92px minmax(0,1fr);gap:0;border:1px solid var(--line);border-left:5px solid var(--cc);background:var(--surface);border-radius:var(--r);transition:border-color .2s,box-shadow .2s}
+.pblock.key{box-shadow:var(--shadow)}
+.pb-time{padding:18px 10px 14px 14px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.ptime{font-family:var(--font-mono);font-weight:600;font-size:15px;color:var(--ink)}
+.pdur{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+.pb-body{padding:16px 20px 14px;min-width:0}
+.pb-head{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+.pb-head .overline{flex-basis:100%;color:var(--cc)}
+.pb-head h3{font-size:22px;font-stretch:108%;font-weight:800}
+.pill{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--line-2);color:var(--ink-2);border-radius:var(--r);white-space:nowrap}
+.pill.must{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.pb-links{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px}
+.pb-links a{font-size:13px;font-weight:600;text-decoration:none;border:1px solid var(--line-2);padding:3px 9px;border-radius:var(--r);background:var(--surface-2)}
+.pb-links a::after{content:" →";color:var(--cc)}
+.pb-links a:hover{border-color:var(--ink)}
+.pb-goal{font-size:15px;color:var(--ink-2);margin:8px 0 6px}
+.pb-goal b{color:var(--ink)}
+
+/* Aufgaben mit Haken */
+.tasks{list-style:none;padding:0;margin:8px 0 6px;display:grid;gap:2px}
+.tasks > li{position:relative;padding:8px 8px 8px 40px;margin:0;border-radius:var(--r);cursor:pointer;font-size:15.5px;line-height:1.55;transition:background .15s,color .15s}
+.tasks > li:hover{background:var(--surface-2)}
+.tasks > li > .box-tick{position:absolute;left:8px;top:9px;width:21px;height:21px;border:1.5px solid var(--ink);background:var(--bg);display:grid;place-items:center;border-radius:2px;padding:0;cursor:pointer}
+.tasks > li > .box-tick svg{width:14px;height:14px;fill:none;stroke:var(--bg);stroke-width:2.6;opacity:0}
+.tasks > li.done > .box-tick{background:var(--cc);border-color:var(--cc)}
+.tasks > li.done > .box-tick svg{opacity:1}
+.tasks > li.done{color:var(--muted)}
+.tasks > li.done b,.tasks > li.done strong{color:var(--muted)}
+.tasks li.extra::before{content:"Extra";margin-right:7px;position:relative;top:-1px}
+.tasks ol{margin:6px 0 2px;padding-left:1.3em}
+.tasks ol li{margin:3px 0}
+.tasks a{color:var(--ink);font-weight:600}
+body[data-mode="kompakt"] .tasks li.extra{display:none}
+body[data-mode="voll"] .only-kompakt,body[data-mode="kompakt"] .only-voll{display:none}
+
+/* Zustand: fertig / jetzt */
+.pblock.done{border-left-color:var(--ok)}
+.pblock.done .pb-head h3::after{content:" ✓";color:var(--ok)}
+.pblock.now{border-color:var(--accent);border-left-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft),var(--shadow)}
+.pblock.now .pb-time::after{content:"Jetzt";font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:var(--accent-ink);padding:2px 6px;align-self:flex-start;margin-top:4px;border-radius:var(--r)}
+
+/* Selbsttest */
+.selfcheck{margin:8px 0 2px;border-top:1px dashed var(--line-2);padding-top:8px}
+.selfcheck summary{cursor:pointer;font-family:var(--font-head);font-weight:700;font-size:15px;list-style:none;display:inline-flex;align-items:center;gap:8px}
+.selfcheck summary::-webkit-details-marker{display:none}
+.selfcheck summary::before{content:"+";font-family:var(--font-mono);width:18px;height:18px;display:grid;place-items:center;border:1.5px solid currentColor;font-size:13px;line-height:1}
+.selfcheck[open] summary::before{content:"−"}
+.selfcheck dl{margin:10px 0 4px;display:grid;gap:10px}
+.selfcheck dt{font-weight:600;font-size:15px}
+.selfcheck dd{margin:3px 0 0;font-size:14.5px;color:var(--ink-2);padding-left:12px;border-left:3px solid var(--cc)}
+
+/* Pausen */
+.pbreak{display:grid;grid-template-columns:92px minmax(0,1fr);align-items:center;font-size:14.5px;color:var(--ink-2);padding:9px 0;border-top:1px dashed var(--line-2);border-bottom:1px dashed var(--line-2)}
+.pbreak .ptime{padding-left:19px;color:var(--muted);font-weight:500}
+.pbreak b{color:var(--ink);font-family:var(--font-head)}
+.pbreak.long{background:var(--surface-2)}
+
+/* Responsive */
+@media (max-width:900px){
+  .plan-hero{grid-template-columns:1fr;gap:28px;padding-top:40px}
+  .rules{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .plan-wrap{padding:0 16px}
+  .plan-hero .lead{font-size:17px}
+  .rules{grid-template-columns:1fr}
+  .pblock{grid-template-columns:1fr}
+  .pb-time{flex-direction:row;align-items:baseline;gap:10px;border-right:0;border-bottom:1px solid var(--line);padding:10px 16px}
+  .pblock.now .pb-time::after{margin:0 0 0 auto}
+  .pb-body{padding:14px 14px 12px}
+  .pb-head h3{font-size:19px}
+  .tasks > li{padding-left:36px;font-size:15px}
+  .tasks > li > .box-tick{left:6px}
+  .pbreak{grid-template-columns:74px minmax(0,1fr);padding:9px 4px}
+  .pbreak .ptime{padding-left:6px}
+}
+@media print{
+  .topbar,.plan-card .btn,.selfcheck,.toasts,.footer button{display:none!important}
+  .pblock{break-inside:avoid}
+}

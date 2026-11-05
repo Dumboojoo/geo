@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lernplan Reliefsphäre</title>
+<meta name="description" content="Lernplan für den Tag vor der Geo-Klausur Reliefsphäre: Schritt für Schritt zu mindestens 11 Notenpunkten – mit Uhrzeiten, Abhak-Liste und Selbsttests.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/lernplan.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e1a15'/%3E%3Cpath d='M2 24 L11 12 L17 19 L23 9 L30 18' fill='none' stroke='%23f07a3e' stroke-width='3'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('geo-reliefsphaere-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body data-mode="voll">
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" aria-label="Zum Lernzettel">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 19 L8 11 L12 15 L18 6 L25 14" fill="none" stroke="var(--accent)" stroke-width="2.4"/></svg>
+      <span class="brand-text">Reliefsphäre</span>
+    </a>
+    <nav class="nav" aria-label="Seiten">
+      <a href="index.html">Lernzettel</a>
+      <a href="lernplan.html" aria-current="page">Lernplan</a>
+      <a href="uebungsklausur-1.html">Übungsklausur 1</a>
+      <a href="uebungsklausur-2.html">Übungsklausur 2</a>
+    </nav>
+    <div class="topbar-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4L7 17M17 7l1.4-1.4"/><path d="M12 8a4 4 0 0 0 0 8z" fill="currentColor"/><path d="M12 8a4 4 0 0 1 0 8"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="topbar-progress" aria-hidden="true"><span id="topProgress"></span></div>
+</header>
+
+<main class="plan-wrap">
+
+  <section class="plan-hero">
+    <div>
+      <div class="overline">Lernplan · nur heute · Klausur morgen</div>
+      <h1>Lernplan<span>Ein Tag, ein Ziel: mindestens 11 Punkte</span></h1>
+      <p class="lead">Du hast nur heute. Deshalb steht hier Block für Block, <em>was genau</em> du tun sollst – in der richtigen Reihenfolge, mit Uhrzeiten und Pausen. Hake jede Aufgabe ab, sobald du sie erledigt hast.</p>
+    </div>
+
+    <aside class="plan-card" aria-label="Plan einstellen">
+      <div class="goal">
+        <div class="goal-np"><b>11</b><span>Notenpunkte</span></div>
+        <p>= ca. <b>75 %</b> = <b>45 von 60 BE</b>.<br>Du darfst also rund 15 BE verlieren – du musst nicht alles perfekt können, aber die großen Punkteblöcke sicher.</p>
+      </div>
+      <label class="field-row" for="startTime"><span>Ich fange an um</span><input type="time" id="startTime" step="300"></label>
+      <div class="field-row"><span>Wie viel Zeit?</span>
+        <div class="seg" id="modeSwitch" role="group" aria-label="Umfang des Lernplans">
+          <button type="button" data-mode="voll" aria-pressed="true">Voll · ca. 6½ h</button>
+          <button type="button" data-mode="kompakt" aria-pressed="false">Kompakt · ca. 4¾ h</button>
+        </div>
+      </div>
+      <p class="finish" id="finish">&nbsp;</p>
+      <div class="plan-progress">
+        <div class="rank-bar" aria-hidden="true"><span id="planBar"></span></div>
+        <div class="plan-count"><b id="doneTasks">0</b> / <b id="allTasks">0</b> Aufgaben erledigt</div>
+      </div>
+      <a class="btn" href="#jetzt" id="nowBtn">Zum aktuellen Block →</a>
+    </aside>
+  </section>
+
+  <section class="block strategy">
+    <h2>Wo die 45 BE herkommen</h2>
+    <p class="block-lead">Die Klausur hat wahrscheinlich wieder <b>Aufgabe 1 mit ca. 50 BE</b> (Plattentektonik, Vulkane, Erdbeben an einem Raumbeispiel) und <b>Aufgabe 2 mit ca. 10 BE</b> (Verwitterung). Daraus folgt die Reihenfolge der Prioritäten:</p>
+    <div class="howto prio">
+      <div><span class="n">Priorität 1</span><b>Plattengrenzen &amp; Subduktion</b>Fast jede Teilaufgabe von Aufgabe 1 baut darauf auf: Lage, Entstehung, Vulkane, Erdbeben. Wer die Grenzen sicher kann, holt hier die meisten BE.</div>
+      <div><span class="n">Priorität 2</span><b>Fließschema (ca. 12 BE)</b>Kam in beiden Übungsklausuren und 2024 vor. Rund 4 BE gibt es allein für die richtige <em>Form</em> – das sind die leichtesten Punkte der ganzen Klausur.</div>
+      <div><span class="n">Priorität 3</span><b>Verwitterung (ca. 10 BE)</b>Eigenständige Aufgabe 2, kleines Stoffgebiet, schnell lernbar: Frostsprengung, chemische Verwitterung, Klima, Wollsack/Felsenmeer.</div>
+    </div>
+    <div class="box tipp"><span class="box-label">So benutzt du den Plan</span>Jeder Block verlinkt die passenden Themen im <a href="index.html">Lernzettel</a>. Lies dort auf Stufe <b>Normal</b>; nur wenn du etwas nicht verstehst, kurz auf <b>Einfach</b> umschalten. Mach am Ende jedes Themas den <b>Schnelltest</b> und setz den Haken – dann zählt dein Bohrkern mit. Schreib und zeichne <b>auf Papier</b>, nicht nur lesen: Was du einmal selbst aufgeschrieben hast, kannst du morgen auch hinschreiben.</div>
+  </section>
+
+  <section class="block">
+    <h2>Dein Tag</h2>
+    <p class="block-lead">Die Uhrzeiten passen sich deiner Startzeit an. Im Modus <b>Kompakt</b> fallen die mit <span class="tag-extra">Extra</span> markierten Aufgaben weg und die Blöcke werden kürzer.</p>
+
+    <ol class="daylist" id="daylist">
+
+      <!-- ===== Block 0 ===== -->
+      <li class="pblock" data-min="10" data-min-k="5" style="--cc:var(--c1)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Start</span><h3>Arbeitsplatz &amp; Ampel-Check</h3><span class="pill must">Pflicht</span></div>
+          <p class="pb-goal"><b>Ziel:</b> Du weißt, welche Themen du schon kannst und wo du heute Zeit brauchst.</p>
+          <ul class="tasks">
+            <li data-id="b0-1">Hefter, Papier (ein paar leere Blätter), zwei Farben, Wasser bereitlegen. Handy in einen anderen Raum oder auf „Nicht stören“ – nur für den Timer benutzen.</li>
+            <li data-id="b0-2">Im <a href="index.html#inhalt">Lernzettel unter „Inhalt“</a> alle 22 Themenüberschriften durchgehen. Auf ein Blatt jedes Thema mit einer <b>Ampelfarbe</b> notieren: <b>grün</b> = kann ich erklären, <b>gelb</b> = ungefähr, <b>rot</b> = keine Ahnung.</li>
+            <li data-id="b0-3">Die roten Themen einkreisen. In den Blöcken unten bekommen sie die meiste Zeit; grüne Themen nur kurz überfliegen, Schnelltest machen, abhaken.</li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- ===== Block 1 ===== -->
+      <li class="pblock" data-min="25" data-min-k="20" style="--cc:var(--c1)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Block 1 · Kapitel I</span><h3>Klausur-Handwerk: Operatoren &amp; Fließschema</h3><span class="pill must">Pflicht</span></div>
+          <p class="pb-links"><a href="index.html#operatoren">Operatoren &amp; Anforderungsbereiche</a><a href="index.html#darstellungsformen">Darstellungsformen</a></p>
+          <p class="pb-goal"><b>Ziel:</b> Du weißt bei jedem Operator, wie ausführlich du antworten musst, und kennst die Formregeln fürs Fließschema auswendig.</p>
+          <ul class="tasks">
+            <li data-id="b1-1">Operatoren-Tabelle lesen. Auf eine Karteikarte schreiben, was diese Operatoren verlangen: <b>nennen, beschreiben, erklären, erläutern, vergleichen, darstellen, beurteilen, erörtern</b> – jeweils mit AFB (I, II, III).</li>
+            <li data-id="b1-2">Merken: „<b>anhand</b> von M1“ = nur Material · „<b>ausgehend</b> von M1“ = Material + eigenes Wissen. Und: <b>erklären</b> = Ursache → Wirkung („weil … dadurch … folglich“), <b>erläutern</b> = erklären + Beispiel/Beleg.</li>
+            <li data-id="b1-3">Aufbau für AFB III (beurteilen/erörtern) aufschreiben: These → Pro mit Beleg → Contra mit Beleg → Abwägung + begründetes Fazit.</li>
+            <li data-id="b1-4">Fließschema-Regeln auf die Karteikarte: <b>Überschrift · lineare Anordnung · unbeschriftete Pfeile · Nominalstil · keine Rückkopplungen · keine Sprünge in der Kette.</b></li>
+            <li data-id="b1-5">Zeitregel merken: <b>ca. 1,5 Minuten pro BE.</b> Eine 6-BE-Aufgabe ≈ 9 Minuten, eine 14-BE-Aufgabe ≈ 20 Minuten.</li>
+            <li data-id="b1-6">Beide Schnelltests machen, beide Themen abhaken.</li>
+          </ul>
+          <details class="selfcheck"><summary>Prüf dich (ohne nachzuschauen)</summary>
+            <dl>
+              <dt>Was ist der Unterschied zwischen „erklären“ und „erläutern“?</dt><dd>Erklären = Zusammenhang/Ursache-Wirkung herstellen. Erläutern = erklären <em>und</em> mit Beispielen oder Belegen veranschaulichen.</dd>
+              <dt>Schreib „Das heiße Material steigt auf, weil es leichter ist“ im Nominalstil.</dt><dd>„Aufstieg des heißen Materials (geringere Dichte)“</dd>
+              <dt>Nenne drei typische Fehler im Fließschema.</dt><dd>Beschriftete Pfeile („führt zu“), ganze Sätze, fehlende Überschrift, Rückkopplungen, Sprünge in der Kausalkette.</dd>
+            </dl>
+          </details>
+        </div>
+      </li>
+
+      <!-- ===== Block 2 ===== -->
+      <li class="pblock" data-min="25" data-min-k="15" style="--cc:var(--c2)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Block 2 · Kapitel II</span><h3>Aufbau der Erde</h3><span class="pill">Wichtig</span></div>
+          <p class="pb-links"><a href="index.html#schalenbau">Schalenbau</a><a href="index.html#hypsografie">Hypsografische Kurve</a><a href="index.html#isostasie">Isostasie</a></p>
+          <p class="pb-goal"><b>Ziel:</b> Du kannst den Schalenbau aus dem Kopf zeichnen und erklären, warum Kontinente höher liegen als Ozeanböden.</p>
+          <ul class="tasks">
+            <li data-id="b2-1">Thema Schalenbau lesen. Dann <b>ohne Vorlage</b> einen Halbkreis zeichnen und beschriften: Kruste (kontinental ca. 35 km, ozeanisch 5–10 km) – Moho – Mantel (bis ca. 2.900 km) – äußerer Kern (flüssig) – innerer Kern (fest, bis 6.371 km). Danach mit dem Lernzettel vergleichen und Fehler rot korrigieren.</li>
+            <li data-id="b2-2">Den wichtigsten Unterschied aufschreiben: <b>Kruste</b> = chemisch definiert (endet an der Moho) · <b>Lithosphäre</b> = mechanisch: Kruste + oberster starrer Mantel, bildet die Platten · <b>Asthenosphäre</b> = fast fest, aber plastisch – <em>kein</em> flüssiges Magma!</li>
+            <li data-id="b2-3">Hypsografische Kurve: Begründung in einem Satz notieren – zweigipflig, weil es zwei Krustentypen mit unterschiedlicher Dichte und Dicke gibt.</li>
+            <li data-id="b2-4">Isostasie mit dem Beispiel Skandinavien merken: Eisauflast in der Eiszeit → Kruste sinkt ein → Eis schmilzt → Entlastung → Hebung (bis knapp 1 cm pro Jahr).</li>
+            <li data-id="b2-5">Drei Schnelltests, drei Haken.</li>
+            <li data-id="b2-6" class="extra">Extra: Stufe „Genauer“ beim Schalenbau lesen (Asthenosphäre, Mesosphäre, Geodynamo) – nur wenn das Thema bei dir rot war.</li>
+          </ul>
+          <details class="selfcheck"><summary>Prüf dich</summary>
+            <dl>
+              <dt>„Die Platten schwimmen auf flüssigem Magma.“ – Was ist falsch?</dt><dd>Die Asthenosphäre ist fast vollständig fest, verhält sich über lange Zeit aber plastisch. Magma entsteht nur lokal.</dd>
+              <dt>Warum liegen Kontinente höher als Ozeanböden?</dt><dd>Kontinentale Kruste ist dicker und leichter (ca. 2,7 g/cm³) als ozeanische (ca. 3,0 g/cm³) und „schwimmt“ deshalb isostatisch höher.</dd>
+            </dl>
+          </details>
+        </div>
+      </li>
+
+      <li class="pbreak" data-min="10" data-min-k="10"><span class="ptime"></span><span><b>Pause</b> · aufstehen, Fenster auf, etwas trinken. Kein Handy-Scrollen – das frisst die Konzentration.</span></li>
+
+      <!-- ===== Block 3 ===== -->
+      <li class="pblock" data-min="25" data-min-k="15" style="--cc:var(--c3)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Block 3 · Kapitel III</span><h3>Von Wegener zur Plattentektonik</h3><span class="pill">Wichtig</span></div>
+          <p class="pb-links"><a href="index.html#wegener">Wegener</a><a href="index.html#pangaea">Zerfall von Pangäa</a><a href="index.html#platten">Ozeanische vs. kontinentale Kruste</a></p>
+          <p class="pb-goal"><b>Ziel:</b> Du kannst Wegeners Belege aufzählen und ozeanische und kontinentale Platten sicher vergleichen.</p>
+          <ul class="tasks">
+            <li data-id="b3-1">Wegeners <b>vier Beweisgruppen</b> mit je einem Beispiel aufschreiben: Passform der Kontinente (Schelfkanten) · Fossilien (Mesosaurus, Glossopteris …) · Gesteine und Gebirge · Paläoklima (Tillite, Gletscherschrammen, Kohlelager).</li>
+            <li data-id="b3-2">Dazu einen Satz: Warum wurde Wegener abgelehnt? → Er konnte keinen überzeugenden <b>Antrieb</b> nennen (Zentrifugal- und Gezeitenkräfte reichen nicht).</li>
+            <li data-id="b3-3">Eine Vergleichstabelle <b>ozeanische vs. kontinentale Kruste</b> aus dem Kopf anlegen (Dicke, Dichte, Gestein, Alter) und kontrollieren. Merksatz: Die dichtere ozeanische Platte wird subduziert, deshalb ist sie jung; kontinentale Kruste bleibt und wird sehr alt.</li>
+            <li data-id="b3-4">Pangäa: eine Folge merken – Schließung der Landbrücke von Panama → Golfstrom/heutige Ozeanzirkulation.</li>
+            <li data-id="b3-5">Drei Schnelltests, drei Haken.</li>
+          </ul>
+          <details class="selfcheck"><summary>Prüf dich</summary>
+            <dl>
+              <dt>Stimmt „Platte = Kontinent“?</dt><dd>Nein. Die Afrikanische Platte reicht z. B. bis zur Mitte des Atlantiks und besteht dort aus ozeanischer Kruste.</dd>
+              <dt>Welche Platte taucht bei einer Kollision ab – und warum?</dt><dd>Die ozeanische, weil sie dichter (schwerer) ist.</dd>
+            </dl>
+          </details>
+        </div>
+      </li>
+
+      <!-- ===== Block 4 ===== -->
+      <li class="pblock key" data-min="40" data-min-k="35" style="--cc:var(--c4)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Block 4 · Kapitel IV</span><h3>Plattengrenzen &amp; Antriebskräfte</h3><span class="pill must">Pflicht · Priorität 1</span></div>
+          <p class="pb-links"><a href="index.html#plattengrenzen">Plattengrenzen</a><a href="index.html#antrieb">Antriebskräfte</a></p>
+          <p class="pb-goal"><b>Ziel:</b> Du kannst jede Plattengrenze skizzieren, ein Beispiel nennen und sagen, ob es dort Vulkane und starke Erdbeben gibt. <b>Das ist der wichtigste Block des Tages.</b></p>
+          <ul class="tasks">
+            <li data-id="b4-1">Thema Plattengrenzen gründlich lesen (Stufe Normal, Abbildungen genau anschauen).</li>
+            <li data-id="b4-2">Ein Blatt quer legen und <b>sechs kleine Profilskizzen</b> zeichnen – jede mit Pfeilen für die Bewegungsrichtung und einem Beispiel:
+              <ol>
+                <li>divergent, ozeanisch: Mittelozeanischer Rücken, Seafloor-Spreading (Mittelatlantischer Rücken)</li>
+                <li>divergent, kontinental: Grabenbruch/Rift (Ostafrikanischer Graben)</li>
+                <li>konvergent, ozeanisch–kontinental: Subduktion, Tiefseerinne, Vulkangebirge (Anden/Chile)</li>
+                <li>konvergent, ozeanisch–ozeanisch: die <b>ältere</b> Platte taucht ab → Inselbogen (Japan, Philippinen, Aleuten)</li>
+                <li>konvergent, kontinental–kontinental: keine Subduktion → Faltengebirge (Himalaya)</li>
+                <li>Transformstörung: ruckartig, starke Erdbeben, <b>kein</b> Vulkanismus (San-Andreas-Verwerfung)</li>
+              </ol></li>
+            <li data-id="b4-3">Neben jede Skizze zwei Kürzel schreiben: <b>Vulkanismus</b> hoch/kaum/keiner und <b>Erdbebengefahr</b> hoch/gering. Dann mit der Tabelle im Thema „Antriebskräfte“ vergleichen.</li>
+            <li data-id="b4-4">Die drei <b>Antriebskräfte</b> je in einem Satz: Mantelkonvektion (Wärme in der Asthenosphäre) · <b>Plattenzug</b> (slab pull: die schwere subduzierte Platte zieht den Rest nach) · <b>Rückendruck</b> (ridge push: Platten rutschen vom erhöhten Rücken weg).</li>
+            <li data-id="b4-5">Laut erklären (oder jemandem erzählen): „Was passiert vor Chile?“ – in 2 Minuten, mit Fachbegriffen: ozeanische Nazca-Platte, Subduktion unter die Südamerikanische Platte, Tiefseerinne, Aufschmelzen, Vulkane, starke Erdbeben.</li>
+            <li data-id="b4-6">Zwei Schnelltests, zwei Haken.</li>
+            <li data-id="b4-7" class="extra">Extra: In <a href="uebungsklausur-1.html">Übungsklausur 1</a> Aufgabe 1a (Lage &amp; beteiligte Platten, 6 BE) in 8 Minuten stichpunktartig lösen und mit dem Erwartungshorizont vergleichen.</li>
+          </ul>
+          <details class="selfcheck"><summary>Prüf dich</summary>
+            <dl>
+              <dt>Warum gibt es an der San-Andreas-Verwerfung keine Vulkane, aber starke Erdbeben?</dt><dd>Die Platten gleiten aneinander vorbei, es tritt kein Magma aus. Die Reibung staut Spannung auf, die sich ruckartig löst.</dd>
+              <dt>Was ist der stärkste Antrieb der Platten?</dt><dd>Der Plattenzug (slab pull) an Subduktionszonen.</dd>
+              <dt>Warum entsteht beim Himalaya keine Tiefseerinne?</dt><dd>Beide Platten sind kontinental und zu leicht zum Abtauchen – sie kollidieren und falten sich zum Gebirge auf.</dd>
+            </dl>
+          </details>
+        </div>
+      </li>
+
+      <li class="pbreak long" data-min="20" data-min-k="15"><span class="ptime"></span><span><b>Große Pause</b> · richtig essen. Danach kurz an die frische Luft – das Gehirn braucht jetzt Energie.</span></li>
+
+      <!-- ===== Block 5 ===== -->
+      <li class="pblock" data-min="35" data-min-k="25" style="--cc:var(--c4)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Block 5 · Kapitel IV</span><h3>Wilson-Zyklus, Hot Spots &amp; Island</h3><span class="pill must">Pflicht</span></div>
+          <p class="pb-links"><a href="index.html#wilson">Wilson-Zyklus</a><a href="index.html#hotspots">Hot Spots</a><a href="index.html#island">Fallbeispiel Island</a></p>
+          <p class="pb-goal"><b>Ziel:</b> Du kannst die sieben Stadien des Wilson-Zyklus mit Beispiel aufsagen und ein Raumbeispiel einordnen.</p>
+          <ul class="tasks">
+            <li data-id="b5-1">Die Stadien in der richtigen Reihenfolge mit Beispiel auswendig lernen – Eselsbrücke über die Beispiele: <b>Ruhe (Eurasien) → Rift (Ostafrika) → Rotes Meer → Atlantik → Pazifik → Mittelmeer → Himalaya</b>. Die ersten drei Öffnungsstadien sind divergent, ab Pazifik konvergent.</li>
+            <li data-id="b5-2"><b>Fließschema üben</b> (wichtig!): „Vom Kontinent zum Ozean“ – Aufstieg von Magma unter kontinentaler Platte → Aufwölbung → … → Seafloor-Spreading. Mindestens 6 Kästchen, Überschrift, unbeschriftete Pfeile, Nominalstil. Danach mit den Regeln aus Block 1 abhaken.</li>
+            <li data-id="b5-3">Hot Spot in 4 Stichpunkten: Mantelplume aus großer Tiefe · <b>ortsfest</b> · unabhängig von Plattengrenzen · Platte wandert darüber → Vulkankette, deren <b>Alter mit der Entfernung zunimmt</b> (Hawaii).</li>
+            <li data-id="b5-4">Island als Sonderfall: Mittelatlantischer Rücken <b>+</b> Hot Spot. Basalte sind spiegelbildlich (symmetrisch) angeordnet – die jüngsten im Zentralgraben, nach außen immer älter.</li>
+            <li data-id="b5-5">Drei Schnelltests, drei Haken.</li>
+            <li data-id="b5-6" class="extra">Extra: Übungsklausur 1, Aufgabe 1b (Ostafrika in den Wilson-Zyklus einordnen) nur als Gliederung in 5 Minuten.</li>
+          </ul>
+          <details class="selfcheck"><summary>Prüf dich</summary>
+            <dl>
+              <dt>Warum wächst die Erde nicht, obwohl am Mittelozeanischen Rücken ständig neue Kruste entsteht?</dt><dd>Im gleichen Maß wird an destruktiven Plattengrenzen ozeanische Lithosphäre subduziert und im Mantel wieder aufgeschmolzen – ein Kreislauf (Klausur 2024!).</dd>
+              <dt>In welchem Stadium ist Ostafrika, in welchem das Rote Meer?</dt><dd>Ostafrika: Graben-/Rift-Stadium (1). Rotes Meer: Rotes-Meer-Stadium, „junger Ozean“ (2).</dd>
+            </dl>
+          </details>
+        </div>
+      </li>
+
+      <!-- ===== Block 6 ===== -->
+      <li class="pblock key" data-min="40" data-min-k="30" style="--cc:var(--c5)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Block 6 · Kapitel V</span><h3>Vulkane &amp; Erdbeben</h3><span class="pill must">Pflicht</span></div>
+          <p class="pb-links"><a href="index.html#feuerring">Feuerring</a><a href="index.html#vulkantypen">Schild- vs. Schichtvulkan</a><a href="index.html#erdbeben">Erdbeben</a><a href="index.html#seismik">Epizentrum bestimmen</a></p>
+          <p class="pb-goal"><b>Ziel:</b> Du kannst die beiden Vulkantypen kriteriengeleitet vergleichen, Magnitude und Intensität unterscheiden und eine Entfernung aus dem Seismogramm berechnen.</p>
+          <ul class="tasks">
+            <li data-id="b6-1"><b>Vergleichstabelle Schild- vs. Schichtvulkan</b> aus dem Kopf anlegen mit den Kriterien: Vorkommen · Form · Magma (SiO₂, Temperatur, Gas) · Ausbruch · Förderprodukte · Beispiel. Danach kontrollieren. Kern: Schildvulkan = basaltisch, dünnflüssig, effusiv (Hawaii, Island) · Schichtvulkan = SiO₂-reich, zähflüssig, Wechsel explosiv/effusiv, v. a. an Subduktionszonen (Vesuv, Fudschijama).</li>
+            <li data-id="b6-2">Verbreitung: Wo liegen Vulkane und Beben? Pazifischer Feuerring (Subduktion), Mittelatlantischer Rücken, Alpidischer Gürtel, Ostafrikanischer Graben, Hot Spots. Merken: <b>Tiefbeben gibt es nur an Subduktionszonen.</b></li>
+            <li data-id="b6-3"><b>Magnitude</b> (Energie, ein Wert pro Beben) vs. <b>Intensität</b> (Auswirkungen an einem Ort, verschieden je Ort) sauber aufschreiben. Dazu die Faktoren für das Schadensausmaß: Magnitude, Herdtiefe, Entfernung, Topographie, Untergrund, Dauer.</li>
+            <li data-id="b6-4">Seismik: P-Welle kommt zuerst, S-Welle später. Formel auf die Karteikarte: <b>d = Δt · 12 km/s</b>. Für das Epizentrum braucht man <b>mindestens drei Stationen</b>: um jede einen Kreis mit Radius d, der Schnittpunkt ist das Epizentrum.</li>
+            <li data-id="b6-5">Rechnen üben (Lösungen unten bei „Prüf dich“): Δt = 15 s · Δt = 30 s · Δt = 42 s.</li>
+            <li data-id="b6-6">Vier Schnelltests, vier Haken.</li>
+            <li data-id="b6-7" class="extra">Extra: Übungsklausur 1, Aufgabe 1d (Vergleich der Vulkane, 10 BE) als Gliederung mit Kriterien in 8 Minuten – dann Erwartungshorizont lesen.</li>
+          </ul>
+          <details class="selfcheck"><summary>Prüf dich</summary>
+            <dl>
+              <dt>Warum ist ein Schichtvulkan gefährlicher als ein Schildvulkan?</dt><dd>Sein Magma ist SiO₂-reich, zähflüssig und gasreich. Der Gasdruck staut sich und entlädt sich explosiv (Asche, Lapilli, Bomben).</dd>
+              <dt>Lösungen der Rechenaufgaben</dt><dd>15 s → 180 km · 30 s → 360 km · 42 s → 504 km.</dd>
+              <dt>Ein Beben hat Magnitude 7,0. Warum ist die Zerstörung in zwei Städten unterschiedlich?</dt><dd>Die Intensität hängt vom Ort ab: Entfernung zum Epizentrum, Herdtiefe, Untergrund (lockere Sedimente verstärken), Topographie, Bauweise.</dd>
+            </dl>
+          </details>
+        </div>
+      </li>
+
+      <li class="pbreak" data-min="10" data-min-k="10"><span class="ptime"></span><span><b>Pause</b> · kurz bewegen. Du hast den Großteil von Aufgabe 1 geschafft.</span></li>
+
+      <!-- ===== Block 7 ===== -->
+      <li class="pblock key" data-min="35" data-min-k="30" style="--cc:var(--c6)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Block 7 · Kapitel VI</span><h3>Verwitterung (Aufgabe 2)</h3><span class="pill must">Pflicht · Priorität 3</span></div>
+          <p class="pb-links"><a href="index.html#verwitterung">Grundlagen</a><a href="index.html#physikalisch">Physikalisch</a><a href="index.html#chemisch">Chemisch &amp; biologisch</a><a href="index.html#klima">Klima</a><a href="index.html#wollsack">Wollsack &amp; Felsenmeer</a></p>
+          <p class="pb-goal"><b>Ziel:</b> Du kannst jede Verwitterungsart erklären und weißt, welches Klima welche Verwitterung begünstigt. Damit sind die 10 BE von Aufgabe 2 gut erreichbar.</p>
+          <ul class="tasks">
+            <li data-id="b7-1">Grundbegriffe trennen: <b>Verwitterung</b> = Zerstörung/Veränderung an Ort und Stelle · <b>Erosion</b> = Abtragung (äolisch = Wind, fluvial = Wasser, glazial = Gletscher) · Sedimentation = Ablagerung.</li>
+            <li data-id="b7-2">Physikalische Verwitterung – je ein Satz zu: Insolations-/Temperaturverwitterung · <b>Frostsprengung</b> (Volumenzunahme beim Gefrieren, Eispfropf oben verhindert Ausweichen, häufiger Frostwechsel) · Salzsprengung (Kapillarwirkung) · Druckentlastung · Hydratation.</li>
+            <li data-id="b7-3">Chemische Verwitterung – je ein Satz zu: Lösung · Kohlensäureverwitterung (Kalk → Karst, Höhlen) · <b>Hydrolyse</b> (Feldspat → Tonminerale) · Oxidation („Rosten“). Biologisch: Wurzelsprengung + Säuren von Lebewesen.</li>
+            <li data-id="b7-4">Klima-Zuordnung als Mini-Tabelle: <b>warm + feucht</b> (Tropen) → chemisch stark, tiefgründige Laterit-Böden · <b>trocken</b> (Wüste) → Wassermangel, physikalisch (Insolation, Salz) · <b>kalt mit Frostwechsel</b> (Hochgebirge, subpolar) → Frostsprengung, Schuttkegel.</li>
+            <li data-id="b7-5"><b>Fließschema Felsenmeer</b> aus dem Kopf zeichnen: Granit mit Klüften → Eindringen von Wasser entlang der Klüfte → chemische Verwitterung, Ecken und Kanten stärker angegriffen → Abrundung zu Wollsäcken, Grus entsteht → Auswaschung des Grus → Felsenmeer (Odenwald). Mit dem Lernzettel vergleichen.</li>
+            <li data-id="b7-6">Fünf Schnelltests, fünf Haken.</li>
+            <li data-id="b7-7" class="extra">Extra: Übungsklausur 1, Aufgabe 2 (Frostsprengung an der Zugspitze, 10 BE) in 12 Minuten stichpunktartig, dann Erwartungshorizont.</li>
+          </ul>
+          <details class="selfcheck"><summary>Prüf dich</summary>
+            <dl>
+              <dt>Warum ist die Frostsprengung im Hochgebirge so stark – und in der Antarktis-Mitte schwächer?</dt><dd>Entscheidend ist der <em>häufige Wechsel</em> um den Gefrierpunkt (Frostwechsel), nicht die Kälte an sich. Dauerfrost sprengt kaum.</dd>
+              <dt>Warum werden Granitblöcke rund?</dt><dd>Ecken haben drei Angriffsflächen, Kanten zwei, Flächen eine – Ecken und Kanten verwittern schneller.</dd>
+              <dt>Warum verwittert es in den Tropen chemisch so stark?</dt><dd>Wärme beschleunigt chemische Reaktionen, Wasser ist das Reaktionsmittel – beides ist reichlich vorhanden.</dd>
+            </dl>
+          </details>
+        </div>
+      </li>
+
+      <li class="pbreak" data-min="10" data-min-k="5"><span class="ptime"></span><span><b>Pause</b> · gleich kommt die Generalprobe. Etwas trinken, Timer bereitlegen.</span></li>
+
+      <!-- ===== Block 8 ===== -->
+      <li class="pblock key" data-min="75" data-min-k="50" style="--cc:var(--accent)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Block 8 · Generalprobe</span><h3>Probeklausur unter Zeitdruck</h3><span class="pill must">Pflicht</span></div>
+          <p class="pb-links"><a href="uebungsklausur-2.html">Übungsklausur 2 · Chile</a></p>
+          <p class="pb-goal"><b>Ziel:</b> Einmal unter echten Bedingungen schreiben und sehen, wo du stehst. <span class="only-voll">Du schreibst 36 BE – Ziel sind mindestens <b>27 BE</b> (75 %).</span><span class="only-kompakt">Du schreibst 22 BE – Ziel sind mindestens <b>17 BE</b> (75 %).</span></p>
+          <ul class="tasks">
+            <li data-id="b8-1">Übungsklausur 2 öffnen, Materialien M1–M6 einmal überfliegen. Hefter und Lernzettel <b>zu</b>. Auf Papier schreiben, Timer stellen.</li>
+            <li data-id="b8-2" class="extra">Aufgabe 1a (plattentektonische Lage, Anden &amp; Atacamagraben, 14 BE) – <b>20 Minuten</b>.</li>
+            <li data-id="b8-3">Aufgabe 1c: <b>Fließschema</b> zum Vulkanismus am Villarrica (12 BE) – <b>17 Minuten</b>. Vorher die Formregeln von deiner Karteikarte an den Rand schreiben.</li>
+            <li data-id="b8-4">Aufgabe 2: Entstehung eines Felsenmeeres (10 BE) – <b>20 Minuten</b>.</li>
+            <li data-id="b8-5">Oben auf „Erwartungshorizont“ klicken und streng selbst bewerten. Jeden fehlenden Punkt auf ein Blatt „<b>Fehlerliste</b>“ schreiben (z. B. „Tiefseerinne vergessen“, „Pfeile beschriftet“).</li>
+            <li data-id="b8-6">BE zusammenzählen. <span class="only-voll">27 BE oder mehr? Super, du bist auf Kurs.</span><span class="only-kompakt">17 BE oder mehr? Super, du bist auf Kurs.</span> Weniger? Kein Problem – genau dafür ist Block 9 da.</li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- ===== Block 9 ===== -->
+      <li class="pblock" data-min="20" data-min-k="10" style="--cc:var(--c3)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Block 9</span><h3>Lücken schließen</h3><span class="pill must">Pflicht</span></div>
+          <p class="pb-goal"><b>Ziel:</b> Die Fehler aus der Probeklausur und die roten Themen vom Ampel-Check sind geklärt.</p>
+          <ul class="tasks">
+            <li data-id="b9-1">Jeden Punkt der Fehlerliste im Lernzettel nachschlagen (Stufe „Genauer“) und die richtige Formulierung daneben schreiben.</li>
+            <li data-id="b9-2">Alle Themen, die vom Ampel-Check noch rot oder gelb sind und noch keinen Haken haben: Schnelltest wiederholen, bis er sitzt.</li>
+            <li data-id="b9-3" class="extra">Extra: Übungsklausur 2, Aufgabe 1d (Entfernungen &amp; drei Stationen, 6 BE) rechnen – gute Rechen-Punkte für wenig Aufwand.</li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- ===== Block 10 ===== -->
+      <li class="pblock" data-min="15" data-min-k="10" style="--cc:var(--c6)">
+        <div class="pb-time"><span class="ptime"></span><span class="pdur"></span></div>
+        <div class="pb-body">
+          <div class="pb-head"><span class="overline">Abschluss</span><h3>Eine Seite für alles &amp; Feierabend</h3><span class="pill must">Pflicht</span></div>
+          <p class="pb-goal"><b>Ziel:</b> Alles Wichtige steht auf einer Seite. Danach ist Schluss – Schlaf bringt morgen mehr als eine weitere Stunde.</p>
+          <ul class="tasks">
+            <li data-id="b10-1">Eine DIN-A4-Seite „<b>Das Wichtigste</b>“ aus dem Kopf schreiben: Operatoren + Fließschema-Regeln · 6 Plattengrenzen mit Beispiel · Wilson-Stadien · Schild vs. Schicht · d = Δt · 12 km/s · Verwitterung nach Klima · Felsenmeer-Kette. (Nur zum Lernen – natürlich nicht mit in die Klausur!)</li>
+            <li data-id="b10-2">Die Seite einmal laut durchlesen. Was fehlt, kurz im Lernzettel nachsehen.</li>
+            <li data-id="b10-3">Tasche packen: Stifte, Lineal (für Pfeile im Fließschema), Atlas falls erlaubt, Uhr.</li>
+            <li data-id="b10-4">Bildschirm aus, früh schlafen (mindestens 8 Stunden). Im Schlaf festigt das Gehirn, was du heute gelernt hast.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>Morgen in der Klausur</h2>
+    <p class="block-lead">Nichts mehr lernen – nur noch diese fünf Regeln.</p>
+    <div class="howto rules">
+      <div><span class="n">01</span><b>Erst alles lesen</b>Alle Aufgaben und Materialien überfliegen, Operatoren unterstreichen. Doppelte Operatoren („erläutern … und erklären …“) = zwei Abschnitte.</div>
+      <div><span class="n">02</span><b>Zeit = Punkte</b>Ca. 1,5 Minuten pro BE. Wenn du bei einer Aufgabe hängst: Lücke lassen, weiter, später zurück.</div>
+      <div><span class="n">03</span><b>Material zitieren</b>Werte und Fundstellen nennen („M3: Tiefseerinne vor der Küste …“). Das zeigt Materialbezug und gibt Punkte.</div>
+      <div><span class="n">04</span><b>Fachsprache</b>„Subduktion der ozeanischen Nazca-Platte“ statt „die Platte geht runter“.</div>
+      <div><span class="n">05</span><b>Fließschema-Check</b>Überschrift? Linear? Pfeile ohne Text? Nominalstil? Keine Sprünge? Die Formpunkte sind geschenkt.</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>Lernplan zum Lernzettel „Reliefsphäre“ · Geo LK. Die Notenpunkte-Grenze (75 % für 11 Punkte) ist ein üblicher Richtwert – deine Lehrkraft kann eine eigene Tabelle verwenden. Dein Fortschritt wird nur in diesem Browser gespeichert.</p>
+    <button class="linkish" type="button" id="resetPlan">Lernplan zurücksetzen</button>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="js/lernplan.js"></script>
+</body>
+</html>

@@ -115,6 +115,7 @@ sub,sup{line-height:0}
 .core a.done{background:var(--cc);background-image:repeating-linear-gradient(var(--tex,0deg),rgba(0,0,0,.14) 0 1px,transparent 1px 5px)}
 .core a:hover{outline:2px solid var(--accent);outline-offset:-2px}
 .rank-info{display:flex;flex-direction:column;min-width:0;flex:1}
+.rank-info .btn + .btn{margin-top:8px}
 .rank-name{font-family:var(--font-head);font-size:34px;font-weight:850;font-stretch:115%;line-height:1;margin:6px 0 4px;text-transform:uppercase}
 .rank-points{font-family:var(--font-mono);font-size:14px;color:var(--ink-2)}
 .rank-bar{height:8px;background:var(--line);margin:12px 0 6px;position:relative}
