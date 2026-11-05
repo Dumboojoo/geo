@@ -445,18 +445,21 @@
       t.classList.add('flash');
     });
   }
-  var resetBtn = $('resetAll');
-  if (resetBtn) {
-    resetBtn.addEventListener('click', function () {
-      if (!window.confirm('Wirklich den ganzen Fortschritt (Häkchen und Schnelltests) löschen?')) return;
+  /* Lernzettel zurücksetzen – der Lernplan (eigener Speicher) bleibt unberührt */
+  var NL = String.fromCharCode(10);
+  [].slice.call(document.querySelectorAll('[data-reset]')).forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (!window.confirm('Den kompletten Lernzettel zurücksetzen?' + NL + NL + 'Alle Haken, Schnelltest-Ergebnisse, Punkte und der Rang werden gelöscht, die Erklärstufe wird wieder auf „Normal“ gestellt.' + NL + NL + 'Dein Lernplan bleibt so, wie er ist.')) return;
       state.done = {};
       state.quiz = {};
+      setGlobalLevel(2, false);
       save();
       allQ.forEach(resetQ);
       render();
-      toast('Fortschritt zurückgesetzt – <b>auf ein Neues!</b>');
+      window.scrollTo(0, 0);
+      toast('Lernzettel zurückgesetzt – <b>auf ein Neues!</b> Dein Lernplan ist unverändert.');
     });
-  }
+  });
 
   /* ---------- Aktives Thema in der Seitenleiste ---------- */
   if ('IntersectionObserver' in window && tocSide) {
