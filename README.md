@@ -2,10 +2,9 @@
 
 Interaktiver Lernzettel als Webseite:
 
-- **22 Themen in 6 Kapiteln**: Operatoren, Schalenbau, Isostasie, Wegener, Plattentektonik, Wilson-Zyklus, Hot Spots, Island, Vulkane, Erdbeben, Verwitterung
+- **21 Themen in 6 Kapiteln**: Operatoren, Schalenbau, Isostasie, Wegener, Plattentektonik, Wilson-Zyklus, Island, Vulkane, Erdbeben, Verwitterung
 - **3 Erklärstufen** pro Thema: Einfach · Normal · Genauer
 - **Abhaken & Punkte**: Haken bei verstandenen Themen, Schnelltests, Ränge von „Staubkorn“ bis „Pangäa“, Bohrkern-Fortschritt
-- **Lernplan für den Tag vor der Klausur**: Block für Block mit Uhrzeiten (passen sich der Startzeit an), Voll- oder Kompakt-Modus, Abhak-Liste und „Prüf dich“-Fragen
 - **Lernplan für den Tag vor der Klausur**: Block für Block mit Uhrzeiten (passen sich der Startzeit an), Voll- oder Kompakt-Modus, Abhak-Liste und „Prüf dich“-Fragen
 - **2 Übungsklausuren** im Stil der Klausur 2024 (60 BE, 90 Minuten) mit Timer, Erwartungshorizont und Notenpunkte-Rechner
 
